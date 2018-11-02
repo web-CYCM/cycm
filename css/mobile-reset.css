@@ -1,0 +1,222 @@
+html,body{
+	font-size: 100px;
+}
+button:focus{
+	outline: none;
+}
+
+
+p{
+	margin-bottom: 0.16rem;
+}
+address{
+	margin-bottom: 0.16rem;
+}
+dl,ol,ul {
+	margin-bottom: 0.16rem;
+}
+dd {
+    margin-bottom: .08rem;
+}
+blockquote {
+    margin: 0 0 0.16rem
+}
+sub {
+    bottom: -.04em
+}
+
+sup {
+    top: -.08em
+}
+code,kbd,pre,samp {
+    font-size: 0.16em
+}
+pre {
+    margin-bottom: 0.16rem;
+}
+
+figure {
+    margin: 0 0 0.16rem;
+}
+caption {
+    padding-top: .12rem;
+    padding-bottom: .12rem;
+}
+label {
+    margin-bottom: .08rem
+}
+legend {
+    margin-bottom: .08rem;
+    font-size: 0.24rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, 
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: .08rem;
+}
+.h1,h1 {
+    font-size: 0.4rem
+}
+
+.h2,h2 {
+    font-size: 0.32rem
+}
+
+.h3,h3 {
+    font-size: 0.28rem
+}
+
+.h4,h4 {
+    font-size: 0.24rem
+}
+
+.h5,h5 {
+    font-size: 0.2rem
+}
+
+.h6,h6 {
+    font-size: 0.16rem
+}
+
+.lead {
+    font-size: 0.2rem;
+}
+
+.display-1 {
+    font-size: 0.96rem;
+}
+
+.display-2 {
+    font-size: 0.88rem;
+}
+
+.display-3 {
+    font-size: 0.72rem;
+}
+
+.display-4 {
+    font-size: 0.56rem;
+}
+
+hr {
+    margin-top: 0.16rem;
+    margin-bottom: .16rem;
+}
+
+.mark,mark {
+    padding: 0.032em;
+}
+.blockquote {
+    margin-bottom: 0.16rem;
+    font-size: 0.2rem
+}
+.img-thumbnail {
+    padding: 0.04rem;
+    border-radius: 0.04rem;
+}
+.figure-img {
+    margin-bottom: 0.08rem;
+}
+
+code {
+    padding: 0.032rem 0.064rem;
+    border-radius: 0.04rem
+}
+kbd {
+    padding: 0.032rem 0.064rem;
+    border-radius: 0.032rem
+}
+pre {
+    margin-bottom: 0.16rem;
+}
+
+
+
+
+
+.card {
+    border-radius: 0.04rem
+}
+
+.card-body {
+    padding: 0.2rem
+}
+
+.card-title {
+    margin-bottom: 0.12rem
+}
+
+.card-subtitle {
+    margin-top: -0.06rem;
+}
+
+.card-link+.card-link {
+    margin-left: 0.2rem
+}
+
+.card>.list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0.04rem;
+    border-top-right-radius: 0.04rem
+}
+
+.card>.list-group:last-child .list-group-item:last-child {
+    border-bottom-right-radius: 0.04rem;
+    border-bottom-left-radius: 0.04rem
+}
+
+.card-header {
+    padding: 0.12rem 0.2rem;
+}
+
+.card-header:first-child {
+    border-radius: calc(0.04rem - 1px) calc(0.04rem - 1px) 0 0
+}
+
+.card-footer {
+    padding: 0.12rem 0.2rem;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 calc(0.04rem - 1px) calc(0.04rem - 1px)
+}
+
+.card-header-tabs {
+    margin-right: -0.1rem;
+    margin-bottom: -0.12rem;
+    margin-left: -0.1rem;
+}
+
+.card-header-pills {
+    margin-right: -0.1rem;
+    margin-left: -0.1rem
+}
+
+.card-img-overlay {
+    padding: 0.2rem
+}
+
+.card-img {
+    border-radius: calc(0.04rem - 1px)
+}
+
+.card-img-top {
+    border-top-left-radius: calc(0.04rem - 1px);
+    border-top-right-radius: calc(0.04rem - 1px)
+}
+
+.card-img-bottom {
+    border-bottom-right-radius: calc(0.04rem - 1px);
+    border-bottom-left-radius: calc(0.04rem - 1px)
+}
+
+
+.card-columns .card {
+    margin-bottom: 0.12rem
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        -webkit-column-gap: 0.2rem;
+        column-gap: 0.2rem
+    }
+}

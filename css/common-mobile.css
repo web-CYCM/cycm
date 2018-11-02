@@ -1,0 +1,39 @@
+
+@media (min-width: 1428px) {
+	.container {
+	  max-width: 1428px !important;
+	}
+  }
+.swiper-height{
+	height: 20rem !important;
+}
+html{
+	font-size: 10px;
+}
+.center-content{
+	width: 100% !important;
+	margin: 0 auto;
+}
+.fontWeight-bold{
+	font-weight: bold;
+}
+footer.footer_info .font-color-footer{
+	font-size: 1rem;
+}
+
+footer .copyright{
+    padding: .5rem 0;
+	font-size: 1.2rem;
+	color: #fff;
+	background: #242424;
+	text-align: center;
+}
+footer .copyright a{
+	color: #fff;
+}
+.wx-info{
+	width: 100%;
+	display: flex;
+	padding: 0 5rem;
+	justify-content: space-around;
+}

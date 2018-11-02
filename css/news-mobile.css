@@ -1,0 +1,102 @@
+@media (min-width: 1428px) {
+	.container {
+	  max-width: 1428px !important;
+	}
+  }
+  .swiper-height{
+	  height: 20rem !important;
+  }
+.section-news .center-content,
+.section-newsView .center-content{
+	width: 100% !important;
+	margin: 0 auto;
+}
+.section-news .center-content .news-list .news-item{
+	text-align: center;
+	padding: 1rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+.section-news .center-content .news-list .news-item:last-child{
+	border: none;
+}
+.section-news .center-content .news-list .news-item .title{
+	color: #333333;
+	font-size: 2rem;
+	font-weight: 600;
+}
+.section-news .center-content .news-list .news-item img{
+	max-width: 100%;	
+	margin-bottom: 1rem;
+}
+.section-news .news-list .news-item .introduce .content{
+	font-size: 1.3rem;
+	color: 999999;
+	overflow: hidden;
+	word-break:break-all;  
+	text-overflow: ellipsis;
+	-o-text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:3;
+}
+.section-news .news-list .news-item .introduce .learnMore {
+	font-size: 1.4rem;
+	color: #29ace0;
+	text-align: right;
+}
+
+
+/* 新闻详情页面样式 */
+.section-newsView .center-content .Main-title{
+	font-size: 2.5rem;
+}
+.section-newsView .center-content .complete-intro{
+	font-size: 1.4rem;
+	padding: 0 1rem;
+}
+.content-flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section-newsView .center-content img {
+	max-width: 100%;
+}
+.section-newsView .center-content .article .article-item .title{
+	font-size: 1.5rem;
+	text-align: left;
+	font-weight: bold;
+	color: #666666;
+	padding: 0 1rem;
+}
+.section-newsView .center-content .article .article-item p,
+.summarize span{
+	font-size: 1.2rem;
+	text-align: left;
+	color: #666666;
+	padding: 0 1rem;
+}
+.endJusmp{
+	display: flex;
+	justify-content: space-between;
+}
+.endJusmp a{
+	width: 12rem;
+	color: #666666;
+	text-decoration: none;
+	overflow: hidden;
+	word-break:break-all;  
+	text-overflow: ellipsis;
+	-o-text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:1;
+	padding: 0 1rem;
+}
+.endJusmp span{
+	font-size: 1.2rem;
+	text-align: justify;
+}
+.endJusmp span:first-child{
+	font-weight: bold;
+}

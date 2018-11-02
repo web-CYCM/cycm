@@ -1,0 +1,276 @@
+@media (min-width: 1428px) {
+	.container {
+	  max-width: 1428px !important;
+	}
+  }
+.center-content{
+	width: 100% !important; 
+}
+.swiper-height{
+	height: 20rem;
+}
+.section-header.fixed{
+	
+}
+.section-header.fixed .hamburger-inner,
+.section-header.fixed .hamburger-inner:after,
+.section-header.fixed .hamburger-inner:before,
+.section-header.showMenu .hamburger-inner,
+.section-header.showMenu .hamburger-inner:after,
+.section-header.showMenu .hamburger-inner:before {
+	background: #999;
+}
+.section-Cooperation .slider,
+.section-featured .slider,
+.section-product-3 .slider{
+	overflow: auto;
+}
+.section-Cooperation .slider .inner{
+	width: 52rem;
+	display: flex;
+	justify-content: center;
+}
+.section-Cooperation .slider .inner .nav-link{
+	color: #333333;
+	background: none;
+	border-radius: 0;
+	margin-bottom: -2px;
+	border-bottom: 2px solid transparent;
+}
+.section-Cooperation .slider .inner .nav-link.active{
+	color: #05a5ff;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #05a5ff;
+}
+.section-featured .slider .inner{
+	width: 60rem;
+}
+.section-product-3 .slider .inner{
+	/* width: 42rem; */
+}
+.section-featured .slider .inner .inner-item{
+	width: 15rem;
+}
+.section-product-3 .slider .inner .nav-item{
+	width: 10rem;
+}
+.section-featured .slider .inner .inner-item .card{
+	margin-bottom: 0;
+}
+.section-featured .slider .inner .inner-item .card .card-image img{
+	transform: scale(0.6);
+}
+.innerPage .container .card-title-link{
+	font-size: 2rem;
+	font-weight: 500;
+}
+.innerPage .card{
+	border: none;
+}
+.innerPage .container .card-text{
+	font-size: 1rem;
+	font-weight: 500;
+}
+.innerPage .container .card-text.flex-card{
+	display: flex;
+	flex-direction: column;
+}
+/* 珠宝定制助手 */
+.section-product-3{
+	background: #ecf8ff;
+}
+.section-product-3.main-title .title-top{
+	font-size: 2.5rem;
+	text-align: center;
+}
+.section-product-3.main-title .title-litter{
+	text-align: center;
+	font-size: 1.4rem;
+}
+.section-product-3 .nav {
+	color: #666666;
+	font-size: 1.6rem;
+}
+.section-product-3 .nav .nav-item .nav-link{
+	width: 10rem;
+	font-size: 1.3rem;
+	color: #666666;
+	text-align: center;
+	padding: 0.5rem 0;
+	background: #FFFFFF;
+	border-right: 1px solid #eeeeee;
+}
+.section-product-3 .nav .nav-item:last-child .nav-link{
+	border: none;
+}
+.section-product-3 .nav .nav-item .nav-link.active {
+	color: #FFFFFF;
+	background: #05a5ff;
+}
+.section-product-3 .nav .nav-item .nav-link.active + div{
+	visibility: visible;
+}
+.section-product-3 .DZ_Class{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.section-product-3 .DZ_Class .center-content{
+	width: 44%;	
+	text-align: left;
+}
+.section-product-3 .DZ_Class .center-content .content p {
+	color: #818181;
+	margin-top: 1rem;
+	font-size: 2rem;
+	padding: 0 1rem;
+}
+.section-product-3 .DZ_Class .center-content .body .content{
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e5e5e5;
+}
+.section-product-3 .DZ_Class .center-content .body .content:last-child{
+	border: none;
+}
+.section-product-3 .DZ_Class .center-content .body .content,
+.section-product-3 .DZ_Class .center-content .body{
+	display: none;
+	text-align: center;
+}
+.section-product-3 .DZ_Class .center-content .body.body-3{
+	height: 28rem;
+}
+.section-product-3 .DZ_Class .center-content .body .content.active,
+.section-product-3 .DZ_Class .center-content .body.active{
+	display: block;
+}
+.section-product-3 .DZ_Class .center-content .second_tab{
+	text-align: center;
+}
+.section-product-3 .DZ_Class .center-content .second_tab a{
+	cursor: pointer;
+	font-size: 2rem;
+}
+.section-product-3 .DZ_Class .center-content .second_tab a.active{
+	color: #05a5ff;
+}
+.section-product-3 .DZ_Class .center-content .body .content .swiper-container .swiper-pagination{
+	bottom: 9rem;
+} 
+.section-product-3 .DZ_Class .swiper-container .swiper-wrapper .swiper-slide img.img-fluid{
+	height: auto !important;
+}
+.section-product-3 .DZ_Class ul{
+	display: flex;
+	justify-content: center;
+}
+#swiper2 p{
+	position: relative;
+	bottom: 8rem;
+}
+.section-product-3 .DZ_intro{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: url("../images/index/bgChild.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.section-product-3 .DZ_intro .inner_intro{
+	max-width: 22rem;
+}
+.section-product-3 .DZ_intro .title{
+	font-size: 1.8rem;
+	border-bottom: 1px dotted #cbcbcb;
+}
+.section-product-3 .DZ_intro .title-little{
+	font-size: 1.2rem;
+}
+.section-product-3 .DZ_intro ul{
+	padding-left: 2rem;
+}
+.section-product-3 .DZ_intro li{
+	color: #808080;
+}
+
+	/* 实心箭头 */
+	.sx-arrow-down{
+		visibility: hidden;
+		margin: 0 auto;
+		border-style:solid dashed dashed dashed;
+		border-width: 1rem;
+		border-color:#05a5ff transparent transparent transparent;
+		width:0;
+		height:0;
+	}
+
+	/* 合作 */
+	.section-Cooperation{
+		margin: 0 auto;
+	}
+	.section-Cooperation .section-head{
+		font-size: 2.5rem;
+		text-align: center;
+	}
+	.section-Cooperation .tab-box .nav{
+		border-bottom: 2px solid #e5e5e5;
+	}
+	.section-Cooperation .tab-box .nav-link{
+		width: 10rem;
+		display: flex;
+		font-size: 2rem;
+		color: #818181;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin-bottom: -3px;
+		border-bottom: 2px solid transparent;
+	}
+	.section-Cooperation .tab-box .nav-link span{
+		font-size: 2rem;
+		padding: 0 1rem .5rem;
+	}
+	.section-Cooperation .tab-box .nav-link.active span{
+		border-bottom: 2px solid #05a5ff;
+	}
+	.section-Cooperation .tab-box .nav-link.active{
+		background: none;
+		color: #05a5ff;
+	}
+	.section-Cooperation .tab-box .tab-content .tab-pane p{	
+		font-size: 2rem;
+		color: #818181;
+	}
+
+	
+.section-slide .caption-heading{
+    margin-bottom: 0.2rem;
+	font-size: 0.48rem;
+	line-height: 1.5;
+    color: #fff;
+
+    visibility: hidden;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.section-slide .caption-text{
+	color: rgba(255,255,255,.8);
+
+    visibility: hidden;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.footer_info{
+	font-size: 2rem !important;
+}
+.wx-info{
+	width: 100%;
+	display: flex;
+	padding: 0 5rem;
+	justify-content: space-around;
+}

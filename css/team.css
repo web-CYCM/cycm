@@ -1,0 +1,38 @@
+.center-content{
+	width: 62%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+html{
+	font-size: 12px;
+}
+.section-about .center-content .left img{
+	margin-right: 5rem;
+	max-width: 100%;
+}
+.section-about .center-content .right .title span,
+.section-about-center .center-content .title span{
+	color: #05a5ff;
+	font-size: 2.5rem;
+	padding: 0 1rem .5rem 0;
+	border-bottom: 2px solid #05a5ff; 
+}
+.section-about .center-content .right .content p,
+.section-about-center .center-content .content p{
+	font-size: 1.3rem;
+	color: #666666;
+}
+.section-about.bg-color{
+	padding: 13rem 0;
+	background: #333c4b;
+}
+
+.section-about-center .center-content{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
