@@ -26,7 +26,7 @@
 	
 	<!-- 导航栏 -->
 	<header class="header-absolute section-header js-header unsticky" id="top">
-		<nav class="navbar navbar-expand-lg navbar-light">
+		<!-- <nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container">
 				<a class="navbar-logo" href="#">
 					<img class="logo-light" src=".\images\index\Logo.png" alt="chenyikoji">
@@ -60,7 +60,7 @@
 					</ul>
 				</div>
 			</div>
-		</nav>
+		</nav> -->
 	</header>
 
 	<!-- 轮播图 -->
@@ -247,7 +247,7 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
-	
+		$('#top').load('header.html');
 		if($(window).width() < 992){
 			location.href = 'index-Mobile.html';
 		}
