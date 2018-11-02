@@ -201,10 +201,6 @@
         // $('.caption-text').css('visibility', 'visible').addClass('fadeInUp');
         // $('.caption-button').css('visibility', 'visible').addClass('fadeInUp');
         // $('.section-Help-image').css('visibility', 'visible').addClass('fadeInLeft');
-        $('.digle').css('visibility', 'visible').addClass('fadeInLeft');
-        $('.factory2').css('visibility', 'visible').addClass('fadeInLeft');
-        $('.DZ').css('visibility', 'visible').addClass('fadeInLeft');
-        $('.WX').css('visibility', 'visible').addClass('fadeInLeft');
 		// let size = document.body.clientWidth / 750 * 12;
 		// document.getElementsByTagName("html")[0].style.fontSize = size + "px";
     });

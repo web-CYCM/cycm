@@ -26,7 +26,7 @@
 	
 	<!-- 导航栏 -->
 	<header class="header-absolute section-header js-header unsticky" id="top">
-		<!-- <nav class="navbar navbar-expand-lg navbar-light">
+		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container">
 				<a class="navbar-logo" href="#">
 					<img class="logo-light" src=".\images\index\Logo.png" alt="chenyikoji">
@@ -60,7 +60,7 @@
 					</ul>
 				</div>
 			</div>
-		</nav> -->
+		</nav>
 	</header>
 
 	<!-- 轮播图 -->
@@ -87,7 +87,8 @@
 			<div class="title-litter">专业制作珠宝产品摄影及视频</div>
 			<div class="row">
 				<div class="col-lg-7 col-md-12">
-					<video src="./videos/03.mp4" controls></video>
+					<!-- <a class="" href="hivideo/html/hivideo.html" target="_blank"></a> -->
+					<!-- <video src="./videos/03.mp4" controls></video> -->
 				</div>
 				<div class="col-lg-5 col-md-12 right-intro flex-column justify-content-center align-items-center">
 					<p　class="text-left">
@@ -127,15 +128,32 @@
 				<div class="tab-pane fade show active" id="v-pills-system" role="tabpanel" aria-labelledby="v-pills-system-tab">
 					<section class="section section-about-1 p-t-40 p-b-30">
 						<div class="container center-content">
+							<!-- <div class="img">
+								<img src="images/index/planeClass_01.jpg" alt="">
+							</div> -->
 							<div class="row align-items-md-center">
 								<div class="col-md-12">
-									<div class="section-content-image wow digle" data-wow-duration="0.8s" data-wow-delay="0.5s">
-										<img class="img-fluid" src="images/index/managementSystem.png" alt="Phone App">
+									<div class="section-content-image digle fadeIn" data-wow-delay="0.2s">
+										<img class="img-fluid" src="images/index/planeClass_01.jpg" alt="Phone App">
 									</div>
 								</div>
 								<div class="col-md-12 m-t-50 section-content-text">
-
-
+									<div class="slider">
+										<div class="left"></div>
+										<div class="inner">
+											<div>
+												<div class="title">产品海报</div>
+												<div class="EnglistTitle">OUR CASE AND WORKS</div>
+												<div class="litile-intro">以品质证言，用实力加冕</div>
+											</div>
+											<div class="introduction">
+													针对相关政企出具要求的文案和脚本，拍摄出政企的业绩,辉煌，一级政企的强劲谋略，后背资源、有利条件，
+													全面的宣传政企的优势和品牌，让相关政企在某个区域更加有名气、影响力。
+													通过网络、电视台的等视频方式向外界展示，以强烈的吸引力招来外界的投资、合作。
+											</div>
+										</div>
+										<div class="right"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -146,8 +164,8 @@
 						<div class="container center-content">
 							<div class="row align-items-md-center">
 								<div class="col-md-12">
-									<div class="section-content-image factory2 wow" data-wow-duration="0.8s" data-wow-delay="0.5s">
-										<img class="img-fluid" src="images/index/index_02.png" alt="Phone App">
+									<div class="section-content-image factory2 fadeIn" data-wow-delay="0.2s">
+										<img class="img-fluid" src="images/index/videoClass_01.jpg" alt="Phone App">
 									</div>
 								</div>
 								<div class="col-md-12 m-t-50 section-content-text">
@@ -247,7 +265,7 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
-		$('#top').load('header.html');
+		// $('#top').load('header.html');
 		if($(window).width() < 992){
 			location.href = 'index-Mobile.html';
 		}
@@ -259,12 +277,33 @@
 			},
 			autoplay: true
 		});
+		function getPlaneClassList(){
+			$.ajax({
+				url: encodeURI("data/ajaxData.php"),
+				type: "get",
+				dataType: "json",
+				data: {
+					"type": "planeClass"
+				},
+				contentType: "application/json; charset=utf-8",
+				success: function(res, status){
+					let data = res.data;
+					if(data){
+						console.log(data)
+					}
+				},
+				error: function(err){
+					console.log(err);
+				}
+			})
+		}
 		$(document).ready(function (){  
 			$("#up-to-top").click(function (){  
 				$('html, body').animate({  
 					scrollTop: $("#top").offset().top
 				}, 500);  
 			});  
+			getPlaneClassList()
 		}); 
 		function toView(link){
 			location.href = './newsView/' + link;

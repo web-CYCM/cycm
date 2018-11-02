@@ -69,7 +69,17 @@ body,html{
 .production-box .tab-box .center-content{
 	display: flex;
 	justify-content: center;
-
+}
+/* .production-box .tab-content .center-content{
+	border: 1px solid red;
+	position: relative;
+}
+.production-box .tab-content .center-content .img{
+	position: absolute;
+	border: 1px solid blue;
+} */
+.production-box .tab-box .center-content .section-content-text{
+	background: #FFFFFF; 	
 }
 .production-box .tab-box .nav .nav-link{
 	text-align: center;
