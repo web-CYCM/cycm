@@ -98,8 +98,55 @@ body,html{
 .production-box .tab-box .active{
 	background: none !important;
 }
-.production-box .tab-box .tab-content{
-	text-align: left !important;
+.production-box .tab-box .tab-content .section-content-image{
+	text-align: center !important;
+}
+/*产品类别切换部分*/
+.production-box .tab-content .all-width{
+	border: 1px solid red;
+	background: #FFFFFF;
+	/* padding: 0 17%; */
+}
+.production-box .tab-content .all-width .slider{
+	border: 1px solid blue;
+	overflow: auto;
+	width: 60%;
+	margin: auto;
+	position: relative;
+}
+.production-box .tab-content .all-width .slider .left{
+	left: 0;
+	top: 10px;
+	position: absolute;
+}
+.production-box .tab-content .all-width .slider .right{
+	right: 0;
+	top: 10px;
+	position: absolute;
+}
+.production-box .tab-content .all-width .slider .slider-item{
+	float: left;
+	/* display: inline-block; */
+	width: 55rem;
+	border: 1px solid red;
+}
+.production-box .tab-content .all-width .slider .slider-item .title{
+	font-size: 2rem;
+	margin-bottom: 1.2rem;
+}
+.production-box .tab-content .all-width .slider .slider-item .EnglistTitle{
+	font-size: 1.5rem;
+}
+.production-box .tab-content .all-width .slider .slider-item .litile-intro{
+	font-size: 0.8rem;
+}
+.production-box .tab-content .all-width .slider .slider-item .introduction{
+	color: #999999;
+	font-size: 1.1rem;
+	margin-top: 3.5rem;
+}
+.production-box .tab-content .all-width .slider .slider-inner{
+	width: 416rem !important;
 }
 .main-title .selection{
 	margin: auto;
