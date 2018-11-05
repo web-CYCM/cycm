@@ -1,9 +1,4 @@
 
-@media (min-width: 1428px) {
-	.container {
-	  max-width: 1428px !important;
-	}
-  }
 .swiper-height{
 	height: 20rem !important;
 }
