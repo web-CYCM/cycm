@@ -129,6 +129,9 @@ a {
 	color: #cbcbcb;
 	text-decoration: none;
 }
+html{
+	font-size: 12px;
+}
 /* 背景 */
 .bg-color{
 	background: #FFFFFF;
