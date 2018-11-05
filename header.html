@@ -3,27 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="">
-	<title>宸熠传媒</title>
-	<link href="css\font-face.css" rel="stylesheet" media="all">
-	<link href="vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
-	<link href="vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
-	<!-- <link href="css\index.css" rel="stylesheet" media="all"> -->
 	<link href="css\theme.css" rel="stylesheet" media="all">
-
-	
-	<link href="vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
-
-	
-	<link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" media="all">
-	<link href="vendor\animate.css\animate.min.css" rel="stylesheet" media="all">
-	<link href="vendor\css-hamburgers\hamburgers.min.css" rel="stylesheet" media="all">
-	<link href="vendor\slick\slick.css" rel="stylesheet" media="all">
-	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
-	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 </head>
 <body>
-	
 	<!-- 导航栏 -->
 	<!-- <header class="header-absolute section-header js-header unsticky" id="top"> -->
 		<nav class="navbar navbar-expand-lg navbar-light">
@@ -42,17 +24,59 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#top">首页</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#intro">产品</a>
+						<li class="nav-item" id="navbar-know">
+							<a class="nav-link" href="#intro">了解宸熠</a>
+							<nav class="second-bar-know no-hover-know">
+								<div class="second-model-know"></div>
+								<div id="second-container-know">
+									<div class="second-item">
+										<div class="second-title"></div>
+										<div class="second-item-first active"></div>
+										<div class="second-item-second"></div>
+										<div class="second-item-third"></div>
+									</div>
+									<div class="img-wrap">
+										<img src="./images/index/videoClass_01.jpg" alt="">
+									</div>
+								</div>
+							</nav>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#features">解决方案</a>
+							<a class="nav-link" href="#features">宸熠资讯</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#pricing">服务</a>
+						<li class="nav-item" id="navbar-case">
+							<a class="nav-link" href="#pricing">作品案例</a>
+							<nav class="second-bar-case no-hover-case">
+								<div class="second-model-case"></div>
+								<div id="second-container-case">
+									<div class="second-item">
+										<div class="second-title"></div>
+										<div class="second-item-first active"></div>
+										<div class="second-item-second"></div>
+										<div class="second-item-third"></div>
+									</div>
+									<div class="img-wrap">
+										<img src="./images/index/videoClass_01.jpg" alt="">
+									</div>
+								</div>
+							</nav>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="team.html">关于宸熠</a>
+						<li class="nav-item" id="navbar-team">
+							<a class="nav-link" href="team.html">团队合作</a>
+							<nav class="second-bar-team no-hover-team">
+								<div class="second-model-team"></div>
+								<div id="second-container-team">
+									<div class="second-item">
+										<div class="second-title"></div>
+										<div class="second-item-first active"></div>
+										<div class="second-item-second"></div>
+										<div class="second-item-third"></div>
+									</div>
+									<div class="img-wrap">
+										<img src="./images/index/videoClass_01.jpg" alt="">
+									</div>
+								</div>
+							</nav>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">联系我们</a>
@@ -61,35 +85,99 @@
 				</div>
 			</div>
 		</nav>
+		
+		
 	<!-- </header> -->
 
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor\popper.js\popper.min.js"></script>
-	<script src="vendor\bootstrap\bootstrap.min.js"></script>
-
-
-
-	<script src="vendor\slick\slick.min.js"></script>
-	<script src="vendor\animsition\animsition.min.js"></script>
-	<script src="vendor\waypoints\jquery.waypoints.min.js"></script>
-	<script src="vendor\jquery.counterup\jquery.counterup.min.js"></script>
-	<script src="vendor\wowjs\wow.min.js"></script>
-	<script src="vendor\lightbox2\js\lightbox.min.js"></script>
-	
-	<script src="./js/global.js"></script>
-
 	<script type="text/javascript">
-		
+		(function () {
+			var headerObj = {
+				
+				initHover: function (navItem) {
+					if (navItem == 'konw') {
+						$('#second-container-know .second-item .second-title').text('ABOUT KING VISION MEDIA');
+						$('#second-container-know .second-item .second-item-first').text('公司简介');
+						$('#second-container-know .second-item .second-item-second').text('公司架构');
+						$('#second-container-know .second-item .second-item-third').text('介绍视频');
+					}
+					if (navItem == 'team') {
+						$('#second-container-team .second-item .second-title').text('TEAM STYLE');
+						$('#second-container-team .second-item .second-item-first').text('团队风采');
+						$('#second-container-team .second-item .second-item-second').text('公司顾问');
+						$('#second-container-team .second-item .second-item-third').text('战略合作');
+					}
+					if (navItem == 'case') {
+						$('#second-container-case .second-item .second-title').text('CASE AND WORKS');
+						$('#second-container-case .second-item .second-item-first').text('视频类');
+						$('#second-container-case .second-item .second-item-second').text('平面类');
+						$('#second-container-case .second-item .second-item-third').text('');
+					}
+				},
+				secondNav: function (navObj, imgObj, imgSrc) {
+					$(navObj).on('click', function () {
+						$(navObj).addClass('active');
+						$(navObj).siblings().removeClass('active');
+						$(imgObj).attr('src', imgSrc);
+					})
+				}
+			}
+
+			$('#navbar-know').mouseenter(function () {
+				headerObj.initHover ('konw');
+				$('.second-bar-know').removeClass('no-hover-know');
+				$('.second-bar-know .second-model-know').addClass('second-model-hover');
+			}).mouseleave(function () {
+				$('.second-bar-know').addClass('no-hover-know');
+				$('.second-bar-know .second-model-know').removeClass('second-model-hover');
+			})
+			$('#navbar-case').mouseenter(function () {
+				headerObj.initHover ('case');
+				$('.second-bar-case').removeClass('no-hover-case');
+				$('.second-bar-case .second-model-case').addClass('second-model-hover');
+			}).mouseleave(function () {
+				$('.second-bar-case').addClass('no-hover-case');
+				$('.second-bar-case .second-model-case').removeClass('second-model-hover');
+			})
+			$('#navbar-team').mouseenter(function () {
+				headerObj.initHover ('team');
+				$('.second-bar-team').removeClass('no-hover-team');
+				$('.second-bar-team .second-model-team').addClass('second-model-hover');
+			}).mouseleave(function () {
+				$('.second-bar-team').addClass('no-hover-team');
+				$('.second-bar-team .second-model-team').removeClass('second-model-hover');
+			})
+
+			headerObj.secondNav ('#second-container-know .second-item-first', '#second-container-know img', './images/index/videoClass_01.jpg' );
+			headerObj.secondNav ('#second-container-know .second-item-second', '#second-container-know img', './images/index/videoClass_02.jpg' );
+			headerObj.secondNav ('#second-container-know .second-item-third', '#second-container-know img', './images/index/videoClass_03.jpg');
+			headerObj.secondNav ('#second-container-case .second-item-first','#second-container-case img' , './images/index/videoClass_01.jpg');
+			headerObj.secondNav ('#second-container-case .second-item-second','#second-container-case img' ,'./images/index/videoClass_02.jpg' );
+			headerObj.secondNav ('#second-container-team .second-item-first','#second-container-team img' ,'./images/index/videoClass_01.jpg' );
+			headerObj.secondNav ('#second-container-team .second-item-second','#second-container-team img' ,'./images/index/videoClass_02.jpg' );
+			headerObj.secondNav ('#second-container-team .second-item-third','#second-container-team img' ,'./images/index/videoClass_03.jpg' );
+
+			function initNav() {
+				
+			}
+
+			window.onload = function () {
+				initNav ()
+			}
+		})()
 	</script>
 
 </body>
 <style>
 	@media (min-width: 1428px) {
 		.container {
-		max-width: 1428px !important;
+			max-width: 1428px !important;
 		}
 	}
+	.navbar{
+		padding: 0;
+	}
 	.container{
+		justify-content: center !important;
 		max-width: 1428px !important;
 	}
 	body,html{
@@ -98,16 +186,114 @@
 		max-width: 100%;
 	}
 	.header-absolute{
-		background: #2b313a;
+		background: #3d2817;
 	} 
 	.navbar-collapse .navbar-nav .nav-item.active a,
 	.navbar-collapse .navbar-nav .nav-item a:hover,
 	.navbar-collapse .navbar-nav .nav-item a:active{
-		color: #23aee6;
+		color: #d0923b;
 	}
 	.navbar-collapse .navbar-nav .nav-item a{
 		color: #FFFFFF;
 		font-weight: 400;
+	}
+	.navbar-collapse .navbar-nav .nav-item{
+		display: flex;
+		align-items: center;
+		height: 7rem;
+		margin: 0;
+		padding: 0 15px;
+	}
+
+	.second-bar-know .second-model-hover,
+	.second-bar-case .second-model-hover,
+	.second-bar-team .second-model-hover{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.66);
+	}
+	#second-container-know,
+	#second-container-case,
+	#second-container-team{
+		position: absolute;
+		top: 7rem;
+		left: 0;
+		width: 100% !important;
+    	margin: 0;
+		height: 37.5rem;
+		background: #FFFFFF;
+		border: 1px solid #e3e3e3;
+		box-shadow: 0 20px 60px #aaaaaa;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	
+	.second-bar-know.no-Hover-know,
+	.second-bar-case.no-Hover-case,
+	.second-bar-team.no-Hover-team {
+		display: none;
+	}
+
+	#second-container-know .second-item,
+	#second-container-case .second-item,
+	#second-container-team .second-item{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 30rem;
+		height: 26.67rem;
+		margin-top: 10rem;
+		font-size: 1.08rem;
+		z-index: 100;
+	}
+	#second-container-know .second-item .second-title,
+	#second-container-case .second-item .second-title,
+	#second-container-team .second-item .second-title{
+		font-size: 1.67rem;
+	}
+	#second-container-know .second-item .second-item-first:hover,
+	#second-container-case .second-item .second-item-first:hover,
+	#second-container-team .second-item .second-item-first:hover,
+	#second-container-know .second-item .second-item-second:hover,
+	#second-container-case .second-item .second-item-second:hover,
+	#second-container-team .second-item .second-item-second:hover,
+	#second-container-know .second-item .second-item-third:hover,
+	#second-container-team .second-item .second-item-third:hover{
+		cursor: pointer;
+		color: #dcaf6c;
+	}
+	#second-container-know .second-item .second-item-first.active,
+	#second-container-case .second-item .second-item-first.active,
+	#second-container-team .second-item .second-item-first.active,
+	#second-container-know .second-item .second-item-second.active,
+	#second-container-case .second-item .second-item-second.active,
+	#second-container-team .second-item .second-item-second.active,
+	#second-container-know .second-item .second-item-third.active,
+	#second-container-team .second-item .second-item-third.active{
+		color: #8e602c;
+	}
+	#second-container-know .img-wrap,
+	#second-container-case .img-wrap,
+	#second-container-team .img-wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 46.67rem;
+		height: 26.67rem;
+		z-index: 100;
+	}
+	#second-container-know .img-wrap>img,
+	#second-container-case .img-wrap>img,
+	#second-container-team .img-wrap>img{
+		max-width: 46.67rem;
+		max-height: 26.67rem;	
 	}
 </style>
 </html>
