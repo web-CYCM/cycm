@@ -49,10 +49,10 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: -webkit-calc(30 / 18);
-  line-height: -moz-calc(30 / 18);
-  line-height: calc(30 / 18);
+  font-size: 12px;
+  line-height: -webkit-calc(30 / 12);
+  line-height: -moz-calc(30 / 12);
+  line-height: calc(30 / 12);
   color: #555555;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
