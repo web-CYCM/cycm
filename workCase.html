@@ -39,8 +39,8 @@
 	</div>
 
 
-	<!-- 了解我们的产品 -->
-	<div class="workCase-box p-t-50 m-b-80">
+	<!-- 视频类 -->
+	<div class="workCase-box p-t-50 m-b-80" id="videoBox">
 		<div class="center-content">
 			<div class="title m-t-90">
 				<span>视频类</span>
@@ -478,7 +478,93 @@
 		</div>
 
 	</div>
-	
+
+	<!-- 平面类 -->
+	<div class="workCase-box p-t-50 m-b-80" id="planeBox">
+		<div class="center-content">
+			<div class="title m-t-90">
+				<span>平面类</span>
+				<sub>THE TYPE OF GRAPH</sub>
+			</div>
+			<div class="title_bar m-t-30">
+				<div></div>
+				<img src="./images/index/commonSys.png" alt="">
+				<div></div>
+			</div>
+			<div class="tab-box">
+				<div class="nav nav-pills tab-left p-t-30 selection" id="v-pills1-tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active seletion-item" id="v-opaque-tab" data-toggle="pill" href="#v-opaque" role="tab" aria-controls="v-opaque" aria-selected="true">
+						<div class="introduce">白底图</div>
+					</a>
+					<a class="nav-link seletion-item" id="v-Scene-tab" data-toggle="pill" href="#v-Scene" role="tab" aria-controls="v-Scene" aria-selected="false">
+						<div class="introduce">场景图</div>
+					</a>
+					<a class="nav-link seletion-item" id="v-tryOn-tab" data-toggle="pill" href="#v-tryOn" role="tab" aria-controls="v-tryOn" aria-selected="false">
+						<div class="introduce">试戴图</div>
+					</a>
+					<a class="nav-link seletion-item" id="v-Poster-tab" data-toggle="pill" href="#v-Poster" role="tab" aria-controls="v-Poster" aria-selected="false">
+						<div class="introduce">海报</div>
+					</a>
+					<a class="nav-link seletion-item" id="v-pictureAlbum-tab" data-toggle="pill" href="#v-pictureAlbum" role="tab" aria-controls="v-pictureAlbum" aria-selected="false">
+						<div class="introduce">画册</div>
+					</a>
+				</div>
+				<div class="tab-content" id="v-pills1-tabContent">
+					<div class="tab-pane fade show active" id="v-opaque" role="tabpanel" aria-labelledby="v-opaque-tab">
+						<section class="section section-about-1 p-t-40 overflow-hidden">
+							<div class="plane_Img">
+								<div class="header_Img">
+									<img src="./images/about/header1.jpg" alt="">
+								</div>
+								<div class="oddNumber row_Img">
+									<div class="left">
+										<img src="./images/about/fourComb_01.png" alt="">
+										<img src="./images/about/fourComb_02.png" alt="">
+										<img src="./images/about/fourComb_03.png" alt="">
+										<img src="./images/about/fourComb_04.png" alt="">
+									</div>
+									<div class="right">
+										<img src="./images/about/alone_01.jpg" alt="">
+									</div>
+								</div>
+								<div class="evenNumber row_Img">
+									<div class="right">
+										<img src="./images/about/alone_02.jpg" alt="">
+									</div>
+									<div class="left">
+										<img src="./images/about/fourComb_01.png" alt="">
+										<img src="./images/about/fourComb_02.png" alt="">
+										<img src="./images/about/fourComb_03.png" alt="">
+										<img src="./images/about/fourComb_04.png" alt="">
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="tab-pane fade" id="v-Scene" role="tabpanel" aria-labelledby="v-Scene-tab">
+						<section class="section section-about-1 p-t-40 overflow-hidden">
+							
+						</section>
+					</div>
+					<div class="tab-pane fade" id="v-tryOn" role="tabpanel" aria-labelledby="v-tryOn-tab">
+						<section class="section section-about-1 p-t-40 overflow-hidden">
+							
+						</section>
+					</div>
+					<div class="tab-pane fade" id="v-Poster" role="tabpanel" aria-labelledby="v-Poster-tab">
+						<section class="section section-about-1 p-t-40 overflow-hidden">
+							
+						</section>
+					</div>
+					<div class="tab-pane fade" id="v-pictureAlbum" role="tabpanel" aria-labelledby="v-pictureAlbum-tab">
+						<section class="section section-about-1 p-t-40 overflow-hidden">
+							
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor\popper.js\popper.min.js"></script>
@@ -498,154 +584,44 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
-		$('#top').load('header.html');
+		(function () {
+			window.onload = function () {
+				$('#top').load('header.html');
+			}
+		})();
 		if($(window).width() < 992){
 			location.href = 'index-Mobile.html';
 		}
-		function getPlaneClassList(){
-			$.ajax({
-				url: encodeURI("data/ajaxData.php"),
-				type: "get",
-				dataType: "json",
-				data: {
-					"type": "planeClass"
-				},
-				contentType: "application/json; charset=utf-8",
-				success: function(res, status){
-					let data = res.data;
-					if(data){
-						// console.log(data)
-					}
-				},
-				error: function(err){
-					// console.log(err);
-				}
-			})
-		}
-		$(document).ready(function (){  
-			$("#up-to-top").click(function (){  
-				$('html, body').animate({  
-					scrollTop: $("#top").offset().top
-				}, 500);  
-			});  
-			// getPlaneClassList()
-		}); 
 		function toView(link){
 			location.href = './newsView/' + link;
 		}
-	</script>
-    <script type="text/javascript">
-        /* 知识点：        */
-        /*       this用法 */
-        /*       DOM事件 */
-        /*       定时器 */
 
-        window.onload = function () {
-            var container = document.getElementById('container');
-            var list = document.getElementById('list');
-            var prev = document.getElementById('prev');
-            var next = document.getElementById('next');
-
-			
-            var containerPlane = document.getElementById('container-plane');
-            var listPlane = document.getElementById('list-plane');
-            var prevPlane = document.getElementById('prev-plane');
-            var nextPlane = document.getElementById('next-plane');
-
-            var index = 1;
-			var indexPlane = 1;
-            var timer;
-            function animate(offset) {
-                //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
-                //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
-                var newLeft = parseInt(list.style.left) + offset;
-                list.style.left = newLeft + 'px';
-                //无限滚动判断 //视频类
-                if (newLeft > -800) {
-                    list.style.left = -3200 + 'px';
-                }
-                if (newLeft < -4000) {
-                    list.style.left = -800 + 'px';
-                }
-                if (newLeft == -4000 || newLeft == 0) {
-                    list.style.left = 0 + 'px';
-                }
-            }
-
-            function animatePlane(offset) {
-				//平面类
-                var newLeftPlane = parseInt(listPlane.style.left) + offset;
-                listPlane.style.left = newLeftPlane + 'px';
-                //无限滚动判断
-                if (newLeftPlane > -800) {
-                    listPlane.style.left = -3200 + 'px';
-                }
-                if (newLeftPlane < -4000) {
-                    listPlane.style.left = -800 + 'px';
-                }
-                if (newLeftPlane == -4000 || newLeftPlane == 0) {
-                    listPlane.style.left = 0 + 'px';
-                }
+		
 
 
-            }
-            function play() {
-                //重复执行的定时器
-                timer = setInterval(function () {
-                    next.onclick();
-                }, 2000)
-            }
+		function initAbout(option) {
+			if (option == 'videoClass') {
+				$('#videoBox').fadeIn();
+				$('#planeBox').fadeOut();
+				$('#videoBox').css("visibility","visible");
+			}
+			if (option == 'planeClass') {
+				$('#planeBox').fadeIn();
+				$('#videoBox').fadeOut();
+				$('#planeBox').css("visibility","visible");
+			}
+		}
 
-            function stop() {
-                clearInterval(timer);
-            }
-            prev.onclick = function () {debugger
-                index -= 1;
-                if (index < 1) {
-                    index = 5
-                }
-                animate(800);
-            };
-
-            next.onclick = function () {
-                //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
-                index += 1;
-                if (index > 5) {
-                    index = 1
-                }
-                animate(-800);
-            };
-
-			// 平面类
-            prevPlane.onclick = function () {
-                indexPlane -= 1;
-                if (indexPlane < 1) {
-                    indexPlane = 5
-                }
-                animatePlane(800);
-            };
-
-            nextPlane.onclick = function () {
-                //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
-                indexPlane += 1;
-                if (indexPlane > 5) {
-                    indexPlane = 1
-                }
-                animatePlane(-800);
-            };
-			//自动播放
-            // container.onmouseover = stop;
-            // container.onmouseout = play;
-            // play();
-
-        }
-	</script>
-	
-	<script>
-		$(".video-item .img-shadow").click(function(){
-			// var index = $(".video-item .img-shadow").index(this);
-			// console.log(index);
-		})
+		var hrefUrl = window.location.href;
+		var hrefData = hrefUrl.split('=');
+		var tabbar =  hrefData[1];
+		if (tabbar == 'videoClass') {
+			initAbout ('videoClass')
+		} else if (tabbar == 'planeClass') {
+			initAbout ('planeClass');
+		}else {
+			initAbout ('planeClass')
+		}
 	</script>
 
 </body>

@@ -1,4 +1,6 @@
-
+#videoBox,#planeBox{
+	visibility: hidden;
+}
 .main-wrap video{
 	width: 100%;
 }
@@ -96,7 +98,6 @@
 	-webkit-line-clamp: 4;
 }
 
-
 .workCase-box .center-content{
 	display: flex;
 	flex-direction: column;
@@ -124,10 +125,46 @@
 .workCase-box .center-content .title_bar img{
 	margin: 0 2rem;
 }
-.workCase-box .center-content .tab-box{
-	/* border: 1px solid red; */
-}
 .workCase-box .center-content .tab-box .selection{
 	display: flex;
 	justify-content: center;
+}
+
+/* 平面类 */
+.workCase-box .center-content .tab-content .plane_Img{
+	border: 1px solid red;
+}
+.workCase-box .center-content .tab-content .plane_Img .header_Img{
+	width: 100%;
+	height: 25.42rem;
+	margin-bottom: 1rem;
+}
+.workCase-box .center-content .tab-content .plane_Img .header_Img img{
+	width: 100%;
+	height: 25.42rem;
+}
+.workCase-box .center-content .tab-content .row_Img{
+	/* border: 1px solid red; */
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+.workCase-box .center-content .tab-content .row_Img >div{
+	width: 48rem;
+	height: 40rem;
+}
+.workCase-box .center-content .tab-content .row_Img >div.right img{
+	width: 100%;
+	height: 100%;
+}
+.workCase-box .center-content .tab-content .row_Img >div.left{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.workCase-box .center-content .tab-content .row_Img >div.left img{
+	width: 20rem;
+	height: 18rem;
+	border: 1px solid #e5e5e5;
+	background: #f9f7f8;
 }
