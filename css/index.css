@@ -1,4 +1,5 @@
-@media (min-width: 1428px) {
+/* header */
+/* @media (min-width: 1428px) {
 	.container {
 	  max-width: 1428px !important;
 	}
@@ -22,7 +23,9 @@ body,html{
 .navbar-collapse .navbar-nav .nav-item a{
 	color: #FFFFFF;
 	font-weight: 400;
-}
+} */
+
+
 .swiper-height{
 	height: 36rem;
 }
@@ -286,7 +289,9 @@ body,html{
 		justify-content: center;
 		font-size: 1.25rem;
 	}
-	.footer_info{
+
+	/* footer */
+	/* .footer_info{
 		font-size: 1.25rem;
 		background: #2e3133;
 	}
@@ -307,7 +312,7 @@ body,html{
 	}
 	.footer_info .companyInfo li{
 		list-style-type: none;
-	}
+	} */
 
 	
 @media screen and (max-width:768px){
@@ -336,7 +341,8 @@ body,html{
 		margin-bottom: 2rem;
 	}
 }
-footer .copyright{
+/* footer */
+/* footer .copyright{
     padding: .5rem 0;
 	font-size: 1.2rem;
 	color: #fff;
@@ -345,7 +351,8 @@ footer .copyright{
 }
 footer .copyright a{
 	color: #fff;
-}
+} */
+
 	/* .slider::-webkit-scrollbar{  
 		width: 0;
 		height: 0;
