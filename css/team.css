@@ -8,31 +8,49 @@
 html{
 	font-size: 12px;
 }
-.section-about .center-content .left img{
-	margin-right: 5rem;
-	max-width: 100%;
+.commonTitle{
+	min-height: 61.67rem;
+	background-image: url("../images/about/about_bg.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat; 
 }
-.section-about .center-content .right .title span,
-.section-about-center .center-content .title span{
-	color: #05a5ff;
-	font-size: 2.5rem;
-	padding: 0 1rem .5rem 0;
-	border-bottom: 2px solid #05a5ff; 
-}
-.section-about .center-content .right .content p,
-.section-about-center .center-content .content p{
-	font-size: 1.3rem;
-	color: #666666;
-}
-.section-about.bg-color{
-	padding: 13rem 0;
-	background: #333c4b;
-}
-
-.section-about-center .center-content{
-	text-align: center;
+.commonTitle .center-content{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+}
+.commonTitle .center-content .title{
+	color: #FFFFFF;
+}
+.commonTitle .center-content .title span{
+	font-size: 2.5rem;
+}
+.commonTitle .center-content .title sub{
+	font-size: 1rem;
+	padding-left: 2rem;
+}
+.commonTitle .center-content .title_bar{
+	display: flex;
 	align-items: center;
+}
+.commonTitle .center-content .title_bar div{
+	width: 31.67rem;
+	border: 1px solid #FFFFFF;
+}
+.commonTitle .center-content .title_bar img{
+	margin: 0 2rem;
+}
+.commonTitle .center-content .section-about{
+	display: flex;
+}
+.commonTitle .center-content .section-about .US_title{
+	/* color: #d0923b; */
+	color: rgba(208,146,59,0.8);
+	font-size: 2rem;
+}
+.commonTitle .center-content .US_info{
+	margin-left: 9.58rem;
+}
+.commonTitle .center-content .US_info .US_contact p{
+	color: rgba(255,255,255,0.6);
+	font-size: 1.33rem;
 }

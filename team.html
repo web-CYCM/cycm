@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="">
 	<title>关于宸熠-深圳市宸熠传媒有限公司</title>
 	<link href="css\font-face.css" rel="stylesheet" media="all">
@@ -22,6 +23,10 @@
 	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<link href="css\team.css" rel="stylesheet" media="all">
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=boS5H3cIm4bD53h37GlKfhpKKBCpmjwl"></script>
+	<!-- <script src="http://api.map.baidu.com/api?v=2.0&ak=A1LU7iHS0avqQwPLAxbhKn0UYSQCuRVH"></script> -->
+	<script src="js/jquery.baiduMap.min.js"></script>
 </head>
 <body>
 	
@@ -73,9 +78,58 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
+	<!-- 标题 -->
+	<div class="commonTitle">
+		<div class="center-content">
+			<div class="title m-t-90">
+				<span>联系我们</span>
+				<sub>CONTACT US</sub>
+			</div>
+			<div class="title_bar m-t-30">
+				<div></div>
+				<img src="./images/index/commonSys.png" alt="">
+				<div></div>
+			</div>
+			<section class="section-about m-t-80 m-b-30">
+				<div id='address'></div>
+				<div class="US_info">
+					<div class="US_title">
+						<p>宸熠与您携手同行</p>
+						<p>共创未来</p>
+					</div>
+					<div class="US_contact">
+						<p>
+							<span class="label">QQ：</span>
+							<span>2964808805</span>
+						</p>
+						<p>
+							<span class="label">电话：</span>
+							<span>18675588652, 0755-22928136</span>
+						</p>
+						<p>
+							<span class="label">微信：</span>
+							<span>18675588652</span>
+						</p>
+						<p>
+							<span class="label">地址：</span>
+							<span>深圳市罗湖区田贝四路宝林国金一期一楼</span>
+						</p>
+						<div class="US_title m-t-60 m-b-40">
+							<p>广纳英才,超越梦想</p>
+							<span style="font-size:1.5rem;">RECRUIT TALENTS AND SURPASS DREAMS</span>
+						</div>
+						<p>
+							<span class="label">简历直投：</span>
+							<span>KVision@126.com</span>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 	
 	<!-- 联系我们 -->
-	<footer class="footer_info" id="contact">
+	<!-- <footer class="footer_info" id="contact">
 		
 		<div class="companyInfo center-content p-t-30 p-b-30">
 			<ul class="info-left font-color-footer">
@@ -98,7 +152,7 @@
 		<div class="copyright">
 			网站备案/许可证号： <a href="http://www.miitbeian.gov.cn">粤ICP备17142766号</a><br />&copy; 深圳市宸熠传媒有限公司 2017
 		</div>
-	</footer>
+	</footer> -->
 
 
 	<!-- <div id="up-to-top">
@@ -127,7 +181,29 @@
 		if($(window).width() < 992){
 			location.href = 'team-Mobile.html';
 		}
+		
+		new BaiduMap({
+				id: "address",
+				title: {
+					text: "宝琳国金珠宝交易中心",
+					className: "title"
+				},
+				content: {
+					className: "content",
+					text: ["深圳市罗湖区田贝四路宝林国金一期一楼", "电话：0755-22928136"]
+				},
+				point: {
+					lng: 114.131416,
+					lat: 22.573554
+				}
+			})
 	</script>
-
+	<style>
+		#address{
+			width: 30.42rem;
+			height: 30.42rem;
+			margin: 2rem 0;
+		}
+	</style>
 </body>
 </html>
