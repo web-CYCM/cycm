@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css\theme.css" rel="stylesheet" media="all">
+
+	<link href="vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
+</head>
+<body>
+	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+	<div id="about-content">
+		<div id="bar-introduction" class="dis-content">
+			<div>公司简介</div>
+		</div>
+		<div id="bar-structure" class="dis-content">
+			<div>公司架构</div>
+		</div>
+		<div id="bar-video" class="dis-content">
+			<div>介绍视频</div>
+		</div>
+	</div>
+	<footer class="footer_info" id="footer"></footer>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor\popper.js\popper.min.js"></script>
+	<script src="vendor\bootstrap\bootstrap.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			window.onload = function () {
+				$('#top').load('header.html');
+				$('#footer').load('footer.html');
+				var aboutObj = {
+					initAbout: function (option) {
+						if (option == 'introduction') {
+							$('#bar-introduction').removeClass('dis-content');
+							$('#bar-introduction').siblings().addClass('dis-content');
+						}
+						if (option == 'structure') {
+							$('#bar-structure').removeClass('dis-content');
+							$('#bar-structure').siblings().addClass('dis-content');
+						}
+						if (option == 'video') {
+							$('#bar-video').removeClass('dis-content');
+							$('#bar-video').siblings().addClass('dis-content');
+						}
+					}
+				}
+
+				var hrefUrl = window.location.href;
+				var hrefData = hrefUrl.split('=');
+				var tabbar = hrefData[1];
+				if (tabbar == 'introduction') {
+					aboutObj.initAbout ('introduction')
+				} else if (tabbar == 'structure') {
+					aboutObj.initAbout ('structure')
+				} else if (tabbar == 'video') {
+					aboutObj.initAbout ('video')
+				} else {
+					aboutObj.initAbout ('introduction')
+				}
+			}
+		})()
+	</script>
+
+</body>
+<style>
+	#about-content{
+		margin-top: 7rem;
+	}
+	#bar-introduction.dis-content,
+	#bar-structure.dis-content,
+	#bar-video.dis-content{
+		display: none;
+	}
+</style>
+</html>
