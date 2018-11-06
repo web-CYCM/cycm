@@ -1,0 +1,133 @@
+
+.main-wrap video{
+	width: 100%;
+}
+.workCase-box .tab-box .center-content{
+	display: flex;
+	justify-content: center;
+}
+.workCase-box .tab-box .center-content .section-content-text{
+	background: #FFFFFF; 	
+}
+.workCase-box .tab-box .nav .nav-link{
+	text-align: center;
+	padding: 0 3rem !important;
+}
+.workCase-box .tab-box .introduce{
+	color: #333333;
+	width: 9rem;
+	/* padding: 0.3rem 0; */
+	border-radius: 50px 50px 50px 50px;
+	border: 1px dashed #333333;
+}
+.workCase-box .tab-box .active .introduce {
+	background: #d0933b;
+	color: #FFFFFF;
+	border: 1px dashed transparent;
+}
+.workCase-box .tab-box .active{
+	background: none !important;
+}
+.workCase-box .tab-box .tab-content .section-content-image{
+	text-align: center !important;
+}
+.workCase-box .tab-content .videoList{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.workCase-box .tab-content .videoList .video-item{
+	width: 16.67rem;
+	margin-right: 1.67rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow{
+	width: 100%;
+	position: relative;
+	height: 10.83rem;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow .popUpVideo{
+	width: 100%;
+	height: 100%;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow>img{
+	width: 100%;
+	height: 100%;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow .shadow{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	visibility: hidden;
+	background: rgba(0,0,0,0.7);
+}
+.workCase-box .tab-content .videoList .video-item:hover .img-shadow .shadow,
+.workCase-box .tab-content .videoList .video-item:hover .img-shadow .shadow img{
+	visibility: visible;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow .shadow div,
+.workCase-box .tab-content .videoList .video-item .img-shadow .shadow a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.workCase-box .tab-content .videoList .video-item .img-shadow .shadow img{
+	max-width: 100%;
+	visibility: hidden;
+}
+.workCase-box .tab-content .videoList .video-item .title{
+	font-size: 1.15rem;
+	margin: 0.5rem 0;
+}
+.workCase-box .tab-content .videoList .video-item .content{
+	font-size: 0.8rem;
+	overflow: hidden;
+	word-break:break-all;  
+	text-overflow: ellipsis;
+	-o-text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp: 4;
+}
+
+
+.workCase-box .center-content{
+	display: flex;
+	flex-direction: column;
+}
+.workCase-box .center-content .title{
+	color: #333333;
+}
+.workCase-box .center-content .title span{
+	font-size: 2.5rem;
+}
+.workCase-box .center-content .title sub{
+	font-size: 1rem;
+	padding-left: 2rem;
+	color: #6e6e6e;
+}
+.workCase-box .center-content .title_bar{
+	display: flex;
+	align-items: center;
+}
+.workCase-box .center-content .title_bar div{
+	/* width: 31.67rem; */
+	width: 43rem;
+	border: 1px solid #6e6e6e;
+}
+.workCase-box .center-content .title_bar img{
+	margin: 0 2rem;
+}
+.workCase-box .center-content .tab-box{
+	/* border: 1px solid red; */
+}
+.workCase-box .center-content .tab-box .selection{
+	display: flex;
+	justify-content: center;
+}

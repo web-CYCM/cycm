@@ -20,6 +20,10 @@ html{
 }
 .commonTitle .center-content .title{
 	color: #FFFFFF;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow:ellipsis;
+	white-space: nowrap;
 }
 .commonTitle .center-content .title span{
 	font-size: 2.5rem;
