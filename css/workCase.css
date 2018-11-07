@@ -168,3 +168,37 @@
 	border: 1px solid #e5e5e5;
 	background: #f9f7f8;
 }
+
+/* 团队合作-团队风采*/
+.workCase-box .figureIntroduction{
+	/* border: 1px solid red; */
+	margin-right: 6rem;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 5rem;
+}
+.workCase-box .figureIntroduction .figureItem{
+	width: 15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5rem;
+	/* border: 1px solid red; */
+	margin-top: 7.5rem;
+	font-size: 1.2rem;
+}
+.workCase-box .figureIntroduction .figureItem .img_border{
+	width: 12.5rem;
+	height: 12.5rem;
+	margin-bottom: 3.5rem;
+}
+.workCase-box .figureIntroduction .figureItem .img_border img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.workCase-box .figureIntroduction .figureItem .figureExperience{
+	/* border: 1px solid blue; */
+	margin-top: 1.5rem;
+}
