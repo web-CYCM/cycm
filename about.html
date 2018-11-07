@@ -3,21 +3,90 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>了解宸熠</title>
 	<link href="css\theme.css" rel="stylesheet" media="all">
 
 	<link href="vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
+
+	<!-- <link rel="stylesheet" href="./hivideo/hivideo.css" /> -->
 </head>
 <body>
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
 	<div id="about-content">
-		<div id="bar-introduction" class="dis-content">
-			<div>公司简介</div>
+		<div id="about-bar-introduction" class="dis-content">
+			<div class="center-content">
+				<div class="title m-t-90">
+					<span>公司简介</span>
+					<sub>COMPANY INTRODUCTION</sub>
+				</div>
+				<div class="title_bar m-t-30">
+					<div></div>
+					<img src="./images/index/commonSys.png" alt="">
+					<div></div>
+				</div>
+				<div class="introduction-img-wrap">
+					<img src="./images/index/videoClass_01.jpg" alt="">
+				</div>
+				<div class="introduction-word-wrap">
+					<p>
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+					</p>
+				</div>
+			</div>
 		</div>
-		<div id="bar-structure" class="dis-content">
-			<div>公司架构</div>
+		<div id="about-bar-structure" class="dis-content">
+			<div class="center-content">
+				<div class="title m-t-90">
+					<span>公司架构</span>
+					<sub>COMPANY STRCTURE</sub>
+				</div>
+				<div class="title_bar m-t-30">
+					<div></div>
+					<img src="./images/index/commonSys.png" alt="">
+					<div></div>
+				</div>
+			</div>
+			<div class="introduction-img-wrap">
+				<img src="./images/index/videoClass_01.jpg" alt="">
+			</div>
 		</div>
-		<div id="bar-video" class="dis-content">
-			<div>介绍视频</div>
+		<div id="about-bar-video" class="dis-content">
+			<div class="center-content">
+				<div class="title m-t-90">
+					<span>介绍视频</span>
+					<sub>INTRODUCTION VIDEO</sub>
+				</div>
+				<div class="title_bar m-t-30">
+					<div></div>
+					<img src="./images/index/commonSys.png" alt="">
+					<div></div>
+				</div>
+				<div class="introduction-video-wrap">
+					<div class="video-single" id="about-video">
+						<!-- <div class="main-wrap">
+							<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true"><source src="../../videos/03.mp4" id="source" type="video/mp4"></video>
+						</div> -->
+						<video src="" controls></video>
+					</div>
+					<div class="video-list">
+						<div><span>播放列表</span></div>
+						<ul>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="introduction-word-wrap">
+					<p>
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<footer class="footer_info" id="footer"></footer>
@@ -25,25 +94,74 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor\popper.js\popper.min.js"></script>
 	<script src="vendor\bootstrap\bootstrap.min.js"></script>
+
+	<!-- <script type="text/javascript" src="./hivideo/hivideo.js"></script> -->
+	<script type="text/javascript" src="./hivideo/f.js"></script>
+	<script type="text/javascript" src="./hivideo/md5.min.js"></script>
+
 	<script type="text/javascript">
 		(function () {
 			window.onload = function () {
 				$('#top').load('header.html');
 				$('#footer').load('footer.html');
+
+				var videoList = [
+						{
+							id: 1,
+							img: './images/about/video_01.jpg',
+							content: '视频名称是拼命测绘南宫拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。',
+							time: '0:21',
+							videoSrc: './videos/01.mp4'
+						},
+						{
+							id: 2,
+							img: './images/about/video_02.jpg',
+							content: '测绘南宫拍摄出政企的业绩、辉煌视频名称是拼命，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。',
+							time: '0:51',
+							videoSrc: './videos/02.mp4'
+						},
+						{
+							id: 3,
+							img: './images/about/video_01.jpg',
+							content: '后备资源、有利条件，全面的宣传政企的优势和品牌视频名称是拼命测绘南宫拍摄出政企的业绩、辉煌，以及政企的前景谋略。',
+							time: '0:48',
+							videoSrc: './videos/03.mp4'
+						},
+						{
+							id: 4,
+							img: './images/about/video_02.jpg',
+							content: '业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，视频名称是拼命测绘南宫拍摄出政企的全面的宣传政企的优势和品牌。',
+							time: '1:10',
+							videoSrc: './videos/01.mp4'
+						}
+				];
+
 				var aboutObj = {
 					initAbout: function (option) {
 						if (option == 'introduction') {
-							$('#bar-introduction').removeClass('dis-content');
-							$('#bar-introduction').siblings().addClass('dis-content');
+							$('#about-bar-introduction').removeClass('dis-content');
+							$('#about-bar-introduction').siblings().addClass('dis-content');
 						}
 						if (option == 'structure') {
-							$('#bar-structure').removeClass('dis-content');
-							$('#bar-structure').siblings().addClass('dis-content');
+							$('#about-bar-structure').removeClass('dis-content');
+							$('#about-bar-structure').siblings().addClass('dis-content');
 						}
 						if (option == 'video') {
-							$('#bar-video').removeClass('dis-content');
-							$('#bar-video').siblings().addClass('dis-content');
+							$('#about-bar-video').removeClass('dis-content');
+							$('#about-bar-video').siblings().addClass('dis-content');
 						}
+					},
+					changeVideoSrc: function (videoObj, videoSrc) {
+						$(videoObj).children('video').attr('src', videoSrc);
+					},
+					
+					initVideoList: function (index) {
+						var li = $('.video-list ul li').eq(index);
+						$(li).attr('id', videoList[i].id);
+						$(li).children('.video-list-img').attr('src', videoList[i].img);
+						$(li).children('.video-description').children('div').children('.video-list-content').attr('title', videoList[i].content);
+						$(li).children('.video-description').children('div').children('.video-list-content').text(videoList[i].content);
+						$(li).children('.video-description').children('.video-list-time').text(videoList[i].time);
 					}
 				}
 
@@ -59,6 +177,31 @@
 				} else {
 					aboutObj.initAbout ('introduction')
 				}
+				
+				aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
+
+				for (var i = 0; i < videoList.length; i++) {
+					$('.video-list ul').append(`<li>
+								<img src="" alt="" class="video-list-img">
+								<div class="video-description">
+									<div>
+										<div class="video-list-content" title=""></div>
+									</div>
+									<p class="video-list-time"></p>
+								</div>
+							</li>`);
+					aboutObj.initVideoList (i)
+				}
+				//点击列表视频
+				$('.video-list ul').on('click','li', function () {
+					var currentId = $(this).attr('id');
+					for (var i = 0; i < videoList.length; i++) {
+						if (currentId == videoList[i].id) {
+							aboutObj.changeVideoSrc ( '#about-video', videoList[i].videoSrc);
+							return false
+						}
+					}
+				})
 			}
 		})()
 	</script>
@@ -68,10 +211,131 @@
 	#about-content{
 		margin-top: 7rem;
 	}
-	#bar-introduction.dis-content,
-	#bar-structure.dis-content,
-	#bar-video.dis-content{
+	#about-bar-introduction.dis-content,
+	#about-bar-structure.dis-content,
+	#about-bar-video.dis-content{
 		display: none;
+	}
+	#about-content .center-content{
+		display: flex;
+		flex-direction: column;
+	}
+	#about-content .center-content .title{
+		color: #333333;
+	}
+	#about-content .center-content .title span{
+		font-size: 2.5rem;
+	}
+	#about-content .center-content .title sub{
+		font-size: 1rem;
+		padding-left: 2rem;
+		color: #6e6e6e;
+	}
+	#about-content .center-content .title_bar{
+		display: flex;
+		align-items: center;
+	}
+	#about-content .center-content .title_bar div{
+		width: 43rem;
+		border: 1px solid #6e6e6e;
+	}
+	#about-content .center-content .title_bar img{
+		margin: 0 2rem;
+	}
+
+	#about-bar-introduction .introduction-img-wrap,
+	#about-bar-structure .introduction-img-wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 33.33rem;
+		margin: 2.5rem 0;
+	}
+	#about-bar-introduction .introduction-img-wrap img,
+	#about-bar-structure .introduction-img-wrap img{
+		max-width: 58.33rem;
+		max-height: 33.33rem;
+	}
+	#about-bar-introduction .introduction-word-wrap p,
+	#about-bar-video .introduction-word-wrap p{
+		font-size: 1.5rem;
+		text-indent: 3.5rem;
+	}
+
+	#about-bar-structure .introduction-img-wrap img{
+		max-width: 62%;
+	}
+	#about-bar-video .introduction-video-wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 33.33rem;
+		margin: 2.5rem 0;
+	}
+
+	#about-bar-video .introduction-video-wrap .video-single{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 52.33rem;
+		height: 33.33rem;
+		margin-right: 1rem;
+		background: #000000;
+		overflow: hidden;
+	}
+	#about-bar-video .introduction-video-wrap .video-single video{
+		width: 52.33rem;
+		height: 33.33rem;
+	}
+
+	#about-bar-video .introduction-video-wrap .video-list{
+		border: 1px solid #e3e3e3;
+		width: 20rem;
+		height: 33.33rem;
+	}
+	#about-bar-video .introduction-video-wrap .video-list>div{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 4rem;
+		border-bottom: 1px solid #e3e3e3;
+		padding-left: 2.5rem;
+		font-weight: 600;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul{
+		margin-bottom: 0;
+		list-style:none;
+		padding: 1rem;
+		height: 29.33rem;
+		overflow: auto;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li:hover{
+		cursor: pointer;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li>img{
+		width: 9rem;
+		height: 5rem;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li .video-description{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 8rem;
+		height: 5rem;
+		margin-left: 1rem;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li .video-description>div{
+		height: 3rem;
+		overflow: hidden;
+	}
+	#about-bar-video .introduction-video-wrap .video-list ul li .video-description>p{
+		margin-bottom: 0;
 	}
 </style>
 </html>
