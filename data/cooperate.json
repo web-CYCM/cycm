@@ -1,0 +1,66 @@
+{
+    "data":[
+        {
+            "name":"建华珠宝",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"百翠灵珠宝",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"枫亭珠宝",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"福美华珠宝",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"周金生珠宝",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"深圳缔一世家文化创意",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"深圳微聚信息技术",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"深圳国投影视",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"深圳谛珑文化",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"北京唯美新画面影视",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"中视合利（北京）文化投资",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"中国国际微电影大点组委会",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"中国国际青年影展组委会",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"中国电影报社",
+			"imgUrl": "../images/index/proSelected_02.png"
+		},
+        {
+            "name":"英中友好促进会",
+			"imgUrl": "../images/index/proSelected_02.png"
+		}
+    ],
+    "code":1001,
+    "message":"获取成功!"
+}
