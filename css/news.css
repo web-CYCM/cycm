@@ -1,0 +1,132 @@
+.section-news{
+	/* border: 1px solid red; */
+}
+.section-news .center-content{
+	/* border: 1px solid blue; */
+}
+
+.section-news .center-content .title{
+	color: #333333;
+}
+.section-news .center-content .title span{
+	font-size: 2.5rem;
+}
+.section-news .center-content .title sub{
+	font-size: 1rem;
+	padding-left: 2rem;
+	color: #6e6e6e;
+}
+.section-news .center-content .title_bar{
+	display: flex;
+	align-items: center;
+}
+.section-news .center-content .title_bar div{
+	/* width: 31.67rem; */
+	width: 43rem;
+	border: 1px solid #6e6e6e;
+}
+.section-news .center-content .title_bar img{
+	margin: 0 2rem;
+}
+
+/* 资讯列表 */
+.section-news .center-content .news-list{
+	/* border: 1px solid red; */
+}
+.section-news .center-content .news-list .news-item{
+	display: flex;
+	/* justify-content: space-between; */
+}
+.section-news .center-content .news-list .news-item img{
+	max-height: 100%;
+}
+.section-news .center-content .news-list .news-item .news-system{
+	max-width: 40rem;
+	height: 18.34rem;
+	/* border: 1px solid blue; */
+	display: flex;
+	/* justify-content: space-around; */
+}
+.section-news .center-content .news-list .news-item .news-system .news-time{
+	/* border: 1px solid blue; */
+	width: 4.17rem;
+	background: #eeeeee;
+	align-self: flex-start;
+	text-align: center;
+}
+.section-news .center-content .news-list .news-item .news-system .news-time p:first-child{
+	color: #d0923B;
+	font-size: 2rem;
+	border-bottom: 2px solid #dcdcdc; 
+	line-height: calc(30 / 18);
+}
+.section-news .center-content .news-list .news-item .news-system .news-time p:last-child{
+	color: #6e6e6e;
+	line-height: calc(30 / 18);
+}
+.section-news .center-content .news-list .news-item .introduce{
+	margin-left: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section-news .center-content .news-list .news-item .introduce .title{
+	color: #333333;
+	font-size: 2rem;
+}
+.section-news .center-content .news-list .news-item .introduce .content{
+	color: #6e6e6e;
+}
+.section-news .center-content .news-list .news-item .introduce .learnMore{
+	color: #d0923B;
+}
+
+
+/* 详情页样式 */
+
+.section-newsView .center-content{
+	width: 62% !important;
+	margin: 0 auto;
+	text-align: center;
+}
+.section-newsView .center-content .Main-title{
+	font-size: 3.3rem;
+}
+.section-newsView .center-content .complete-intro{
+	font-size: 1.6rem;
+}
+.content-flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section-newsView .center-content .article,.summarize{
+	padding-left: 13rem;
+	padding-right:	13rem; 
+}
+.section-newsView .center-content .article .article-item .title{
+	font-size: 1.5rem;
+	text-align: left;
+	font-weight: bold;
+	color: #666666;
+}
+.section-newsView .center-content .article .article-item p,
+.summarize span,
+.endJusmp span{
+	font-size: 1.5rem;
+	color: #666666;
+	text-align: justify;
+}
+.endJusmp{
+	display: flex;
+	justify-content: space-between;
+}
+.endJusmp a{
+	font-size: 1.5rem;
+	text-align: left;
+	color: #666666;
+	text-decoration: none;
+}
+.endJusmp span:first-child{
+	font-weight: bold;
+}
