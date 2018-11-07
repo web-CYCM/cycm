@@ -42,7 +42,8 @@ body,html{
 	width: 100%;
 	height: 100%;
 }
-.main-title {
+.main-title .title-top,
+.main-title .title-litter{
 	text-align: center;
 }
 .main-title .title-top{
@@ -95,6 +96,7 @@ body,html{
 .production-box .tab-box .introduce{
 	color: #FFFFFF;
 	width: 9rem;
+	padding: 0.35rem 0;
 	border-radius: 50px 50px 50px 50px;
 	border: 1px dashed #FFFFFF;
 }
@@ -120,6 +122,7 @@ body,html{
 }
 .production-box .tab-content .all-width .list-item{
 	/* border: 1px solid red; */
+	text-align: center;
 }
 .production-box .tab-content .all-width .list-item>div:first-child{
 	color: #5b4b3b;
@@ -152,22 +155,25 @@ body,html{
 	margin: auto;
 }
 .brief-intro video{
-	width: 40.5rem !important;
-	height: 24.17rem !important;
+	max-width: 100%;
+	/* width: 40.5rem !important; */
+	/* height: 24.17rem !important; */
 }
 .brief-intro .right-intro{
 	display: flex;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: #333333;
 }
 .brief-intro  .view-more{
 	width: 100%;
+	color: #5b4b3b;
 }
 .main-title .selection .seletion-item.active{
 	color: #28abe3;
 }
 .main-title .selection .seletion-item .introduce{
 	font-size: 1rem;
+	padding: 0.35rem 0; 
 }
 
 .section-about-1{
@@ -458,7 +464,8 @@ footer .copyright a{
 }
 /* 作品案例 */
 .workCase .container{
-	padding: 0 18rem;
+	width: 62%;
+	padding: 0;
 }
 .workCase .container .big-img,
 .workCase .container .little-img{
@@ -467,11 +474,11 @@ footer .copyright a{
 	cursor: pointer;
 }
 .workCase .container .big-img{
-	height: 26.67rem;
+	/* height: 26.67rem; */
 	max-width: 100%;
 }
 .workCase .container .little-img{
-	height: 14.58rem;
+	/* height: 14.58rem; */
 	max-width: 100%;
 }
 .workCase .container .big-img img,
@@ -498,7 +505,7 @@ footer .copyright a{
 	height: 100%;
 	z-index: 5;
 	visibility: hidden;
-	color: rgba(250,250,250,0.5);
+	color: rgba(250,250,250,0.7);
 	background: rgba(0,0,0,0.5);
 }
 .workCase .container .shadow div{
@@ -507,6 +514,13 @@ footer .copyright a{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+.workCase .container .shadow div span{
+	padding-bottom: 2rem;
+	font-size: 1.42rem;
+}
+.workCase .container .shadow div p{
+	margin: 0 auto 0.1rem;
 }
 .newsInformation{
 	/* border: 1px solid red; */
