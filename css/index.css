@@ -509,7 +509,7 @@ footer .copyright a{
 	align-items: center;
 }
 .newsInformation{
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 .newsInformation .center-content{
 	display: flex;
