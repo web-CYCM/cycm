@@ -50,9 +50,9 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: -webkit-calc(30 / 12);
-  line-height: -moz-calc(30 / 12);
-  line-height: calc(30 / 12);
+  line-height: -webkit-calc(30 / 18);
+  line-height: -moz-calc(30 / 18);
+  line-height: calc(30 / 18);
   color: #555555;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */

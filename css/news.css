@@ -65,7 +65,7 @@
 	line-height: calc(30 / 18);
 }
 .section-news .center-content .news-list .news-item .introduce{
-	margin-left: 5rem;
+	margin: 0 6rem 0 5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -76,9 +76,13 @@
 }
 .section-news .center-content .news-list .news-item .introduce .content{
 	color: #6e6e6e;
+	font-size: 1.2rem;
 }
 .section-news .center-content .news-list .news-item .introduce .learnMore{
 	color: #d0923B;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+	cursor: pointer;
 }
 
 
