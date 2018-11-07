@@ -8,6 +8,8 @@
 
 	<link href="vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
 
+	<link href="vendor\css-hamburgers\hamburgers.min.css" rel="stylesheet" media="all">
+
 	<!-- <link rel="stylesheet" href="./hivideo/hivideo.css" /> -->
 </head>
 <body>
@@ -90,7 +92,7 @@
 		</div>
 	</div>
 	<footer class="footer_info" id="footer"></footer>
-
+	<nav id="sideNav"></nav>
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor\popper.js\popper.min.js"></script>
 	<script src="vendor\bootstrap\bootstrap.min.js"></script>
@@ -104,6 +106,7 @@
 			window.onload = function () {
 				$('#top').load('header.html');
 				$('#footer').load('footer.html');
+				$('#sideNav').load('sideNav.html');
 
 				var videoList = [
 						{
