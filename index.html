@@ -466,8 +466,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- 联系我们 -->
-	
+	<!-- 尾部 -->
+	<footer class="footer_info" id="footer"></footer>
 
 
 	<!-- <div id="up-to-top">
@@ -492,11 +492,12 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
-		$('#top').load('header.html');
 		if($(window).width() < 992){
 			location.href = 'index-Mobile.html';
 		}
 
+		$('#top').load('header.html');
+		$('#footer').load('footer.html');
 		var swiper = new Swiper('.swiper-container', {
 			pagination: {
 				el: '.swiper-pagination',
