@@ -39,7 +39,7 @@
 	</div>
 
 	<!-- 团队风采 -->
-	<div class="workCase-box p-t-50 m-b-80" id="planeBox">
+	<div class="workCase-box p-t-50 m-b-80" id="teamWork">
 		<div class="center-content">
 			<div class="title m-t-90">
 				<span>团队风采</span>
@@ -115,6 +115,39 @@
 			</div>
 		</div>
 	</div>
+	<!-- 公司顾问 -->
+	<div class="workCase-box p-t-50 m-b-80" id="consultant">
+		<div class="center-content">
+			<div class="title m-t-90">
+				<span>公司顾问</span>
+				<sub>COMPANY ADVISOR</sub>
+			</div>
+			<div class="title_bar m-t-30">
+				<div></div>
+				<img src="./images/index/commonSys.png" alt="">
+				<div></div>
+			</div>
+			<!-- 人物介绍 -->
+			
+		</div>
+	</div>
+	<!-- 战略合作 -->
+	<div class="workCase-box p-t-50 m-b-80" id="strategy">
+		<div class="center-content">
+			<div class="title m-t-90">
+				<span>战略合作</span>
+				<sub>STRATEGIC COOPERATION</sub>
+			</div>
+			<div class="title_bar m-t-30">
+				<div></div>
+				<img src="./images/index/commonSys.png" alt="">
+				<div></div>
+			</div>
+			
+			
+		</div>
+	</div>
+
 	<!-- 尾部 -->
 	<footer class="footer_info" id="footer"></footer>
 	
@@ -153,27 +186,34 @@
 
 
 		function initAbout(option) {
-			if (option == 'videoClass') {
-				$('#videoBox').fadeIn();
-				$('#planeBox').fadeOut();
-				$('#videoBox').css("visibility","visible");
+			if (option == 'teamWork') {
+				$('#teamWork').fadeIn();
+				$('#consultant').fadeOut();
+				$('#strategy').fadeOut();
+				$('#teamWork').css("visibility","visible");
 			}
-			if (option == 'planeClass') {
-				$('#planeBox').fadeIn();
-				$('#videoBox').fadeOut();
-				$('#planeBox').css("visibility","visible");
+			if (option == 'consultant') {
+				$('#consultant').fadeIn();
+				$('#teamWork').fadeOut();
+				$('#strategy').fadeOut();
+				$('#consultant').css("visibility","visible");
+			}
+			if (option == 'strategy') {
+				$('#strategy').fadeIn();
+				$('#teamWork').fadeOut();
+				$('#consultant').fadeOut();
+				$('#strategy').css("visibility","visible");
 			}
 		}
 
 		var hrefUrl = window.location.href;
 		var hrefData = hrefUrl.split('=');
 		var tabbar =  hrefData[1];
-		if (tabbar == 'videoClass') {
-			initAbout ('videoClass')
-		} else if (tabbar == 'planeClass') {
-			initAbout ('planeClass');
-		}else {
-			initAbout ('planeClass')
+			initAbout (tabbar)
+		if (tabbar == 'teamWork' || tabbar == 'consultant' || tabbar == 'strategy') {
+			initAbout (tabbar)
+		}else{
+			initAbout ('teamWork')
 		}
 	</script>
 
