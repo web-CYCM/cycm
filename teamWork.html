@@ -169,8 +169,10 @@
 				<div></div>
 			</div>
 			<!-- 合作企业（滑动框） -->
-			<div>
-				<div class="left" id="prev">上一页</div>
+			<div class="slider_box m-t-60">
+				<div id="prevLeft" class="m-l-50">
+					<img src="./images/about/left.png" alt="">
+				</div>
 				<div id="container">
 					<div id="list" style="left:0;">
 						<div class="img">
@@ -215,7 +217,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="right" id="next">下一页</div>
+				<div id="nextRight" class="m-r-50">
+					<img src="./images/about/right.png" alt="">
+				</div>
 			</div>
 			
 		</div>
@@ -248,26 +252,26 @@
 		function getSlider(){
             var container = document.getElementById('container');
             var list = document.getElementById('list');
-			 var prev = document.getElementById('prev');
-            var next = document.getElementById('next');
+			 var prevLeft = document.getElementById('prevLeft');
+            var nextRight = document.getElementById('nextRight');
             var index = 1;
             var timer;
 
             function animate(offset) {
 				var newLeft = parseInt(list.style.left) + offset;
-                list.style.left = newLeft + 'px';
+                list.style.left = newLeft + 'rem';
                 //无限滚动判断
-                if (newLeft > -600) {
-                    list.style.left = -3000 + 'px';
+                if (newLeft > -70) {
+                    list.style.left = -255 + 'rem';
                 }
-                if (newLeft < -3000) {
-                    list.style.left = -600 + 'px';
+                if (newLeft < -255) {
+                    list.style.left = -70 + 'rem';
                 }
             }
 
             function play() {
                 timer = setInterval(function () {
-                    next.onclick();
+                    nextRight.onclick();
                 }, 2000)
             }
 
@@ -275,19 +279,20 @@
                 clearInterval(timer);
             }
 
-            prev.onclick = function () {
+            prevLeft.onclick = function () {
                 index -= 1;
                 if (index < 1) {
-                    index = 5
+                    index = 15
                 }
-                animate(600);
+                animate(17);
             };
 
-            next.onclick = function () {index += 1;
-                if (index > 5) {
+            nextRight.onclick = function () {
+				index += 1;
+                if (index > 15) {
                     index = 1
                 }
-                animate(-600);
+                animate(-17);
             };
 		}
 		(function () {
