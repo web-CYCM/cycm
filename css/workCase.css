@@ -1,4 +1,4 @@
-#videoBox,#planeBox{
+#teamWork,#consultant,#strategy{
 	visibility: hidden;
 }
 .main-wrap video{
@@ -201,4 +201,32 @@
 .workCase-box .figureIntroduction .figureItem .figureExperience{
 	/* border: 1px solid blue; */
 	margin-top: 1.5rem;
+}
+/* 团队合作-公司顾问 */
+.workCase-box .advisoryList{
+	margin: 0 auto;
+}
+.workCase-box .advisoryList .advisoryItem{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	margin: 8rem 0;
+}
+.workCase-box .advisoryList .advisoryItem img{
+	width: 21.67rem;
+	height: 21.67rem;
+	border-radius: 50%;
+	margin-bottom: 5rem;
+}
+.workCase-box .advisoryList .advisoryItem>span{
+	color: #333333;
+}
+.workCase-box .advisoryList .advisoryItem p{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #6e6e6e;
 }
