@@ -256,6 +256,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	border: 1px solid red;
 }
 #list .img img, #list .img span{
 	display: block;

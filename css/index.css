@@ -576,7 +576,7 @@ footer .copyright a{
 #listCooperate {
 	overflow: hidden;
 	margin: 0 auto;
-	width: 85rem;
+	width: 90rem;
     height: 10rem;
 	position: relative;
 }
@@ -591,19 +591,26 @@ footer .copyright a{
 	width: 10rem;
 	height: 100%;
 	text-align: center;
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+#listInner .img img{
+	max-width: 100%;
 }
 #listInner .img img, #listInner .img span{
 	display: block;
 	margin: 0 auto 1rem;
 	font-weight: bold;
 }
+#prevLeft{
+	opacity: 0;
+}
 #prevLeft, #nextRight{
 	cursor: pointer;
+	transition: all 0.3s;
 }
 #prevLeft img, #nextRight img{
 	max-width: 100%;

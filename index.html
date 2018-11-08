@@ -504,9 +504,6 @@
 		if($(window).width() < 992){
 			// location.href = 'index-Mobile.html';
 		}
-
-		// $('#top').load('header.html');
-		// $('#footer').load('footer.html');
 		var swiper = new Swiper('.swiper-container', {
 			pagination: {
 				el: '.swiper-pagination',
@@ -515,35 +512,19 @@
 			autoplay: true
 		});
 		function getStrategyList(){
-			// $.ajax({
-			// 	url: encodeURI("data/ajaxData.php"),
-			// 	type: "get",
-			// 	dataType: "json",
-			// 	data: {
-			// 		"type": "strategyList"
-			// 	},
-			// 	contentType: "application/json; charset=utf-8",
-			// 	success: function(res, status){
-			// 		let data = res.data;
 			let data = cooperateList.data;
-					if(data){
-						$("#listInner").css({
-							"width": data.length*17 + 'rem'
-						});
-						for(var index = 0; index < data.length; index++){
-							let obj = data[index];
-							//<span>${obj.name}</span>
-							let str = `<div class="img">
-								<img src="${obj.imgUrl}" alt="">
-							</div>`
-							$("#listCooperate #listInner").append(str)
-						}
-					}
-			// 	},
-			// 	error: function(err){
-			// 		console.log(err);
-			// 	}
-			// })
+			if(data){
+				$("#listInner").css({
+					"width": data.length*11 + 'rem'
+				});
+				for(var index = 0; index < data.length; index++){
+					let obj = data[index];
+					let str = `<div class="img">
+						<img src="${obj.imgUrl}" alt="">
+					</div>`
+					$("#listCooperate #listInner").append(str)
+				}
+			}
 		}
 
 		function createSlider(){
@@ -598,16 +579,21 @@
             }
 			// 战略合作
 			function animateCoop(offset) {
+				$("#prevLeft").css("opacity",1);
+				$("#nextRight").css("opacity",1);
 				var newLeft = parseInt(listInner.style.left) + offset;
                 listInner.style.left = newLeft + 'rem';
-                if (newLeft > -10.5) {
+                if (newLeft > -11) {
                     listInner.style.left = 0 + 'rem';
+					$("#prevLeft").css("opacity",0);
                 }
 				//这里的数值是动态变化的
 				let len = $("#listCooperate #listInner .img").length;
-				let maxLeft = (len - 8)*10.5;
+				let maxLeft = (len - 8)*11;
                 if (newLeft < -maxLeft) {
                     listInner.style.left = -maxLeft + 'rem';
+					//右侧箭头隐藏
+					$("#nextRight").css("opacity",0);
                 }
             }
             function play() {
@@ -677,7 +663,7 @@
                 if (cooperateIndex < 1) {
                     cooperateIndex = maxIndex
                 }
-                animateCoop(10.5);
+                animateCoop(11);
             };
 
             nextRight.onclick = function () {
@@ -685,7 +671,7 @@
                 if (cooperateIndex > maxIndex) {
                     cooperateIndex = 1
                 }
-                animateCoop(-10.5);
+                animateCoop(-11);
             };
 		}
 		function getNewsList(){

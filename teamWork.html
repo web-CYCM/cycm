@@ -169,35 +169,20 @@
 			}
 		}
 		function getStrategyList(){
-			// $.ajax({
-			// 	url: encodeURI("data/ajaxData.php"),
-			// 	type: "get",
-			// 	dataType: "json",
-			// 	data: {
-			// 		"type": "strategyList"
-			// 	},
-			// 	contentType: "application/json; charset=utf-8",
-			// 	success: function(res, status){
-			// 		let data = res.data;
 			let data = cooperateList.data;
-					if(data){
-						$("#container #list").css({
-							"width": data.length*17 + 'rem'
-						});
-						for(var index = 0; index < data.length; index++){
-							let obj = data[index];
-							let str = `<div class="img">
-								<img src="${obj.imgUrl}" alt="">
-								<span>${obj.name}</span>
-							</div>`
-							$("#container #list").append(str)
-						}
-					}
-			// 	},
-			// 	error: function(err){
-			// 		console.log(err);
-			// 	}
-			// })
+			if(data){
+				$("#container #list").css({
+					"width": data.length*17 + 'rem'
+				});
+				for(var index = 0; index < data.length; index++){
+					let obj = data[index];
+					let str = `<div class="img">
+						<img src="${obj.imgUrl}" alt="">
+						<span>${obj.name}</span>
+					</div>`
+					$("#container #list").append(str)
+				}
+			}
 		}
 		function getSlider(){
             var container = document.getElementById('container');
@@ -208,17 +193,21 @@
             var timer;
 
             function animate(offset) {
+				$("#prevLeft").css("opacity",1);
+				$("#nextRight").css("opacity",1);
 				var newLeft = parseInt(list.style.left) + offset;
                 list.style.left = newLeft + 'rem';
                 //无限滚动判断
                 if (newLeft > -17) {
                     list.style.left = 0 + 'rem';
+					$("#prevLeft").css("opacity",0);
                 }
 				//这里的数值是动态变化的
 				let len = $("#container #list .img").length;
 				let maxLeft = (len - 4)*17;
                 if (newLeft < -maxLeft) {
                     list.style.left = -maxLeft + 'rem';
+					$("#nextRight").css("opacity",0);
                 }
             }
 

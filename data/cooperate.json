@@ -10,35 +10,35 @@ var cooperateList = {
 		},
         {
             "name":"枫亭珠宝",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_03.png"
 		},
         {
             "name":"福美华珠宝",
-			"imgUrl": "images/index/team_02.png"
+			"imgUrl": "images/index/team_04.png"
 		},
         {
             "name":"周金生珠宝",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_05.png"
 		},
         {
             "name":"深圳缔一世家文化创意",
-			"imgUrl": "images/index/team_02.png"
+			"imgUrl": "images/index/team_01.png"
 		},
         {
             "name":"深圳微聚信息技术",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_02.png"
 		},
         {
             "name":"深圳国投影视",
-			"imgUrl": "images/index/team_02.png"
+			"imgUrl": "images/index/team_03.png"
 		},
         {
             "name":"深圳谛珑文化",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_04.png"
 		},
         {
             "name":"北京唯美新画面影视",
-			"imgUrl": "images/index/team_02.png"
+			"imgUrl": "images/index/team_05.png"
 		},
         {
             "name":"中视合利（北京）文化投资",
@@ -50,15 +50,15 @@ var cooperateList = {
 		},
         {
             "name":"中国国际青年影展组委会",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_03.png"
 		},
         {
             "name":"中国电影报社",
-			"imgUrl": "images/index/team_02.png"
+			"imgUrl": "images/index/team_04.png"
 		},
         {
             "name":"英中友好促进会",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/team_05.png"
 		}
     ],
     "code":1001,
