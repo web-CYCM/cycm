@@ -32,10 +32,10 @@
 	<div class="swiper-height">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper2.png"></div>
 				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper1.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="./images/index/webCenter.png"></div>
+				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper2.png"></div>
 				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper1.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="./images/index/webCenter.png"></div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
@@ -93,11 +93,11 @@
 				<div class="tab-pane fade show active" id="v-pills-video" role="tabpanel" aria-labelledby="v-pills-video-tab">
 					<div class="bottom_bg">
 						<div class="center-content">
-							<img src="./images/index/videoClass_01.jpg" alt="" class="current-img">
+							<img src="./images/index/videoClass_01.png" alt="" class="current-img">
 						</div>
 					</div>
 					<section class="section section-about-1 overflow-hidden">
-						<div class="all-width p-t-150">
+						<div class="all-width p-t-200">
 							<div id="container">
 								<div id="list" style="left:0;">
 									<div class="list-item">
@@ -172,7 +172,7 @@
 				<div class="tab-pane fade" id="v-pills-plane" role="tabpanel" aria-labelledby="v-pills-plane-tab">
 					<div class="bottom_bg">
 						<div class="center-content">
-							<img src="./images/index/planeClass_01.jpg" alt="" class="currentPlane-img">
+							<img src="./images/index/planeClass_01.png" alt="" class="currentPlane-img">
 						</div>
 					</div>
 					<section class="section section-about-1 p-t-40 overflow-hidden">
@@ -299,7 +299,7 @@
 						<div class="container">
 							<div class="big-img">
 								<div class="img">
-									<img src="./images/index/workVideo_01.jpg" alt="">
+									<img src="./images/index/workClassPlane_01.png" alt="">
 									<div class="shadow">
 										<div>
 											<span>宣传片</span>
@@ -309,7 +309,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workVideo_02.jpg" alt="">
+									<img src="./images/index/workClassPlane_02.png" alt="">
 									<div class="shadow">
 										<div>
 											<span>展示片</span>
@@ -321,7 +321,7 @@
 							</div>
 							<div class="little-img">
 								<div class="img">
-									<img src="./images/index/workVideo_03.jpg" alt="">
+									<img src="./images/index/workClassPlane_03.png" alt="">
 									<div class="shadow">
 										<div>
 											<span>广告片</span>
@@ -331,7 +331,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workVideo_05.jpg" alt="">
+									<img src="./images/index/workClassPlane_04.png" alt="">
 									<div class="shadow">
 										<div>
 											<span>三维视频</span>
@@ -341,7 +341,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workVideo_03.jpg" alt="">
+									<img src="./images/index/workClassPlane_05.png" alt="">
 									<div class="shadow">
 										<div>
 											<span>宣推视频</span>
@@ -423,21 +423,21 @@
 			<div class="center-content">
 				<div class="newsItem">
 					<h4 class="font-bold">KeyShot产品优势</h4>
-					<img src="./images/index/videoClass_02.jpg" alt="">
+					<img src="./images/index/news_01.png" alt="">
 					<div class="content">
 						KeyShot是基于LuxRender开发的渲染引擎，使用先进的技术水平算法，根据物理方程模拟光线流，产生高精度逼真场景效果，达到照片...
 					</div>
 				</div>
 				<div class="newsItem">
 					<h4 class="font-bold">抖音信息流广告-抖音营销原来是这么“玩...</h4>
-					<img src="./images/index/videoClass_02.jpg" alt="">
+					<img src="./images/index/news_02.png" alt="">
 					<div class="content">
 						去年是短视频发展的元年，随着活跃用户的增长，针对细分人群的平台也应运而生。作为行业内的一匹黑马，抖音自2017年爆发开始...
 					</div>
 				</div>
 				<div class="newsItem">
 					<h4 class="font-bold">品牌选择抖音短视频平台的理由</h4>
-					<img src="./images/index/videoClass_02.jpg" alt="">
+					<img src="./images/index/news_03.png" alt="">
 					<div class="content">
 						现如今，基本上意识形态的注意逻辑是：短视频>GIF图>图片>纯文字信息。与图文相比，短视频的代入感、传播性更强，更能深入用户内心...
 					</div>
@@ -562,8 +562,6 @@
             var timer;
             function animate(offset) {
 				console.log(offset)
-                //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
-                //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
                 var newLeft = parseInt(list.style.left) + offset;
 				console.log(newLeft);
                 list.style.left = newLeft + 'px';
@@ -617,11 +615,11 @@
                 clearInterval(timer);
             }
 			var videoImgList = [
-				"./images/index/videoClass_01.jpg",
-				"./images/index/videoClass_02.jpg",
-				"./images/index/videoClass_03.jpg",
-				"./images/index/videoClass_04.jpg",
-				"./images/index/videoClass_05.jpg"
+				"./images/index/videoClass_01.png",
+				"./images/index/videoClass_02.png",
+				"./images/index/videoClass_03.png",
+				"./images/index/videoClass_04.png",
+				"./images/index/videoClass_05.png"
 			];
             prev.onclick = function () {
                 index -= 1;
@@ -641,11 +639,11 @@
                 animate(-800);
             };
 			var planeImgList = [
-				"./images/index/planeClass_01.jpg",
-				"./images/index/planeClass_02.jpg",
-				"./images/index/planeClass_03.jpg",
-				"./images/index/planeClass_04.jpg",
-				"./images/index/planeClass_05.jpg"
+				"./images/index/planeClass_01.png",
+				"./images/index/planeClass_02.png",
+				"./images/index/planeClass_03.png",
+				"./images/index/planeClass_04.png",
+				"./images/index/planeClass_05.png"
 			]
 			// 平面类
             prevPlane.onclick = function () {
