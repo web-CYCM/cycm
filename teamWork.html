@@ -174,68 +174,7 @@
 					<img src="./images/about/left.png" alt="">
 				</div>
 				<div id="container">
-					<div id="list" style="left:0;">
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司1</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司2</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司3</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司4</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司5</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司6</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司7</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司8</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司9</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司10</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司11</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司12</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司13</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司14</span>
-						</div>
-						<div class="img">
-							<img src="./images/index/proSelected_02.png" alt="">
-							<span>深圳市微聚信息技术有限公司15</span>
-						</div>
-					</div>
+					<div id="list" style="left:0;"></div>
 				</div>
 				<div id="nextRight" class="m-r-50">
 					<img src="./images/about/right.png" alt="">
@@ -269,6 +208,36 @@
 		if($(window).width() < 992){
 			location.href = 'index-Mobile.html';
 		}
+		function getStrategyList(){
+			$.ajax({
+				url: encodeURI("data/ajaxData.php"),
+				type: "get",
+				dataType: "json",
+				data: {
+					"type": "strategyList"
+				},
+				contentType: "application/json; charset=utf-8",
+				success: function(res, status){
+					let data = res.data;
+					if(data){
+						$("#container #list").css({
+							"width": data.length*17 + 'rem'
+						});
+						for(var index = 0; index < data.length; index++){
+							let obj = data[index];
+							let str = `<div class="img">
+								<img src="${obj.imgUrl}" alt="">
+								<span>${obj.name}</span>
+							</div>`
+							$("#container #list").append(str)
+						}
+					}
+				},
+				error: function(err){
+					console.log(err);
+				}
+			})
+		}
 		function getSlider(){
             var container = document.getElementById('container');
             var list = document.getElementById('list');
@@ -284,8 +253,11 @@
                 if (newLeft > -17) {
                     list.style.left = 0 + 'rem';
                 }
-                if (newLeft < -187) {
-                    list.style.left = -187 + 'rem';
+				//这里的数值是动态变化的
+				let len = $("#container #list .img").length;
+				let maxLeft = (len - 4)*17;
+                if (newLeft < -maxLeft) {
+                    list.style.left = -maxLeft + 'rem';
                 }
             }
 
@@ -298,18 +270,18 @@
             function stop() {
                 clearInterval(timer);
             }
-
+			let maxIndex = $("#container #list .img").length;
             prevLeft.onclick = function () {
                 index -= 1;
                 if (index < 1) {
-                    index = 15
+                    index = maxIndex
                 }
                 animate(17);
             };
 
             nextRight.onclick = function () {
 				index += 1;
-                if (index > 15) {
+                if (index > maxIndex) {
                     index = 1
                 }
                 animate(-17);
@@ -321,6 +293,7 @@
 				$('#footer').load('footer.html');
 			}
 			getSlider();
+			getStrategyList();
 		})();
 		function toView(link){
 			// location.href = link;

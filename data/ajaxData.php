@@ -1,8 +1,8 @@
 <?php 
 	$type = $_REQUEST['type'];
 	$str = '';
-	if ($type == 'videoClass') {  //主页产品和服务：平面类
-		$str = file_get_contents('http://api.shangtianapp.com/api/v1/homeinit');
+	if ($type == 'strategyList') {  //战略合作
+		$str = file_get_contents('cooperate.json');
 	}elseif ($type == 'homeMore') {//首页上拉加载
 		$pageIndex = $_REQUEST['pageIndex'];//页数，从1开始
 		$str = file_get_contents('http://api.shangtianapp.com/api/v1/homelist?page='.$pageIndex);

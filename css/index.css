@@ -555,33 +555,44 @@ footer .copyright a{
 .newsInformation .center-content .newsItem img{
 	max-width: 100%;
 }
-.cooperative-enterprise{
-	/* border: 1px solid red; */
+/* 战略合作 */
+.cooperative-enterprise .containerCooperate{
+	display: flex;
+	align-items: center;
+	justify-content: center !important;
 }
-#containerCooperate {
-	position: relative;
-	width: 600px;
-	height: 100px;
-	border: 1px solid #333;
+#listCooperate {
 	overflow: hidden;
 	margin: 0 auto;
+	width: 800px;
+    height: 25rem;
+	position: relative;
 }
-
-#listCooperate {
+#listInner {
 	position: absolute;
-	z-index: 1;
-	width: 4200px;
+	height: 100%;
 }
 
-#listCooperate img {
+#listInner .img {
 	float: left;
+	width: 14rem;
+	height: 100%;
+	text-align: center;
+	margin-right: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#listInner .img img, #listInner .img span{
+	display: block;
+	margin: 0 auto 2rem;
+	font-weight: bold;
+}
+#prevLeft, #nextRight{
+	cursor: pointer;
+}
+#prevLeft img, #nextRight img{
 	max-width: 100%;
-}
-#prevCooperate {
-	left: 20px;
-}
-
-#nextCooperate {
-	right: 20px;
 }
 

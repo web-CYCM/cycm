@@ -447,7 +447,7 @@
 
 	<!-- 合作企业 -->
 	<div class="main-title cooperative-enterprise m-t-30 m-b-30">
-		<div class="container">
+		<div class="center-content">
 			<div class="title-top">PARTNERS AND CLIENTS</div>
 			<div class="title-center justify-content-center align-items-center">
 				<div></div>
@@ -455,19 +455,17 @@
 				<div></div>
 			</div>
 			<div class="title-litter">宸熠传媒合作伙伴与企业</div>
-			<div id="containerCooperate">
-				<div id="listCooperate" style="left: 0;">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
-					<img src="./images/index/server_01.png" alt="">
+			<!-- 移动图 -->
+			<div class="containerCooperate">
+				<div id="prevLeft" class="m-l-50">
+					<img src="./images/about/left.png" alt="">
 				</div>
-				<a href="javascript:;" id="prevCooperate" class="arrow">&lt;</a>
-				<a href="javascript:;" id="nextCooperate" class="arrow">&gt;</a>
+				<div id="listCooperate">
+					<div id="listInner" style="left:0;"></div>
+				</div>
+				<div id="nextRight" class="m-r-50">
+					<img src="./images/about/right.png" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -501,8 +499,8 @@
 			location.href = 'index-Mobile.html';
 		}
 
-		$('#top').load('header.html');
-		$('#footer').load('footer.html');
+		// $('#top').load('header.html');
+		// $('#footer').load('footer.html');
 		var swiper = new Swiper('.swiper-container', {
 			pagination: {
 				el: '.swiper-pagination',
@@ -510,23 +508,33 @@
 			},
 			autoplay: true
 		});
-		function getPlaneClassList(){
+		function getStrategyList(){
 			$.ajax({
 				url: encodeURI("data/ajaxData.php"),
 				type: "get",
 				dataType: "json",
 				data: {
-					"type": "planeClass"
+					"type": "strategyList"
 				},
 				contentType: "application/json; charset=utf-8",
 				success: function(res, status){
 					let data = res.data;
 					if(data){
-						// console.log(data)
+						$("#listInner").css({
+							"width": data.length*17 + 'rem'
+						});
+						for(var index = 0; index < data.length; index++){
+							let obj = data[index];
+							let str = `<div class="img">
+								<img src="${obj.imgUrl}" alt="">
+								<span>${obj.name}</span>
+							</div>`
+							$("#listCooperate #listInner").append(str)
+						}
 					}
 				},
 				error: function(err){
-					// console.log(err);
+					console.log(err);
 				}
 			})
 		}
@@ -540,8 +548,15 @@
             var listPlane = document.getElementById('list-plane');
             var prevPlane = document.getElementById('prev-plane');
             var nextPlane = document.getElementById('next-plane');
+			// 合作滑动
+            var listCooperate = document.getElementById('listCooperate');
+            var listInner = document.getElementById('listInner');
+            var prevLeft = document.getElementById('prevLeft');
+            var nextRight = document.getElementById('nextRight');
+
             var index = 1;
 			var indexPlane = 1;
+			var cooperateIndex = 1;
             var timer;
             function animate(offset) {
 				console.log(offset)
@@ -574,6 +589,20 @@
                 }
                 if (newLeftPlane == -4000 || newLeftPlane == 0) {
                     listPlane.style.left = 0 + 'px';
+                }
+            }
+			// 战略合作
+			function animateCoop(offset) {
+				var newLeft = parseInt(listInner.style.left) + offset;
+                listInner.style.left = newLeft + 'rem';
+                if (newLeft > -17) {
+                    listInner.style.left = 0 + 'rem';
+                }
+				//这里的数值是动态变化的
+				let len = $("#listCooperate #listInner .img").length;
+				let maxLeft = (len - 4)*17;
+                if (newLeft < -maxLeft) {
+                    listInner.style.left = -maxLeft + 'rem';
                 }
             }
             function play() {
@@ -634,21 +663,34 @@
 				$(".currentPlane-img").attr("src",planeImgList[indexPlane-1]);
                 animatePlane(-800);
             };
-			//自动播放
-            // container.onmouseover = stop;
-            // container.onmouseout = play;
-            // play();
-		}
+			
+			
+			//战略合作
+			let maxIndex = $("#listCooperate #listInner .img").length;
+			prevLeft.onclick = function () {
+                cooperateIndex -= 1;
+                if (cooperateIndex < 1) {
+                    cooperateIndex = maxIndex
+                }
+                animateCoop(17);
+            };
 
-		$(document).ready(function (){  
-			$("#up-to-top").click(function (){  
-				$('html, body').animate({  
-					scrollTop: $("#top").offset().top
-				}, 500);  
-			});  
-			// getPlaneClassList()
+            nextRight.onclick = function () {
+				cooperateIndex += 1;
+                if (cooperateIndex > maxIndex) {
+                    cooperateIndex = 1
+                }
+                animateCoop(-17);
+            };
+		}
+		(function () {
+			window.onload = function () {
+				$('#top').load('header.html');
+				$('#footer').load('footer.html');
+			}
 			createSlider();
-		}); 
+			getStrategyList();
+		})();
 		function toView(link){
 			location.href = link;
 		}
@@ -656,16 +698,6 @@
 			location.href = "./workCase.html?about=" + params;
 		}
 	</script>
-    <script type="text/javascript">
-        /* 知识点：        */
-        /*       this用法 */
-        /*       DOM事件 */
-        /*       定时器 */
-
-        window.onload = function () {
-			
-        }
-    </script>
 
 </body>
 </html>
