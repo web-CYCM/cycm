@@ -462,13 +462,13 @@
 			<div class="title-litter p-b-30">宸熠传媒合作伙伴与企业</div>
 			<!-- 移动图 -->
 			<div class="containerCooperate">
-				<div id="prevLeft" class="m-l-50">
+				<div id="prevLeft">
 					<img src="./images/about/left.png" alt="">
 				</div>
 				<div id="listCooperate">
 					<div id="listInner" style="left:0;"></div>
 				</div>
-				<div id="nextRight" class="m-r-50">
+				<div id="nextRight">
 					<img src="./images/about/right.png" alt="">
 				</div>
 			</div>
@@ -531,9 +531,9 @@
 						});
 						for(var index = 0; index < data.length; index++){
 							let obj = data[index];
+							//<span>${obj.name}</span>
 							let str = `<div class="img">
 								<img src="${obj.imgUrl}" alt="">
-								<span>${obj.name}</span>
 							</div>`
 							$("#listCooperate #listInner").append(str)
 						}
@@ -599,12 +599,12 @@
 			function animateCoop(offset) {
 				var newLeft = parseInt(listInner.style.left) + offset;
                 listInner.style.left = newLeft + 'rem';
-                if (newLeft > -17) {
+                if (newLeft > -10.5) {
                     listInner.style.left = 0 + 'rem';
                 }
 				//这里的数值是动态变化的
 				let len = $("#listCooperate #listInner .img").length;
-				let maxLeft = (len - 4)*17;
+				let maxLeft = (len - 8)*10.5;
                 if (newLeft < -maxLeft) {
                     listInner.style.left = -maxLeft + 'rem';
                 }
@@ -676,7 +676,7 @@
                 if (cooperateIndex < 1) {
                     cooperateIndex = maxIndex
                 }
-                animateCoop(17);
+                animateCoop(10.5);
             };
 
             nextRight.onclick = function () {
@@ -684,7 +684,7 @@
                 if (cooperateIndex > maxIndex) {
                     cooperateIndex = 1
                 }
-                animateCoop(-17);
+                animateCoop(-10.5);
             };
 		}
 		function getNewsList(){

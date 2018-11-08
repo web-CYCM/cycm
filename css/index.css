@@ -576,8 +576,8 @@ footer .copyright a{
 #listCooperate {
 	overflow: hidden;
 	margin: 0 auto;
-	width: 800px;
-    height: 25rem;
+	width: 85rem;
+    height: 10rem;
 	position: relative;
 }
 #listInner {
@@ -588,10 +588,10 @@ footer .copyright a{
 
 #listInner .img {
 	float: left;
-	width: 14rem;
+	width: 10rem;
 	height: 100%;
 	text-align: center;
-	margin-right: 3rem;
+	margin-right: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
