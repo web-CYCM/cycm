@@ -1,0 +1,36 @@
+{
+    "data":[
+        {
+            "name":"KeyShot产品优势",
+			"time":"2018-09-15",
+			"imgUrl": "../images/index/planeClass_01.jpg",
+            "introduce": "KeyShot是基于LuxRender开发的渲染引擎，使用先进的技术水平算法，根据物理方程模拟光线流，产生高精度逼真场景效果，达到照片..."
+        },
+        {
+            "name":"抖音信息流广告-抖音营销原来是这么“玩...",
+			"time":"2018-09-15",
+			"imgUrl": "../images/index/planeClass_01.jpg",
+            "introduce": "去年是短视频发展的元年，随着活跃用户的增长，针对细分人群的平台也应运而生。作为行业内的一匹黑马，抖音自2017年爆发开始..."
+        },
+        {
+            "name":"品牌选择抖音短视频平台的理由",
+			"time":"2018-09-15",
+			"imgUrl": "../images/index/planeClass_01.jpg",
+            "introduce": "现如今，基本上意识形态的注意逻辑是：短视频>GIF图>图片>纯文字信息。与图文相比，短视频的代入感、传播性更强，更能深入用户内心..."
+        },
+        {
+            "name":"宣传片需要提供哪些资料?",
+			"time":"2018-09-15",
+			"imgUrl": "../images/index/planeClass_01.jpg",
+            "introduce": "1.企业简介"
+        },
+        {
+            "name":"把好的产品展现的淋漓尽致才是好的产品宣传片",
+			"time":"2018-09-15",
+			"imgUrl": "../images/index/planeClass_01.jpg",
+            "introduce": "影视宣传片"
+        }
+    ],
+    "code":1001,
+    "message":"获取成功!"
+}

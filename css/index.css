@@ -571,6 +571,7 @@ footer .copyright a{
 #listInner {
 	position: absolute;
 	height: 100%;
+	transition: all 0.3s;
 }
 
 #listInner .img {

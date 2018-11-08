@@ -1,18 +1,18 @@
 <?php 
+	// header("Access-Control-Allow-Origin:*")
 	$type = $_REQUEST['type'];
 	$str = '';
-	if ($type == 'strategyList') {  //战略合作
+	if ($type == 'strategyList') {  			//战略合作企业列表
 		$str = file_get_contents('cooperate.json');
-	}elseif ($type == 'homeMore') {//首页上拉加载
-		$pageIndex = $_REQUEST['pageIndex'];//页数，从1开始
-		$str = file_get_contents('http://api.shangtianapp.com/api/v1/homelist?page='.$pageIndex);
-	}elseif ($type == "planeClass") {	//主页产品和服务：视频类
-		$str = file_get_contents('planeClass.json');
-	}elseif ($type == 'setList') {//获取一套-产品列表
-		$occasion_id = $_REQUEST['occasion_id'];//菜单id，参照A_set_menu中的值
-		$pageIndex = $_REQUEST['pageIndex'];//页数，从1开始
+	}elseif ($type == 'newsList') {				//宸熠资讯列表页数据
+		$pageIndex = $_REQUEST['pageIndex'];	//页数，从1开始
+		$pageSize = $_REQUEST['pageSize'];		//一页展示多少条，
+		$str = file_get_contents('newsList.json?pageIndex='.$pageIndex.'&pageSize='.$pageSize);
+	}elseif ($type == 'setList') {
+		$occasion_id = $_REQUEST['occasion_id'];	//菜单id，参照A_set_menu中的值
+		$pageIndex = $_REQUEST['pageIndex'];		//页数，从1开始
 		$str = file_get_contents('http://api.shangtianapp.com/api/v1/Topic/getHomeList?occasion_id='.$occasion_id.'&page='.$pageIndex);
-	}elseif ($type == 'getCode') {//获取验证码
+	}elseif ($type == 'getCode') {		//获取验证码
 		$mobile = $_REQUEST['mobile'];
 		$opts = array (
 			'http' => array (

@@ -22,6 +22,7 @@
 	<link href="vendor\slick\slick.css" rel="stylesheet" media="all">
 	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="./data/cooperate.json"></script>
 </head>
 <body>
 	
@@ -209,16 +210,17 @@
 			location.href = 'index-Mobile.html';
 		}
 		function getStrategyList(){
-			$.ajax({
-				url: encodeURI("data/ajaxData.php"),
-				type: "get",
-				dataType: "json",
-				data: {
-					"type": "strategyList"
-				},
-				contentType: "application/json; charset=utf-8",
-				success: function(res, status){
-					let data = res.data;
+			// $.ajax({
+			// 	url: encodeURI("data/ajaxData.php"),
+			// 	type: "get",
+			// 	dataType: "json",
+			// 	data: {
+			// 		"type": "strategyList"
+			// 	},
+			// 	contentType: "application/json; charset=utf-8",
+			// 	success: function(res, status){
+			// 		let data = res.data;
+			let data = cooperateList.data;
 					if(data){
 						$("#container #list").css({
 							"width": data.length*17 + 'rem'
@@ -232,11 +234,11 @@
 							$("#container #list").append(str)
 						}
 					}
-				},
-				error: function(err){
-					console.log(err);
-				}
-			})
+			// 	},
+			// 	error: function(err){
+			// 		console.log(err);
+			// 	}
+			// })
 		}
 		function getSlider(){
             var container = document.getElementById('container');
