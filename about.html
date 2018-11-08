@@ -15,6 +15,11 @@
 <body>
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
 	<div id="about-content">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img class="img-wrap" src="./images/index/swiper1.png">
+			</div>
+		</div>
 		<div id="about-bar-introduction" class="dis-content">
 			<div class="center-content">
 				<div class="title m-t-90">
@@ -27,14 +32,11 @@
 					<div></div>
 				</div>
 				<div class="introduction-img-wrap">
-					<img src="./images/index/videoClass_01.jpg" alt="">
+					<img src="./images/know/know-constrction.png" alt="">
 				</div>
 				<div class="introduction-word-wrap">
 					<p>
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
+						宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。
 					</p>
 				</div>
 			</div>
@@ -52,7 +54,7 @@
 				</div>
 			</div>
 			<div class="introduction-img-wrap">
-				<img src="./images/index/videoClass_01.jpg" alt="">
+				<img src="./images/know/company-strctrue.png" alt="">
 			</div>
 		</div>
 		<div id="about-bar-video" class="dis-content">
@@ -81,12 +83,8 @@
 					</div>
 				</div>
 				<div class="introduction-word-wrap">
-					<p>
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-						拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。
-					</p>
+					<div></div>
+					<p></p>
 				</div>
 			</div>
 		</div>
@@ -111,31 +109,12 @@
 				var videoList = [
 						{
 							id: 1,
-							img: './images/about/video_01.jpg',
-							content: '视频名称是拼命测绘南宫拍摄出政企的业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。',
-							time: '0:21',
-							videoSrc: './videos/01.mp4'
-						},
-						{
-							id: 2,
-							img: './images/about/video_02.jpg',
-							content: '测绘南宫拍摄出政企的业绩、辉煌视频名称是拼命，以及政企的前景谋略，后备资源、有利条件，全面的宣传政企的优势和品牌。',
-							time: '0:51',
-							videoSrc: './videos/02.mp4'
-						},
-						{
-							id: 3,
-							img: './images/about/video_01.jpg',
-							content: '后备资源、有利条件，全面的宣传政企的优势和品牌视频名称是拼命测绘南宫拍摄出政企的业绩、辉煌，以及政企的前景谋略。',
-							time: '0:48',
-							videoSrc: './videos/03.mp4'
-						},
-						{
-							id: 4,
-							img: './images/about/video_02.jpg',
-							content: '业绩、辉煌，以及政企的前景谋略，后备资源、有利条件，视频名称是拼命测绘南宫拍摄出政企的全面的宣传政企的优势和品牌。',
-							time: '1:10',
-							videoSrc: './videos/01.mp4'
+							img: './images/know/video-list-01.jpg',
+							contentList: '宸熠传媒团队简介',
+							time: '1:15',
+							videoSrc: './videos/introduce.mp4',
+							contentTitle: 'OUR CASE AND WORKS',
+							content: '宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
 						}
 				];
 
@@ -157,13 +136,17 @@
 					changeVideoSrc: function (videoObj, videoSrc) {
 						$(videoObj).children('video').attr('src', videoSrc);
 					},
+					changeVideoInfo: function (InfoObj, infoTitle, info) {
+						$(InfoObj).children('div').text(infoTitle);
+						$(InfoObj).children('p').text(info);
+					},
 					
 					initVideoList: function (index) {
 						var li = $('.video-list ul li').eq(index);
 						$(li).attr('id', videoList[i].id);
 						$(li).children('.video-list-img').attr('src', videoList[i].img);
-						$(li).children('.video-description').children('div').children('.video-list-content').attr('title', videoList[i].content);
-						$(li).children('.video-description').children('div').children('.video-list-content').text(videoList[i].content);
+						$(li).children('.video-description').children('div').children('.video-list-content').attr('title', videoList[i].contentList);
+						$(li).children('.video-description').children('div').children('.video-list-content').text(videoList[i].contentList);
 						$(li).children('.video-description').children('.video-list-time').text(videoList[i].time);
 					}
 				}
@@ -182,6 +165,7 @@
 				}
 				
 				aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
+				aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[0].contentTitle,  videoList[0].content );
 
 				for (var i = 0; i < videoList.length; i++) {
 					$('.video-list ul').append(`<li>
@@ -201,6 +185,7 @@
 					for (var i = 0; i < videoList.length; i++) {
 						if (currentId == videoList[i].id) {
 							aboutObj.changeVideoSrc ( '#about-video', videoList[i].videoSrc);
+							aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[i].contentTitle,  videoList[i].content );
 							return false
 						}
 					}
@@ -212,7 +197,11 @@
 </body>
 <style>
 	#about-content{
-		margin-top: 7rem;
+		margin-top: 6.45rem;
+	}
+	#about-content .swiper-wrapper .img-wrap{
+		width: 100%;
+		height: auto;
 	}
 	#about-bar-introduction.dis-content,
 	#about-bar-structure.dis-content,
@@ -263,6 +252,9 @@
 	#about-bar-video .introduction-word-wrap p{
 		font-size: 1.5rem;
 		text-indent: 3.5rem;
+	}
+	#about-bar-video .introduction-word-wrap>div{
+		font-size: 2rem;
 	}
 
 	#about-bar-structure .introduction-img-wrap img{
