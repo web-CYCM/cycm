@@ -41,31 +41,104 @@
 		
 	</div>
 	<div class="content-form dis-content-form">
-			
+		<div class="content-form-close">X</div>
+		<div class="content-form-tip">请输入联系方式，我司将立即与您联络！</div>
+		<form action="" method="get">
+			<div>
+				<input type="text" name="firstName" value="" class="required" id="firstName" placeholder="请输入您的称呼：" autocomplete="off">
+				<p class="first-name-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<div>
+				<input type="text" name="telPhone" value="" class="required" id="telPhone" placeholder='请输入您的手机号码：' autocomplete="off">
+				<p class="tel-phone-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<div>
+				<input type="text" name="companyName" value="" class="required" id="companyName" placeholder="请输入贵司的公司名称：" autocomplete="off">
+				<p class="company-name-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<input type="submit" value="提交">
+		</form>
 	</div>
 	<div class="sideNav-model dis-sideNav-model"></div>
 
 	<script type="text/javascript">
 		(function () {
 			var sideNavObj = {
-				clickServices: function (clickObj) {
-					$(clickObj).on('click', function () {
-						$('.content-form').removeClass('dis-content-form');
-						$('.sideNav-model').removeClass('dis-sideNav-model');
-					})
+				clickServices: function () {
+					$('.content-form').removeClass('dis-content-form');
+					$('.sideNav-model').removeClass('dis-sideNav-model');
+					
+					$('form').find('.form-input-tip span').addClass('dis-form-input-tip'); //隐藏表单tip
 				},
-				clickModel: function (modelObj) {
-					$(modelObj).on('click', function () {
-						$('.content-form').addClass('dis-content-form');
-						$('.sideNav-model').addClass('dis-sideNav-model');
+				clickModel: function () {
+					$('.content-form').addClass('dis-content-form');
+					$('.sideNav-model').addClass('dis-sideNav-model');
+					
+					$('form').find('.form-input-tip span').addClass('dis-form-input-tip'); //隐藏表单tip
+				},
+
+				initForm: function () {
+					$('form input.required').each(function () {
+						$(this).parent().prepend('<span class="high">*</span>')
 					})
-				}
+
+					$('form').find('.form-input-tip span').addClass('dis-form-input-tip');//隐藏表单tip
+				},
 			}
-
-			sideNavObj.clickServices ('.content-consult-service div');
-
-			sideNavObj.clickModel ('.sideNav-model');
+			
+			sideNavObj.clickServices ();
+			sideNavObj.clickModel ();
+			sideNavObj.initForm ();
+			//点击客服
+			$('.content-consult-service div').on('click', function () {
+				sideNavObj.clickServices ();
+			})
+			//点击form的遮罩
+			$('.sideNav-model').on('click', function () {
+				sideNavObj.clickModel ();
+			})
+			//点击弹窗关闭图标
+			$('.content-form-close').on('click', function () {
+				sideNavObj.clickModel ();
+			})
+			//表单验证
+			$('form input').blur(function () {
+				if ($(this).is('#firstName')) {
+					if (this.value == '') {
+						$(this).next().children().text('请输入您的称呼');
+						$(this).next().children().removeClass('dis-form-input-tip')
+					}else {
+						$(this).attr('value', this.value)
+					}
+				}
+				if ($(this).is('#telPhone')) {
+					if (this.value == '') {
+						$(this).next().children().text('请输入您的手机号码');
+						$(this).next().children().removeClass('dis-form-input-tip')
+					}else {
+						$(this).attr('value', this.value)
+					}
+				}
+				if ($(this).is('#companyName')) {
+					if (this.value == '') {
+						$(this).next().children().text('请输入贵司的公司名称');
+						$(this).next().children().removeClass('dis-form-input-tip')
+					}else {
+						$(this).attr('value', this.value)
+					}
+				}
+			})
+			//表单提交
+			$('form').submit(function () {
+				$('form input').trigger("blur");
+				if ($('form .dis-form-input-tip').length < $('form .form-input-tip').length) {
+					return false
+				} 
+				var firstNameSub = $('form #firstName').attr('value');
+				var telPhoneSub = $('form #telPhone').attr('value');
+				var companyNameSub = $('form #companyName').attr('value');
 				
+			})
 		})()
 	</script>
 
@@ -184,12 +257,70 @@
 		position: fixed;
 		top: 50%;
 		right: 50%;
-		width: 20rem;
-		height: 16.67rem;
+		width: 40rem;
 		background: #d1933a;
-		margin-top: -8.335rem;
-		margin-right: -10rem;
+		border-radius: 0.5rem;
+		margin-top: -16.665rem;
+		margin-right: -20rem;
 		z-index: 999;
+		padding: 2rem;
+	}
+	.content-form .content-form-close{
+		cursor: pointer;
+		display: flex;
+		justify-content: flex-end;
+		font-size: 1rem;
+		color: #ffffff;
+	}
+	.content-form .content-form-tip{
+		display: flex;
+		justify-content: center;
+		font-size: 1rem;
+		color: #ffffff;
+		margin: 2rem 0 1.5rem 0;
+	}
+	.content-form form{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+	.content-form form .high{
+		width: 1rem;
+		color: rgb(255, 0, 0);
+	}
+	.content-form form input.required{
+		width: 33.33rem;
+		padding: 0 1rem;
+		margin-bottom: 1rem;
+	}
+	.content-form form input[type="text"]{
+		border-style:none;
+		height: 2rem !important;		
+	}
+	.content-form form input:-webkit-autofill {
+         -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+	.content-form form input[type="submit"]{
+		border-style:none;
+		width: 3.33rem;
+		height: 2rem !important;
+		background-color: #010100;
+		color: #ffffff;
+	}
+
+	.content-form form .form-input-tip{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: 1rem;
+		font-size: 1rem;
+		color:rgb(255, 0, 0);
+		margin-left: 1rem;
+	}
+	.content-form form .dis-form-input-tip{
+		display: none;
 	}
 </style>
 </html>
