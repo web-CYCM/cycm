@@ -65,7 +65,6 @@ body,html{
 .main-title .title-litter{
 	color: #999999;
 	font-size: 1.2rem;
-	margin-bottom: 4.6rem;
 }
 /* 产品和服务 */
 .production-box{
@@ -471,18 +470,30 @@ footer .copyright a{
 	width: 62%;
 	padding: 0;
 }
+.workCase .container.plane_flex{
+	display: flex;
+	justify-content: center !important;
+}
 .workCase .container .big-img,
 .workCase .container .little-img{
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
 }
-.workCase .container .big-img{
-	/* height: 26.67rem; */
-	max-width: 100%;
+.workCase .container .right-img{
+	display: flex;
+	cursor: pointer;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
-.workCase .container .little-img{
-	/* height: 14.58rem; */
+.workCase .container .right-img>div{
+	display: flex;
+	justify-content: flex-start;
+}
+.workCase .container .big-img,
+.workCase .container .left-img,
+.workCase .container .little-img,
+.workCase .container .right-img{
 	max-width: 100%;
 }
 .workCase .container .big-img img,
@@ -490,16 +501,13 @@ footer .copyright a{
 	max-height: 100%;
 	width: 100%;
 }
-.workCase .container .big-img .img,
-.workCase .container .little-img .img{
-	transition: all 0.5s;
-}
-.workCase .container .big-img .img:hover .shadow,
-.workCase .container .little-img .img:hover .shadow{
+.workCase .container .img:hover .shadow,
+.workCase .container .img:hover .shadow{
 	visibility: visible;
 }
 .workCase .container .img{
 	position: relative;
+	transition: all 0.5s;
 }
 .workCase .container .shadow{
 	position: absolute;
