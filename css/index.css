@@ -382,7 +382,7 @@ footer .copyright a{
 #container,#container-plane {
 	position: relative;
 	width: 800px;
-	height: 25rem;
+	height: 20rem;
 	overflow: hidden;
 }
 
@@ -390,7 +390,7 @@ footer .copyright a{
 	position: absolute;
 	z-index: 1;
 	width: 4000px;
-	height: 25rem;
+	height: 20rem;
 	transition: all .3s;
 }
 

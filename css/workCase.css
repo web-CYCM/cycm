@@ -171,7 +171,6 @@
 
 /* 团队合作-团队风采*/
 .workCase-box .figureIntroduction{
-	/* border: 1px solid red; */
 	margin-right: 6rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -181,10 +180,8 @@
 	width: 15rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	margin-right: 5rem;
-	/* border: 1px solid red; */
 	margin-top: 7.5rem;
 	font-size: 1.2rem;
 }
@@ -205,6 +202,9 @@
 /* 团队合作-公司顾问 */
 .workCase-box .advisoryList{
 	margin: 0 auto;
+}
+#consultant .center-content .advisoryList{
+	padding: 0 10rem;
 }
 .workCase-box .advisoryList .advisoryItem{
 	display: flex;
