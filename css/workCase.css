@@ -245,8 +245,6 @@
 #list {
 	width: 255rem;
 	position: absolute;
-	/* height: 400px; */
-	border: 1px solid red;
 }
 
 #list .img {
@@ -263,10 +261,11 @@
 #list .img img, #list .img span{
 	display: block;
 	margin: 0 auto 2rem;
+	font-weight: bold;
 }
 #prevLeft, #nextRight{
 	cursor: pointer;
 }
 #prevLeft img, #nextRight img{
-	max-width: 80%;
+	max-width: 100%;
 }
