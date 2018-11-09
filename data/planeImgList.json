@@ -1,0 +1,138 @@
+var planeImgList = {
+    "whiteBg":[
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_01.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_02.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_03.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_04.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_05.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_06.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_07.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_08.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_09.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_10.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_11.png"
+		},
+        {
+			"imgUrl": "images/planeWorkCase/whiteBg_12.png"
+		}
+	],
+	"scene": [
+		{
+			"imgUrl": "images/planeWorkCase/scene_01.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/scene_02.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/scene_03.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/scene_04.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/scene_05.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/scene_06.png"
+		}
+	],
+	"tryOn": [
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_01.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_02.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_03.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_04.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_05.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_06.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_07.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_08.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_09.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_10.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_11.png"
+		}
+	],
+	"posterList":[
+		// {
+		// 	"imgUrl": "images/planeWorkCase/poster_01.png"
+		// },
+		{
+			"imgUrl": "images/planeWorkCase/poster_02.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/poster_03.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/poster_04.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/poster_05.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/poster_06.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/poster_07.png"
+		}
+	],
+	"albumList": [
+		{
+			"imgUrl": "images/planeWorkCase/album_01.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/album_02.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/album_03.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/album_04.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/album_05.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/album_06.png"
+		}
+	]
+}

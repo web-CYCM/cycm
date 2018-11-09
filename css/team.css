@@ -39,6 +39,7 @@ html{
 .commonTitle .center-content .title_bar div{
 	width: 31.67rem;
 	border: 1px solid #FFFFFF;
+	background: #FFFFFF;
 }
 .commonTitle .center-content .title_bar img{
 	margin: 0 2rem;
