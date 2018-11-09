@@ -28,6 +28,7 @@ body,html{
 
 .swiper-height{
 	height: 36rem;
+	margin-top: 7rem;
 }
 .swiper-height .swiper-pagination .swiper-pagination-bullet{
 	border-radius: 0;
@@ -169,6 +170,11 @@ body,html{
 }
 .brief-intro  .view-more{
 	width: 100%;
+	color: #5b4b3b;
+	cursor: pointer;
+}
+.brief-intro  .view-more a{
+	text-decoration: none;
 	color: #5b4b3b;
 }
 .main-title .selection .seletion-item.active{
