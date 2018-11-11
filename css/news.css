@@ -41,8 +41,8 @@
 	max-height: 100%;
 }
 .section-news .center-content .news-list .news-item .news-system{
-	max-width: 40rem;
-	height: 18.34rem;
+	/* max-width: 40rem;
+	height: 18.34rem; */
 	/* border: 1px solid blue; */
 	display: flex;
 	/* justify-content: space-around; */
