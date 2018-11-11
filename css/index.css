@@ -510,7 +510,8 @@ footer .copyright a{
 }
 .workCase .container .img:hover .shadow,
 .workCase .container .img:hover .shadow{
-	visibility: visible;
+	/* visibility: visible; */
+	opacity: 1;
 }
 .workCase .container .img{
 	position: relative;
@@ -523,9 +524,11 @@ footer .copyright a{
 	width: 100%;
 	height: 100%;
 	z-index: 5;
-	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s;
+	/* visibility: hidden; */
 	color: rgba(250,250,250,0.7);
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.6);
 }
 .workCase .container .shadow div{
 	display: flex;

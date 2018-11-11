@@ -22,6 +22,7 @@
 	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<script type="text/javascript" src="./data/cooperate.json"></script>
+	<script type="text/javascript" src="./data/newsList.json"></script>
 </head>
 <body>
 	
@@ -425,8 +426,8 @@
 
 		<!-- 新闻资讯 -->
 		<div class="newsInformation p-t-50 p-b-50">
-			<div class="center-content">
-				<div class="newsItem">
+			<div class="center-content" id="newsList">
+				<!-- <div class="newsItem">
 					<h4 class="font-bold">KeyShot产品优势</h4>
 					<img src="./images/index/news_01.png" alt="">
 					<div class="content">
@@ -446,7 +447,7 @@
 					<div class="content">
 						现如今，基本上意识形态的注意逻辑是：短视频>GIF图>图片>纯文字信息。与图文相比，短视频的代入感、传播性更强，更能深入用户内心...
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
@@ -675,8 +676,24 @@
             };
 		}
 		function getNewsList(){
-			$.getJSON('data/newsList.json',function(data){
-				console.log(data)
+			let data = newsList.data;
+			let endList = [];
+			if(data.length>3){
+				//只取前三条数据
+				endList.push(data[0]);
+				endList.push(data[1]);
+				endList.push(data[2]);
+			}else{
+				//全部赋值
+				endList = data;
+			}
+			$.each(endList || [], (index,item) =>{
+				let str = `<div class="newsItem">
+					<h4 class="font-bold">${item.name}</h4>
+					<img src="${item.imgUrl}" alt="">
+					<div class="content">${item.introduce}</div>
+				</div>`;
+				$("#newsList").append(str);
 			})
 		}
 		(function () {
