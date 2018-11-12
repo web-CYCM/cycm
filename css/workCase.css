@@ -89,13 +89,21 @@
 }
 .workCase-box .tab-content .videoList .video-item .content{
 	font-size: 0.8rem;
+	max-width: 100%;
+	max-height: 6.5rem;
+
+	/* 单行省略 */
+	/* overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap; */
+
+	/* 多行省略 */
 	overflow: hidden;
-	word-break:break-all;  
+	word-break:break-all;
 	text-overflow: ellipsis;
 	-o-text-overflow:ellipsis;
 	display:-webkit-box;
 	-webkit-box-orient:vertical;
-	-webkit-line-clamp: 4;
 }
 
 .workCase-box .center-content{
