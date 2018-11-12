@@ -68,7 +68,6 @@
 			if(Id){
 				$.each(data, (index,item) =>{
 					if(item.Id === Id){
-						console.log(data[index])
 						let str = `<div class="center-content">
 								<div class="Main-title m-b-50">${item.name}</div>
 								<div class="complete-intro" style="display:${item.details.preface?'block;':'none;'}">

@@ -545,7 +545,7 @@ footer .copyright a{
 	margin: 0 auto 0.1rem;
 }
 .newsInformation{
-	/* border: 1px solid red; */
+	
 }
 .newsInformation .center-content{
 	display: flex;
@@ -554,7 +554,7 @@ footer .copyright a{
 }
 .newsInformation .center-content .newsItem{
 	display: flex;
-	width: 25rem;
+	width: 22rem;
 	flex-direction: column;
 }
 .newsInformation .center-content .newsItem h4{
@@ -575,7 +575,7 @@ footer .copyright a{
 	margin-top: 1rem;
 }
 .newsInformation .center-content .newsItem img{
-	max-width: 100%;
+	max-height: 100%;
 }
 /* 战略合作 */
 .cooperative-enterprise .containerCooperate{

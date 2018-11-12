@@ -93,8 +93,8 @@
 				let str = `<div class="news-item m-t-70">
 					<div class="news-system">
 						<div class="news-time">
-							<p>14</p>
-							<p>2018-09</p>
+							<p style="margin-bottom:0;">${item.time.split("-")[2]}</p>
+							<span>${item.time.split("-")[0] + '-' + item.time.split("-")[1]}</span>
 						</div>
 						<img src="${item.imgUrl}" alt="">
 					</div>
