@@ -155,7 +155,9 @@
 		}
 		function getTeamPeople(){
 			let data = teamPeopleList.data;
+			let len = data.length;
 			if(data){
+					// let div = $("<div class='row_box'></div>");
 				$.each(data, (index,item) =>{
 					let str = `
 						<div class="figureItem">
@@ -165,6 +167,13 @@
 							<span class="font-bold">${item.name}</span>
 							<div class="figureExperience">${item.introduce}</div>
 						</div>`;
+					// div.append(str);
+					// if((index+1)%4 == 0){
+					// 	console.log(div)
+					// 	$("#people_introduction").append(div);
+					// }else{
+
+					// }
 					$("#people_introduction").append(str)
 				})
 			}

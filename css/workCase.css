@@ -133,11 +133,11 @@
 /* 平面类 */
 .workCase-box .center-content .tab-content .plane_Img{
 	/* border: 1px solid red; */
+
 }
 .workCase-box .center-content .tab-content .plane_Img .header_Img{
-	/* width: 100%;
-	height: 25.42rem; */
 	margin-bottom: 1rem;
+	text-align: center;
 }
 .workCase-box .center-content .tab-content .plane_Img .header_Img img{
 	/* width: 100%; */
@@ -148,27 +148,35 @@
 	margin-bottom: 1rem;
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: space-between; */
+	justify-content: center;
 }
 .workCase-box .center-content .tab-content .row_Img >div{
-	width: 38rem;
+	width: 37rem;
+}
+.workCase-box .center-content .tab-content .row_Img.oddNumber >div.right,
+.workCase-box .center-content .tab-content .row_Img.evenNumber >div.left{
+	text-align: right;
 }
 .workCase-box .center-content .tab-content .row_Img >div.right img{
 	/* max-width: 100%; */
-	margin: 1.5rem 1.5rem 0 0;
+	/* margin: 1.5rem 1.5rem 0 0; */
+	margin: 1rem 0 0 0;
 }
 .workCase-box .center-content .tab-content .row_Img >div.left{
 	display: flex;
 	flex-wrap: wrap;
 }
-.workCase-box .center-content .tab-content .row_Img >div.left img{
-	/* max-width: 100%; */
-	margin: 1.5rem 1.5rem 0 0;
+.workCase-box .center-content .tab-content .row_Img.evenNumber >div.left img{
+	margin: 1rem 0 0 1rem;
+}
+.workCase-box .center-content .tab-content .row_Img.oddNumber >div.left img{
+	margin: 1rem 1rem 0 0;
 }
 /* 白底图 */
 #bg_white{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 #bg_white .imgItem{
 	width: 17.5rem;
@@ -192,6 +200,7 @@
 	width: 100%;
 	display: flex;
 	margin-bottom: 1.2rem;
+	justify-content: center;
 }
 #sceneList .sceneItem div,
 #posterList .sceneItem div,
@@ -205,14 +214,21 @@
 	/* margin-right: 6rem; */
 	display: flex;
 	flex-wrap: wrap;
+	/* justify-content: space-between; */
 	/* padding: 0 5rem; */
+}
+.workCase-box .figureIntroduction .row_box{
+	display: flex;
+	flex-wrap: wrap;
 }
 .workCase-box .figureIntroduction .figureItem{
 	width: 15rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-right: 4rem;
+	/* margin-right: 4rem; */
+	margin-right: 3rem;
+	margin-left: 3rem;
 	margin-top: 7.5rem;
 	font-size: 1.2rem;
 }
