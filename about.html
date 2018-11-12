@@ -106,19 +106,75 @@
 				$('#footer').load('footer.html');
 				$('#sideNav').load('sideNav.html');
 
-				var videoList = [
-						{
-							id: 1,
-							img: './images/know/video-list-01.jpg',
-							contentList: '宸熠传媒团队简介',
-							time: '1:15',
-							videoSrc: './videos/introduce.mp4',
-							contentTitle: 'OUR CASE AND WORKS',
-							content: '宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-						}
-				];
+				var videoList = [];
 
 				var aboutObj = {
+					getVideoList: function () {
+						// 初次请求列表
+						var getList = [
+							{
+								id: 1,
+								img: './images/know/video-list-01.jpg',
+								contentList: '宸熠传媒团队简介',
+								time: '1:15',
+								videoSrc: './videos/introduce.mp4',
+								contentTitle: 'OUR CASE AND WORKS',
+								content: '宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							},
+							// {
+							// 	id: 2,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '1宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '1OUR CASE AND WORKS',
+							// 	content: '1宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 3,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '2宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '2OUR CASE AND WORKS',
+							// 	content: '2宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 4,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '3宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/03.mp4',
+							// 	contentTitle: '3OUR CASE AND WORKS',
+							// 	content: '3宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 5,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '5宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '1OUR CASE AND WORKS',
+							// 	content: '5宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 6,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '6宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '2OUR CASE AND WORKS',
+							// 	content: '6宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// }
+					];
+						videoList = getList;
+						if (videoList.length) {
+							aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
+							aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[0].contentTitle,  videoList[0].content );
+							aboutObj.initVideoList (videoList);
+						}
+					},
+
 					initAbout: function (option) {
 						if (option == 'introduction') {
 							$('#about-bar-introduction').removeClass('dis-content');
@@ -140,45 +196,32 @@
 						$(InfoObj).children('div').text(infoTitle);
 						$(InfoObj).children('p').text(info);
 					},
-					
-					initVideoList: function (index) {
-						var li = $('.video-list ul li').eq(index);
-						$(li).attr('id', videoList[i].id);
-						$(li).children('.video-list-img').attr('src', videoList[i].img);
-						$(li).children('.video-description').children('div').children('.video-list-content').attr('title', videoList[i].contentList);
-						$(li).children('.video-description').children('div').children('.video-list-content').text(videoList[i].contentList);
-						$(li).children('.video-description').children('.video-list-time').text(videoList[i].time);
+
+					initVideoList: function (list) {
+						for (var i = 0; i < list.length; i++) {
+							$('.video-list ul').append(`<li id="${list[i].id}">
+										<img src="${list[i].img}" alt="" class="video-list-img">
+										<div class="video-description">
+											<div>
+												<div class="video-list-content" title="${list[i].contentList}">${list[i].contentList}</div>
+											</div>
+											<p class="video-list-time">${list[i].time}</p>
+										</div>
+									</li>`);
+						}
 					}
 				}
 
 				var hrefUrl = window.location.href;
 				var hrefData = hrefUrl.split('=');
 				var tabbar = hrefData[1];
-				if (tabbar == 'introduction') {
-					aboutObj.initAbout ('introduction')
-				} else if (tabbar == 'structure') {
-					aboutObj.initAbout ('structure')
-				} else if (tabbar == 'video') {
-					aboutObj.initAbout ('video')
+				if (tabbar == 'introduction' || tabbar == 'structure' || tabbar == 'video') {
+					aboutObj.initAbout (tabbar)
 				} else {
 					aboutObj.initAbout ('introduction')
 				}
-				
-				aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
-				aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[0].contentTitle,  videoList[0].content );
-
-				for (var i = 0; i < videoList.length; i++) {
-					$('.video-list ul').append(`<li>
-								<img src="" alt="" class="video-list-img">
-								<div class="video-description">
-									<div>
-										<div class="video-list-content" title=""></div>
-									</div>
-									<p class="video-list-time"></p>
-								</div>
-							</li>`);
-					aboutObj.initVideoList (i)
-				}
+				//初始化视频
+				aboutObj.getVideoList ();
 				//点击列表视频
 				$('.video-list ul').on('click','li', function () {
 					var currentId = $(this).attr('id');
@@ -190,6 +233,75 @@
 						}
 					}
 				})
+				//视频列表滚动
+				// var objHeight = $(".video-list ul").height(),
+				// 	scrollHeight = 0,
+				// 	scrollTopHeight = 0;
+				// $('.video-list ul').scroll(function () {
+				// 	scrollHeight = this.scrollHeight;
+				// 	scrollTopHeight = $(this)[0].scrollTop;
+				// 	if ( objHeight + scrollTopHeight >= scrollHeight - 0.1){
+				// 		// 后续请求列表
+				// 		var videoListContinue = [
+				// 		{
+				// 				id: 7,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '7宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/introduce.mp4',
+				// 				contentTitle: 'OUR CASE AND WORKS',
+				// 				content: '7宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			},
+				// 			{
+				// 				id: 8,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '8宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/02.mp4',
+				// 				contentTitle: '1OUR CASE AND WORKS',
+				// 				content: '8宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			},
+				// 			{
+				// 				id: 9,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '9宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/02.mp4',
+				// 				contentTitle: '2OUR CASE AND WORKS',
+				// 				content: '9宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			},
+				// 			{
+				// 				id: 10,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '10宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/03.mp4',
+				// 				contentTitle: '3OUR CASE AND WORKS',
+				// 				content: '10宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			},
+				// 			{
+				// 				id: 11,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '11宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/02.mp4',
+				// 				contentTitle: '1OUR CASE AND WORKS',
+				// 				content: '11宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			},
+				// 			{
+				// 				id: 12,
+				// 				img: './images/know/video-list-01.jpg',
+				// 				contentList: '12宸熠传媒团队简介',
+				// 				time: '1:15',
+				// 				videoSrc: './videos/02.mp4',
+				// 				contentTitle: '1OUR CASE AND WORKS',
+				// 				content: '12宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+				// 			}
+				// 		]
+				// 		videoList = videoList.concat(videoListContinue);
+				// 		aboutObj.initVideoList (videoListContinue);
+				// 	}
+				// })
 			}
 		})()
 	</script>
@@ -235,22 +347,29 @@
 		margin: 0 2rem;
 	}
 
-	#about-bar-introduction .introduction-img-wrap,
-	#about-bar-structure .introduction-img-wrap{
+	#about-bar-introduction .introduction-img-wrap{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 33.33rem;
 		margin: 2.5rem 0;
 	}
-	#about-bar-structure .introduction-img-wrap{
-		margin: 2.5rem 0 9.5rem 0;
-	}
-	#about-bar-introduction .introduction-img-wrap img,
-	#about-bar-structure .introduction-img-wrap img{
+	#about-bar-introduction .introduction-img-wrap img{
 		max-width: 58.33rem;
 		max-height: 33.33rem;
 	}
+	#about-bar-structure .introduction-img-wrap{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50rem;
+		margin: 2.5rem 0 9.5rem 0;
+	}
+	#about-bar-structure .introduction-img-wrap img{
+		max-width: 58.33rem;
+		max-height: 50rem;
+	}
+	
 	#about-bar-introduction .introduction-word-wrap p,
 	#about-bar-video .introduction-word-wrap p{
 		font-size: 1.5rem;
@@ -304,7 +423,7 @@
 	#about-bar-video .introduction-video-wrap .video-list ul{
 		margin-bottom: 0;
 		list-style:none;
-		padding: 1rem;
+		padding: 0 1rem 0 1rem;
 		height: 29.33rem;
 		overflow: auto;
 	}
@@ -312,7 +431,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 	#about-bar-video .introduction-video-wrap .video-list ul li:hover{
 		cursor: pointer;
