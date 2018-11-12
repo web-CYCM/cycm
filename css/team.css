@@ -40,7 +40,8 @@ html{
 	align-items: center;
 }
 .commonTitle .center-content .title_bar div{
-	width: 31.67rem;
+	/* width: 31.67rem; */
+	width: 46rem;
 	border: 1px solid #FFFFFF;
 	background: #FFFFFF;
 }

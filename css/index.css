@@ -555,6 +555,7 @@ footer .copyright a{
 .newsInformation .center-content .newsItem{
 	display: flex;
 	width: 22rem;
+	cursor: pointer;
 	flex-direction: column;
 }
 .newsInformation .center-content .newsItem h4{
