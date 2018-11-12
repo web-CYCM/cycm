@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="">
-	<title>宸熠传媒</title>
+	<title>深圳市宸熠传媒有限公司</title>
 	<link href="css\font-face.css" rel="stylesheet" media="all">
 	<link href="vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
 	<link href="vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
@@ -22,6 +22,7 @@
 	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<script type="text/javascript" src="./data/cooperate.json"></script>
+	<script type="text/javascript" src="./data/newsList.json"></script>
 </head>
 <body>
 	
@@ -425,29 +426,7 @@
 
 		<!-- 新闻资讯 -->
 		<div class="newsInformation p-t-50 p-b-50">
-			<div class="center-content">
-				<div class="newsItem">
-					<h4 class="font-bold">KeyShot产品优势</h4>
-					<img src="./images/index/news_01.png" alt="">
-					<div class="content">
-						KeyShot是基于LuxRender开发的渲染引擎，使用先进的技术水平算法，根据物理方程模拟光线流，产生高精度逼真场景效果，达到照片...
-					</div>
-				</div>
-				<div class="newsItem">
-					<h4 class="font-bold">抖音信息流广告-抖音营销原来是这么“玩...</h4>
-					<img src="./images/index/news_02.png" alt="">
-					<div class="content">
-						去年是短视频发展的元年，随着活跃用户的增长，针对细分人群的平台也应运而生。作为行业内的一匹黑马，抖音自2017年爆发开始...
-					</div>
-				</div>
-				<div class="newsItem">
-					<h4 class="font-bold">品牌选择抖音短视频平台的理由</h4>
-					<img src="./images/index/news_03.png" alt="">
-					<div class="content">
-						现如今，基本上意识形态的注意逻辑是：短视频>GIF图>图片>纯文字信息。与图文相比，短视频的代入感、传播性更强，更能深入用户内心...
-					</div>
-				</div>
-			</div>
+			<div class="center-content" id="newsList"></div>
 		</div>
 
 
@@ -675,8 +654,24 @@
             };
 		}
 		function getNewsList(){
-			$.getJSON('data/newsList.json',function(data){
-				console.log(data)
+			let data = newsList.data;
+			let endList = [];
+			if(data.length>3){
+				//只取前三条数据
+				endList.push(data[0]);
+				endList.push(data[1]);
+				endList.push(data[2]);
+			}else{
+				//全部赋值
+				endList = data;
+			}
+			$.each(endList || [], (index,item) =>{
+				let str = `<div class="newsItem" onclick="javascript:location.href='newsView.html?Id=${item.Id}'">
+					<h4 class="font-bold">${item.name}</h4>
+					<img src="${item.imgUrl}" alt="">
+					<div class="content">${item.introduce}</div>
+				</div>`;
+				$("#newsList").append(str);
 			})
 		}
 		(function () {

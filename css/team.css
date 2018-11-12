@@ -17,11 +17,14 @@ html{
 .commonTitle .center-content{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .commonTitle .center-content .title{
 	color: #FFFFFF;
 	overflow: hidden;
-	max-width: 100%;
+	width: 100%;
+	text-align: left;
 	text-overflow:ellipsis;
 	white-space: nowrap;
 }
@@ -37,7 +40,8 @@ html{
 	align-items: center;
 }
 .commonTitle .center-content .title_bar div{
-	width: 31.67rem;
+	/* width: 31.67rem; */
+	width: 46rem;
 	border: 1px solid #FFFFFF;
 	background: #FFFFFF;
 }

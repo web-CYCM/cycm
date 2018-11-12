@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="">
-	<title>知识分享-深圳市宸熠传媒有限公司</title>
+	<title>宸熠资讯-深圳市宸熠传媒有限公司</title>
 	<link href="css\font-face.css" rel="stylesheet" media="all">
 	<link href="vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
 	<link href="vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
@@ -22,6 +22,7 @@
 	<link href="vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<link href="css\news.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="./data/newsList.json"></script>
 </head>
 <body>
 	
@@ -49,59 +50,7 @@
 				<img src="./images/index/commonSys.png" alt="">
 				<div></div>
 			</div>
-			<div class="news-list">
-				<div class="news-item m-t-70">
-					<div class="news-system">
-						<div class="news-time">
-							<p>14</p>
-							<p>2018-09</p>
-						</div>
-						<img src="./images/news/news_01.png" alt="">
-					</div>
-					<div class="introduce" onclick="toView('newsView.html')">
-						<div class="title">RFID仓储盘点管理系统方案</div>
-						<div class="content">
-							<span>在仓库管理中货物每天进进出出，总给人一种混乱的</span>
-							<span>感觉，无论是进货还是销售量以及货物的缺失等，一</span>
-							<span>切都是由管理员说了算，并没有严格的管理制度，而这样也就为企业带来了很多不必要的麻烦和工作。</span>
-						</div>
-						<div class="learnMore">了解详情&nbsp;&gt;</div>
-					</div>
-				</div>
-				<div class="news-item m-t-70">
-					<div class="news-system">
-						<div class="news-time">
-							<p>14</p>
-							<p>2018-09</p>
-						</div>
-						<img src="./images/news/news_02.png" alt="">
-					</div>
-					<div class="introduce" onclick="toView('newsView.html')">
-						<div class="title">人脸识别客流统计客流人群分析</div>
-						<div class="content">
-							近年来，网络电商的风靡，正在逐步的改变人们的消费习惯，线上线下的竞争日趋激烈，线下运营成本更高，覆盖范围更小，人脸识别客流统计系统会对客户进行形象备案，精准、快速、高效的将大数据与线下店商结合起来，通过客流大数据、会员管理大数据、产品销售大数据、广告投放大数据，引领线下店商新一轮变革潮流。
-						</div>
-						<div class="learnMore">了解详情&nbsp;&gt;</div>
-					</div>
-				</div>
-				<div class="news-item m-t-70">
-					<div class="news-system">
-						<div class="news-time">
-							<p>14</p>
-							<p>2018-09</p>
-						</div>
-						<img src="./images/news/news_03.png" alt="">
-					</div>
-					<div class="introduce" onclick="toView('newsView.html')">
-						<div class="title">2018世界人工智能大会释放AI发展新信号</div>
-						<div class="content" style="-webkit-line-clamp:2;">
-								潮起黄浦江，赋能新时代。<br>
-								9月17日至19日，被誉为“人工智能的奥林匹克...
-						</div>
-						<div class="learnMore">了解详情&nbsp;&gt;</div>
-					</div>
-				</div>
-			</div>
+			<div class="news-list" id="newsList"></div>
 
 			<!-- 分页器 -->
 
@@ -125,16 +74,56 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
-		$('#top').load('header.html');
-		$('#footer').load('footer.html');
-		$('#sideNav').load('sideNav.html');
-	
+		
+		function getNewsList(){
+			let data = newsList.data;
+			let endList = [];
+			if(data.length>5){
+				//只取前三条数据
+				endList.push(data[0]);
+				endList.push(data[1]);
+				endList.push(data[2]);
+				endList.push(data[3]);
+				endList.push(data[4]);
+			}else{
+				//全部赋值
+				endList = data;
+			}
+			$.each(endList || [], (index,item) =>{
+				let str = `<div class="news-item m-t-70">
+					<div class="news-system">
+						<div class="news-time">
+							<p style="margin-bottom:0;">${item.time.split("-")[2]}</p>
+							<span>${item.time.split("-")[0] + '-' + item.time.split("-")[1]}</span>
+						</div>
+						<img src="${item.imgUrl}" alt="">
+					</div>
+					<div class="introduce" onclick="toView('newsView.html?Id=${item.Id}')">
+						<div class="title">${item.name}</div>
+						<div class="content">
+							<span>${item.introduce}</span>
+						</div>
+						<div class="learnMore">了解详情&nbsp;&gt;</div>
+					</div>
+				</div>`;
+				$("#newsList").append(str);
+			})
+		}
 		if($(window).width() < 992){
 			// location.href = 'news-Mobile.html';
 		}
 		function toView(link){
 			location.href = link;
 		}
+		(function () {
+			window.onload = function () {
+				$('#top').load('header.html');
+				$('#footer').load('footer.html');
+				$('#sideNav').load('sideNav.html');
+			}
+			// 动态获取新闻列表
+			getNewsList()
+		})();
 	</script>
 </body>
 </html>
