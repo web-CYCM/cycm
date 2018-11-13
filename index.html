@@ -491,16 +491,14 @@
 			autoplay: true
 		});
 		function getStrategyList(){
-			let data = cooperateList.data;
+			var data = cooperateList.data;
 			if(data){
 				$("#listInner").css({
 					"width": data.length*11 + 'rem'
 				});
 				for(var index = 0; index < data.length; index++){
-					let obj = data[index];
-					let str = `<div class="img">
-						<img src="${obj.imgUrl}" alt="">
-					</div>`
+					var obj = data[index];
+					var str = '<div class="img"><img src="'+ obj.imgUrl+'" alt=""></div>';
 					$("#listCooperate #listInner").append(str)
 				}
 			}
@@ -653,9 +651,13 @@
                 animateCoop(-11);
             };
 		}
+		function handleToNewsView(Id){
+			console.log(Id)
+			location.href= "newsView.html?Id=" + Id
+		}
 		function getNewsList(){
-			let data = newsList.data;
-			let endList = [];
+			var data = newsList.data;
+			var endList = [];
 			if(data.length>3){
 				//只取前三条数据
 				endList.push(data[0]);
@@ -666,11 +668,7 @@
 				endList = data;
 			}
 			$.each(endList || [], (index,item) =>{
-				let str = `<div class="newsItem" onclick="javascript:location.href='newsView.html?Id=${item.Id}'">
-					<h4 class="font-bold">${item.name}</h4>
-					<img src="${item.imgUrl}" alt="">
-					<div class="content">${item.introduce}</div>
-				</div>`;
+				var str = '<div class="newsItem" onclick=handleToNewsView("'+item.Id+'")><h4 class="font-bold">'+item.name+'</h4><img src="'+item.imgUrl+'" alt=""><div class="content">'+item.introduce+'</div></div>';
 				$("#newsList").append(str);
 			})
 		}

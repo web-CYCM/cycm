@@ -199,15 +199,16 @@
 
 					initVideoList: function (list) {
 						for (var i = 0; i < list.length; i++) {
-							$('.video-list ul').append(`<li id="${list[i].id}">
-										<img src="${list[i].img}" alt="" class="video-list-img">
-										<div class="video-description">
-											<div>
-												<div class="video-list-content" title="${list[i].contentList}">${list[i].contentList}</div>
-											</div>
-											<p class="video-list-time">${list[i].time}</p>
-										</div>
-									</li>`);
+							$('.video-list ul').append('<li id="' + list[i].id + '"><img src="' + list[i].img + '"alt="" class="video-list-img"><div class="video-description"><div><div class="video-list-content" title=" ' + list[i].contentList + '"> ' + list[i].contentList + '</div></div><p class="video-list-time">' + list[i].time + '</p></div></li>');
+							// $('.video-list ul').append(`<li id="${list[i].id}">
+							// 			<img src="${list[i].img}" alt="" class="video-list-img">
+							// 			<div class="video-description">
+							// 				<div>
+							// 					<div class="video-list-content" title="${list[i].contentList}">${list[i].contentList}</div>
+							// 				</div>
+							// 				<p class="video-list-time">${list[i].time}</p>
+							// 			</div>
+							// 		</li>`);
 						}
 					}
 				}
