@@ -62,52 +62,21 @@
 			// location.href = 'newsView-Mobile.html';
 		}
 		function getNewsList(){
-			let data = newsList.data;
-			let Id = location.search && location.search.split("Id=")[1];
-			let formData = {}
+			var data = newsList.data;
+			var Id = location.search && location.search.split("Id=")[1];
+			var formData = {}
 			if(Id){
 				$.each(data, (index,item) =>{
 					if(item.Id === Id){
-						let str = `<div class="center-content">
-								<div class="Main-title m-b-50">${item.name}</div>
-								<div class="complete-intro" style="display:${item.details.preface?'block;':'none;'}">
-									<p class="content-flex m-b-30">
-										<span style="text-align:left;">${item.details.preface}</span>
-									</p>
-								</div>
-								<img src="${item.viewImgUrl}" alt="" style="margin:5rem auto;display:${item.viewImgUrl?'block;':'none;'}">
-								<div id="article_Info"></div>
-								<div class="summarize content-flex m-b-50">
-									<span>${item.details.endInfo}</span>
-								</div>
-								<div class="endJusmp">
-									<div class="last" style="visibility:${index>0?'visible;':'hidden;'}">
-										<a href="newsView.html?Id=${index-1>=0?data[index-1].Id:data[index].Id}"><span>上一篇：</span>${index-1>=0?data[index-1].name:data[index].name}<span></span></a>
-									</div>
-									<div class="next" style="visibility:${index>=0 && index < (data.length-1)?'visible;':'hidden;'}">
-										<a href="newsView.html?Id=${(index+1<data.length)?data[index+1].Id:data[index].Id}">
-											<span>下一篇：</span>
-											<span>${((index+1)<data.length)?data[index+1].name:data[index].name}</span>
-										</a>
-									</div>
-								</div>
-							</div>`;
-
+						var str = '<div class="center-content"><div class="Main-title m-b-50">'+item.name+'</div><div class="complete-intro" style="display:'+item.details.preface+'?block;'+':'+'none;'+'"><p class="content-flex m-b-30"><span style="text-align:left;">'+item.details.preface+'</span></p></div><img src="'+item.viewImgUrl+'" alt="" style="margin:5rem auto;display:'+item.viewImgUrl+'?block;'+':'+'none;'+'"><div id="article_Info"></div><div class="summarize content-flex m-b-50"><span>'+item.details.endInfo+'</span></div><div class="endJusmp"><div class="last" style="visibility:'+index>0+'?visible;'+':'+'hidden;'+'"><a href="newsView.html?Id='+index-1>=0?data[index-1].Id:data[index].Id+'"><span>上一篇：</span>'+index-1>=0?data[index-1].name:data[index].name+'<span></span></a></div><div class="next" style="visibility:'+index>=0 && index < (data.length-1)+'?visible;'+':'+'hidden;'+'"><a href="newsView.html?Id='+(index+1<data.length)?data[index+1].Id:data[index].Id+'"><span>下一篇：</span><span>'+((index+1)<data.length)?data[index+1].name:data[index].name+'</span></a></div></div></div>';
 						var article = $('<div class="article"></div>');
 						$.each(item.details.advantages, (chiIndex,chi) =>{
 							//处理单个小标题下，数据解释
-							let littleTitle = ``;
+							var littleTitle = '';
 							$.each(chi.infoForm, (InfoIndex,info) =>{
-								littleTitle += `<span>${info.stage}</span>`;
+								littleTitle += '<span>'+info.stage+'</span>';
 							})
-							let chiStr = `
-								<div class="article-item">
-									<div class="title m-t-20">${chi.name}</div>
-									<p class="content-flex">
-										${littleTitle}
-									</p>
-									<img style="margin:5rem auto;display:${chi.innerImg?'block;':'none;'}" src="${chi.innerImg}" alt="" >
-								</div>`;
+							var chiStr = '<div class="article-item"><div class="title m-t-20">'+chi.name+'</div><p class="content-flex">'+littleTitle+'</p><img style="margin:5rem auto;display:'+chi.innerImg+'?block;'+':'+'none;'+'" src="'+chi.innerImg+'" alt="" ></div>';
 								article.append(chiStr);
 						})
 						$("#sectionList").append(str);

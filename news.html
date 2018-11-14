@@ -76,8 +76,8 @@
 	<script type="text/javascript">
 		
 		function getNewsList(){
-			let data = newsList.data;
-			let endList = [];
+			var data = newsList.data;
+			var endList = [];
 			if(data.length>5){
 				//只取前三条数据
 				endList.push(data[0]);
@@ -90,22 +90,7 @@
 				endList = data;
 			}
 			$.each(endList || [], (index,item) =>{
-				let str = `<div class="news-item m-t-70">
-					<div class="news-system">
-						<div class="news-time">
-							<p style="margin-bottom:0;">${item.time.split("-")[2]}</p>
-							<span>${item.time.split("-")[0] + '-' + item.time.split("-")[1]}</span>
-						</div>
-						<img src="${item.imgUrl}" alt="">
-					</div>
-					<div class="introduce" onclick="toView('newsView.html?Id=${item.Id}')">
-						<div class="title">${item.name}</div>
-						<div class="content">
-							<span>${item.introduce}</span>
-						</div>
-						<div class="learnMore">了解详情&nbsp;&gt;</div>
-					</div>
-				</div>`;
+				var str = '<div class="news-item m-t-70"><div class="news-system"><div class="news-time"><p style="margin-bottom:0;">'+item.time.split("-")[2] + '</p><span>' + item.time.split("-")[0] + '-' + item.time.split("-")[1]+'</span></div><img src="'+item.imgUrl+'" alt=""></div><div class="introduce" onclick=toView("newsView.html?Id='+item.Id+'")><div class="title">'+item.name+'</div><div class="content"><span>'+item.introduce+'</span></div><div class="learnMore">了解详情&nbsp;&gt;</div></div></div>';
 				$("#newsList").append(str);
 			})
 		}

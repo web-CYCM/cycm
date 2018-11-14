@@ -565,8 +565,8 @@
 					$("#prevLeft").css("opacity",0);
                 }
 				//这里的数值是动态变化的
-				let len = $("#listCooperate #listInner .img").length;
-				let maxLeft = (len - 8)*11;
+				var len = $("#listCooperate #listInner .img").length;
+				var maxLeft = (len - 8)*11;
                 if (newLeft < -maxLeft) {
                     listInner.style.left = -maxLeft + 'rem';
 					//右侧箭头隐藏
@@ -634,7 +634,7 @@
 			
 			
 			//战略合作
-			let maxIndex = $("#listCooperate #listInner .img").length;
+			var maxIndex = $("#listCooperate #listInner .img").length;
 			prevLeft.onclick = function () {
                 cooperateIndex -= 1;
                 if (cooperateIndex < 1) {

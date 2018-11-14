@@ -154,43 +154,25 @@
 			// location.href = 'index-Mobile.html';
 		}
 		function getTeamPeople(){
-			let data = teamPeopleList.data;
-			let len = data.length;
+			var data = teamPeopleList.data;
+			var len = data.length;
 			if(data){
-					// let div = $("<div class='row_box'></div>");
 				$.each(data, (index,item) =>{
-					let str = `
-						<div class="figureItem">
-							<div class="img_border">
-								<img src="${item.imgUrl}" alt="">
-							</div>
-							<span class="font-bold">${item.name}</span>
-							<div class="figureExperience">${item.introduce}</div>
-						</div>`;
-					// div.append(str);
-					// if((index+1)%4 == 0){
-					// 	console.log(div)
-					// 	$("#people_introduction").append(div);
-					// }else{
-
-					// }
+					var str = '<div class="figureItem"><div class="img_border"><img src="'+item.imgUrl+'" alt=""></div><span class="font-bold">'+item.name+'</span><div class="figureExperience">'+item.introduce+'</div></div>';
 					$("#people_introduction").append(str)
 				})
 			}
 		}
 		function getStrategyList(){
-			let data = cooperateList.data;
+			var data = cooperateList.data;
 			if(data){
 				$("#container #list").css({
 					"width": data.length*17 + 'rem'
 				});
 				for(var index = 0; index < data.length; index++){
-					let obj = data[index];
-					let str = `<div class="img">
-						<img src="${obj.imgUrl}" alt="">
-						<span>${obj.name}</span>
-					</div>`
-					$("#container #list").append(str)
+					var obj = data[index];
+					var str = '<div class="img"><img src="'+obj.imgUrl+'" alt=""><span>'+obj.name+'</span></div>';
+					$("#container #list").append(str);
 				}
 			}
 		}
@@ -213,8 +195,8 @@
 					$("#prevLeft").css("opacity",0);
                 }
 				//这里的数值是动态变化的
-				let len = $("#container #list .img").length;
-				let maxLeft = (len - 4)*17.5;
+				var len = $("#container #list .img").length;
+				var maxLeft = (len - 4)*17.5;
                 if (newLeft < -maxLeft) {
                     list.style.left = -maxLeft + 'rem';
 					$("#nextRight").css("opacity",0);
@@ -230,7 +212,7 @@
             function stop() {
                 clearInterval(timer);
             }
-			let maxIndex = $("#container #list .img").length;
+			var maxIndex = $("#container #list .img").length;
             prevLeft.onclick = function () {
                 index -= 1;
                 if (index < 1) {
