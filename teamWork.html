@@ -157,7 +157,7 @@
 			var data = teamPeopleList.data;
 			var len = data.length;
 			if(data){
-				$.each(data, (index,item) =>{
+				$.each(data, function(index,item){
 					var str = '<div class="figureItem"><div class="img_border"><img src="'+item.imgUrl+'" alt=""></div><span class="font-bold">'+item.name+'</span><div class="figureExperience">'+item.introduce+'</div></div>';
 					$("#people_introduction").append(str)
 				})

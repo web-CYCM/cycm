@@ -3500,7 +3500,7 @@ ul.list-reset {
   /* -webkit-justify-content: space-around; */
   -moz-box-pack: end;
   -ms-flex-pack: end;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
   /* justify-content: space-around; */
   padding-left: 30px; 
 }
