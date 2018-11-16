@@ -674,10 +674,10 @@
 			//场景图
 			$.each(posterList, function(index, item){
 				if((index+1)%3==0 && (index+1)%2 != 0){	//奇数行
-					var str = '<div class="sceneItem"><div><img src="'+posterList[index-2] && posterList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+posterList[index-1] && posterList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
+					var str = '<div class="sceneItem"><div><img src="'+posterList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+posterList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
 					$("#posterList").append(str);
 				}else if((index+1)%3==0 && (index+1)%2 == 0){	//偶数行
-					var str = '<div class="sceneItem"><img src="'+item.imgUrl+'" alt=""><div class="m-l-10"><img src="'+posterList[index-2] && posterList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+posterList[index-1] && posterList[index-1].imgUrl+'" alt=""></div></div>';
+					var str = '<div class="sceneItem"><img src="'+item.imgUrl+'" alt=""><div class="m-l-10"><img src="'+posterList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+posterList[index-1].imgUrl+'" alt=""></div></div>';
 					$("#posterList").append(str);
 				}
 			})
@@ -685,10 +685,10 @@
 			//海报
 			$.each(sceneList, function(index, item){
 				if((index+1)%3==0 && (index+1)%2 != 0){	//奇数行
-					var str = '<div class="sceneItem"><div><img src="'+sceneList[index-2] && sceneList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+sceneList[index-1] && sceneList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
+					var str = '<div class="sceneItem"><div><img src="'+sceneList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+sceneList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
 					$("#sceneList").append(str);
 				}else if((index+1)%3==0 && (index+1)%2 == 0){	//偶数行
-					var str = '<div class="sceneItem"><img src="'+item.imgUrl+'" alt=""><div class="m-l-10"><img src="'+sceneList[index-2] && sceneList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+sceneList[index-1] && sceneList[index-1].imgUrl+'" alt=""></div></div>';
+					var str = '<div class="sceneItem"><img src="'+item.imgUrl+'" alt=""><div class="m-l-10"><img src="'+sceneList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+sceneList[index-1].imgUrl+'" alt=""></div></div>';
 					$("#sceneList").append(str);
 				}
 			})
@@ -696,10 +696,10 @@
 			//画册
 			$.each(albumList, function(index, item){
 				if(index%3==0 && (index+1)%4 == 0){	//奇数行
-					var str = '<div class="sceneItem"><img src="'+albumList[index-3] && albumList[index-3].imgUrl+'" alt="" class="m-r-10"><div><img src="'+albumList[index-2] && albumList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+albumList[index-1] && albumList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
+					var str = '<div class="sceneItem"><img src="'+albumList[index-3].imgUrl+'" alt="" class="m-r-10"><div><img src="'+albumList[index-2].imgUrl+'" alt="" class="m-b-10"><img src="'+albumList[index-1].imgUrl+'" alt=""></div><img src="'+item.imgUrl+'" alt="" class="m-l-10"></div>';
 					$("#albumList").append(str);
 				}else if((index+1)%6==0){	//偶数行
-					var str = '<div class="sceneItem"><img src="'+albumList[index-1] && albumList[index-1].imgUrl+'" alt="" class="m-r-10"><img src="'+item.imgUrl+'" alt=""></div>';
+					var str = '<div class="sceneItem"><img src="'+albumList[index-1].imgUrl+'" alt="" class="m-r-10"><img src="'+item.imgUrl+'" alt=""></div>';
 					$("#albumList").append(str);
 				}
 			})
