@@ -23,6 +23,29 @@
 	<link href="vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<script type="text/javascript" src="./data/cooperate.json"></script>
 	<script type="text/javascript" src="./data/newsList.json"></script>
+    <link rel="stylesheet" href="./hivideo/hivideo.css" />
+    <script type="text/javascript" src="./hivideo/hivideo.js"></script>
+    <script type="text/javascript" src="./hivideo/md5.min.js"></script>
+	<script type="text/javascript" src="./hivideo/f.js"></script>
+	<style>
+		.hi-video-wrapper{
+			background: transparent;
+		}
+		.hi-video{
+			height: auto !important;
+		}
+		.hi-video-controlbar{
+			display: flex;
+			align-items: center;
+			bottom: 0;
+		}
+		.hi-video-controlbar .video-volume{
+			overflow: visible;
+		}
+		.hi-video-controlbar .video-slider .progressbar{
+			top: 0;
+		}
+	</style>
 </head>
 <body>
 	
@@ -54,7 +77,10 @@
 			<div class="row">
 				<div class="col-lg-7 col-md-12">
 					<!-- <a class="" href="hivideo/html/hivideo.html" target="_blank"></a> -->
-					<video src="./videos/introduce.mp4" poster="./images/index/cyMedia.png" controls></video>
+					<!-- <video src="./videos/introduce.mp4" poster="./images/index/11.png" controls></video> -->
+					<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true" poster="./images/index/11.png">
+						<source src="./videos/introduce.mp4" id="source" type="video/mp4">
+					</video>
 					<!-- <video src="./videos/01.mp4" poster="./images/index/cyMedia.png" controls></video> -->
 				</div>
 				<div class="col-lg-5 col-md-12 right-intro flex-column justify-content-center">
@@ -301,7 +327,7 @@
 						<div class="container">
 							<div class="big-img">
 								<div class="img">
-									<img src="./images/index/workClassPlane_01.png" alt="">
+									<img src="./images/index/workClassPlane_01.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>宣传片</span>
@@ -311,7 +337,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workClassPlane_02.png" alt="">
+									<img src="./images/index/workClassPlane_02.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>展示片</span>
@@ -323,7 +349,7 @@
 							</div>
 							<div class="little-img">
 								<div class="img">
-									<img src="./images/index/workClassPlane_03.png" alt="">
+									<img src="./images/index/workClassPlane_03.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>广告片</span>
@@ -333,7 +359,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workClassPlane_04.png" alt="">
+									<img src="./images/index/workClassPlane_04.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>三维视频</span>
@@ -343,7 +369,7 @@
 									</div>
 								</div>
 								<div class="img">
-									<img src="./images/index/workClassPlane_05.png" alt="">
+									<img src="./images/index/workClassPlane_05.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>宣推视频</span>
@@ -361,7 +387,7 @@
 						<div class="container plane_flex">
 							<div class="left-img">
 								<div class="img">
-									<img src="./images/index/workCaseVideo_01.png" alt="">
+									<img src="./images/index/workCaseVideo_01.jpg" alt="">
 									<div class="shadow">
 										<div>
 											<span>白底图</span>
@@ -372,9 +398,9 @@
 								</div>
 							</div>
 							<div class="right-img">
-								<div>
+								<div class="right_one">
 									<div class="img">
-										<img src="./images/index/workCaseVideo_02.png" alt="">
+										<img src="./images/index/workCaseVideo_02.jpg" alt="">
 										<div class="shadow">
 											<div>
 												<span>画册</span>
@@ -384,7 +410,7 @@
 										</div>
 									</div>
 									<div class="img">
-										<img src="./images/index/workCaseVideo_03.png" alt="">
+										<img src="./images/index/workCaseVideo_03.jpg" alt="">
 										<div class="shadow">
 											<div>
 												<span>场景图</span>
@@ -394,9 +420,9 @@
 										</div>
 									</div>
 								</div>
-								<div>
+								<div class="right_two">
 									<div class="img">
-										<img src="./images/index/workCaseVideo_04.png" alt="">
+										<img src="./images/index/workCaseVideo_04.jpg" alt="">
 										<div class="shadow">
 											<div>
 												<span>海报</span>
@@ -406,7 +432,7 @@
 										</div>
 									</div>
 									<div class="img">
-										<img src="./images/index/workCaseVideo_05.png" alt="">
+										<img src="./images/index/workCaseVideo_05.jpg" alt="">
 										<div class="shadow">
 											<div>
 												<span>试戴图</span>
@@ -425,7 +451,14 @@
 	</div>
 
 		<!-- 新闻资讯 -->
-		<div class="newsInformation p-t-50 p-b-50">
+		<div class="main-title newsInformation p-t-30 p-b-50">
+			<div class="title-top">KING VISION NEWS</div>
+			<div class="title-center justify-content-center align-items-center">
+				<div></div>
+				<span class="p-l-20 p-r-20">宸熠资讯</span>
+				<div></div>
+			</div>
+			<div class="title-litter p-b-50">影视视频制作行业热点话题</div>
 			<div class="center-content" id="newsList"></div>
 		</div>
 
@@ -524,9 +557,7 @@
 			var cooperateIndex = 1;
             var timer;
             function animate(offset) {
-				console.log(offset)
                 var newLeft = parseInt(list.style.left) + offset;
-				console.log(newLeft);
                 list.style.left = newLeft + 'px';
                 //无限滚动判断 //视频类
                 if (newLeft > -800) {
@@ -556,21 +587,16 @@
             }
 			// 战略合作
 			function animateCoop(offset) {
-				$("#prevLeft").css("opacity",1);
-				$("#nextRight").css("opacity",1);
 				var newLeft = parseInt(listInner.style.left) + offset;
                 listInner.style.left = newLeft + 'rem';
                 if (newLeft > -11) {
                     listInner.style.left = 0 + 'rem';
-					$("#prevLeft").css("opacity",0);
                 }
 				//这里的数值是动态变化的
 				var len = $("#listCooperate #listInner .img").length;
 				var maxLeft = (len - 8)*11;
                 if (newLeft < -maxLeft) {
                     listInner.style.left = -maxLeft + 'rem';
-					//右侧箭头隐藏
-					$("#nextRight").css("opacity",0);
                 }
             }
             function play() {

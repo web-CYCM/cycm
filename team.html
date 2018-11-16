@@ -34,14 +34,7 @@
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
 
 	<!-- 轮播图 -->
-	<div class="swiper-height">
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper1.png"></div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-	</div>
+	<div class="swiper-height" style="height:0;"></div>
 	<!-- 标题 -->
 	<div class="commonTitle">
 		<div class="center-content">
@@ -54,7 +47,7 @@
 				<img src="./images/index/commonSys2.png" alt="">
 				<div></div>
 			</div>
-			<section class="section-about m-t-80 m-b-30">
+			<section class="section-about m-t-80 m-b-120">
 				<div id='address'></div>
 				<div class="US_info">
 					<div class="US_title">
@@ -78,9 +71,9 @@
 							<span class="label">地址：</span>
 							<span>深圳市罗湖区田贝四路宝林国金一期一楼</span>
 						</p>
-						<div class="US_title m-t-60 m-b-40">
-							<p>广纳英才,超越梦想</p>
-							<span style="font-size:1.5rem;">RECRUIT TALENTS AND SURPASS DREAMS</span>
+						<div class="US_title m-t-60 m-b-10" style="font-size:2rem;">
+							<div>广纳英才,超越梦想</div>
+							<span>RECRUIT TALENTS AND SURPASS DREAMS</span>
 						</div>
 						<p>
 							<span class="label">简历直投：</span>
@@ -126,22 +119,24 @@
 			}
 		})();
 		
-		new BaiduMap({
-				id: "address",
-				title: {
-					text: "宝琳国金珠宝交易中心",
-					className: "title"
-				},
-				content: {
-					className: "content",
-					text: ["深圳市罗湖区田贝四路宝林国金一期一楼", "电话：0755-22928136"]
-				},
-				point: {
-					lng: 114.131416,
-					lat: 22.573554
-				},
-				zoom: 20
-			})
+		var map = new BMap.Map('address');
+		var point = new BMap.Point(114.131416, 22.573554);
+		map.centerAndZoom(point, 20);  
+		map.addControl(new BMap.NavigationControl()); 
+		map.addControl(new BMap.ScaleControl()); 
+		map.addControl(new BMap.MapTypeControl());
+		var marker = new BMap.Marker(point); 
+		map.addOverlay(marker);
+
+		var opts = {    
+		width : 220,     // 信息窗口宽度    
+		height: 80,     // 信息窗口高度    
+		title : "<p style='font-size: 1.5rem; margin-bottom: 0.1rem;'>宝琳国金珠宝交易中心</p>",  // 信息窗口标题  
+		content: "<p style='margin: 0;padding: 0;'>地址：深圳市罗湖区田贝四路宝林国金一期一楼</p><p style='margin: 0;padding: 0;'>电话：0755-22928136</p>" 
+		}    
+		var infoWindow = new BMap.InfoWindow(opts.content, opts); 
+		map.openInfoWindow(infoWindow, point); 
+		map.enableScrollWheelZoom(true); 
 	</script>
 	<style>
 		#address{

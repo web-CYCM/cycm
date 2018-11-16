@@ -48,12 +48,12 @@ body,html{
 	text-align: center;
 }
 .main-title .title-top{
-	font-size: 1.67rem;
+	font-size: 1.8rem;
 	margin: 5rem 0 1.1rem;
 	color: #cf9237;
 }
 .main-title .title-center {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 	color: #cf9237;
 	display: flex;
 }
@@ -65,7 +65,7 @@ body,html{
 }
 .main-title .title-litter{
 	color: #999999;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 }
 /* 产品和服务 */
 .production-box{
@@ -95,8 +95,9 @@ body,html{
 }
 .production-box .tab-box .introduce{
 	color: #FFFFFF;
-	width: 9rem;
-	padding: 0.35rem 0;
+	width: 10rem;
+	font-size: 1.3rem;
+	padding: 0.3rem 0;
 	border-radius: 50px 50px 50px 50px;
 	border: 1px dashed #FFFFFF;
 }
@@ -132,6 +133,7 @@ body,html{
 	color: #5b4b3b;
 	width: 50%;
 	margin: 0 auto;
+	font-weight: bold;
 }
 .production-box .tab-content .all-width .list-item .introduction{
 	/* border: 1px solid blue; */
@@ -160,8 +162,8 @@ body,html{
 }
 .brief-intro video{
 	max-width: 100%;
-	/* width: 40.5rem !important; */
-	/* height: 24.17rem !important; */
+	/* width: 44.16rem;
+	height: 26.25rem; */
 }
 .brief-intro .right-intro{
 	display: flex;
@@ -181,8 +183,8 @@ body,html{
 	color: #28abe3;
 }
 .main-title .selection .seletion-item .introduce{
-	font-size: 1rem;
-	padding: 0.35rem 0; 
+	font-size: 1.3rem;
+	padding: 0.3rem 0; 
 }
 
 .section-about-1{
@@ -388,7 +390,6 @@ footer .copyright a{
 #container,#container-plane {
 	position: relative;
 	width: 800px;
-	/* width: 100%; */
 	height: 20rem;
 	overflow: hidden;
 }
@@ -413,10 +414,7 @@ footer .copyright a{
 }
 .current-img,
 .currentPlane-img{
-	/* width: 54.17rem;
-	height: 26.67rem; */
 	max-width: 100%;
-	/* max-height: 100%; */
 	position: absolute;
 	z-index: 10;
 	margin: 0 auto;
@@ -455,18 +453,19 @@ footer .copyright a{
 }
 .production-footer .container{
 	display: flex;
-	width: 60%;
+	width: 62%;
 	justify-content: space-around;
 }
 .production-footer .proFooter{
 	display: flex;
 	width: 22rem;
+	color: #615C59;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.4rem;
 	font-weight: bold;
-	padding: 1rem 3rem 0;
+	padding: 1rem 0 0;
 	border-right: 2px solid #ccc;
 }
 .production-footer .proFooter:last-child{
@@ -475,11 +474,20 @@ footer .copyright a{
 /* 作品案例 */
 .workCase .container{
 	width: 62%;
+	/* max-height: 44.67rem; */
 	padding: 0;
 }
 .workCase .container.plane_flex{
 	display: flex;
 	justify-content: center !important;
+}
+.workCase .container .big-img{
+	/* height: 38.88rem; */
+	/* height: 28.83rem; */
+}
+.workCase .container .little-img{
+	/* height: 21.18rem; */
+	/* height: 15.75rem; */
 }
 .workCase .container .big-img,
 .workCase .container .little-img{
@@ -492,10 +500,21 @@ footer .copyright a{
 	cursor: pointer;
 	flex-wrap: wrap;
 	flex-direction: column;
+	/* flex-grow: 1; */
 }
 .workCase .container .right-img>div{
 	display: flex;
 	justify-content: flex-start;
+}
+.workCase .container .left-img{
+	/* height: 44.75rem; */
+	/* flex-grow: 1; */
+}
+.workCase .container .right-img > div.right_one{
+	/* height: 28.67rem; */
+}
+.workCase .container .right-img > div.right_two{
+	/* height: 16.08rem; */
 }
 .workCase .container .big-img,
 .workCase .container .left-img,
@@ -504,9 +523,13 @@ footer .copyright a{
 	max-width: 100%;
 }
 .workCase .container .big-img img,
-.workCase .container .little-img img{
-	max-height: 100%;
-	width: 100%;
+.workCase .container .little-img img,
+.workCase .container .left-img img,
+.workCase .container .right-img img{
+	/* height: 100%;
+	width: 100%; */
+	/* object-fit: fill;  */
+	max-width: 100%;
 }
 .workCase .container .img:hover .shadow,
 .workCase .container .img:hover .shadow{
@@ -544,9 +567,6 @@ footer .copyright a{
 .workCase .container .shadow div p{
 	margin: 0 auto 0.1rem;
 }
-.newsInformation{
-	
-}
 .newsInformation .center-content{
 	display: flex;
 	justify-content: space-between;
@@ -576,7 +596,7 @@ footer .copyright a{
 	margin-top: 1rem;
 }
 .newsInformation .center-content .newsItem img{
-	max-height: 100%;
+	max-width: 100%;
 }
 /* 战略合作 */
 .cooperative-enterprise .containerCooperate{
@@ -615,9 +635,6 @@ footer .copyright a{
 	display: block;
 	margin: 0 auto 1rem;
 	font-weight: bold;
-}
-#prevLeft{
-	opacity: 0;
 }
 #prevLeft, #nextRight{
 	cursor: pointer;

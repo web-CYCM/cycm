@@ -10,33 +10,18 @@
 		<div class="content-weibo">
 			<img src="./images/footer/weibo.png" alt="">
 			<div class="weibo-code">
-				<img src="./images/index/wx_01.png" alt="">
+				<img src="./images/index/wx_02.jpg" alt="">
 			</div>
 		</div>
 		<div class="content-weixin">
 			<img src="./images/footer/weixin.png" alt="">
 			<div class="weixin-code">
-				<img src="./images/index/wx_01.png" alt="">
+				<img src="./images/index/wx_01.jpg" alt="">
 			</div>
 		</div>
 		<div class="content-consult">
-			<div class="content-consult-img"> 
-				<img src="./images/footer/kefu.png" alt="">
-			</div>
-			<div class="content-consult-service">
-				<div>
-					<span>客服一</span>
-				</div>
-				<div>
-					<span>客服二</span>
-				</div>
-				<div>
-					<span>客服三</span>
-				</div>
-				<div>
-					<span>客服四</span>
-				</div>
-			</div>
+			<img src="./images/footer/kefu.png" alt="">
+
 		</div>
 		
 	</div>
@@ -90,7 +75,7 @@
 			sideNavObj.clickModel ();
 			sideNavObj.initForm ();
 			//点击客服
-			$('.content-consult-service div').on('click', function () {
+			$('.content-consult').on('click', function () {
 				sideNavObj.clickServices ();
 			})
 			//点击form的遮罩
@@ -171,7 +156,7 @@
 		margin-bottom: 0.5rem;
 	}
 	.content-weixin{
-		margin-bottom: 4.17rem;
+		margin-bottom: 0.6rem;
 	}
 	.content-weibo .weibo-code,
 	.content-weixin .weixin-code{
@@ -185,7 +170,7 @@
 	.content-weibo .weibo-code>img,
 	.content-weixin .weixin-code>img{
 		max-width: 10rem;
-		max-height: 10.83rem;
+		height: 100%;
 	}
 	.content-weibo:hover,
 	.content-weixin:hover{
@@ -200,13 +185,11 @@
 
 	/* 客服 */
 	.content-consult{
-		width: 12.5rem;
-		border: 1px solid #d0923b;
-		border-radius: 4px;
-		background: #FFFFFF;
+		background: #D0923A;
 	}
 	.content-consult-img{
 		display: flex;
+		width: 100%;
 		justify-content: center;
 		align-items: center;
 		height: 6.3rem;
@@ -214,6 +197,7 @@
 	}
 	.content-consult-img>img{
 		height: 11.5rem;
+		max-width: 100%;
 	}
 	.content-consult-service{
 		display: flex;

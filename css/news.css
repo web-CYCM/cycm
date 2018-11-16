@@ -30,15 +30,14 @@
 }
 
 /* 资讯列表 */
-.section-news .center-content .news-list{
-	/* border: 1px solid red; */
-}
 .section-news .center-content .news-list .news-item{
 	display: flex;
 	/* justify-content: space-between; */
 }
 .section-news .center-content .news-list .news-item img{
-	max-height: 100%;
+	/* max-height: 100%; */
+	max-width: 15.75rem;
+	height: 9.58rem;
 }
 .section-news .center-content .news-list .news-item .news-system{
 	/* max-width: 40rem;

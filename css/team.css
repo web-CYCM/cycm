@@ -18,7 +18,6 @@ html{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
 .commonTitle .center-content .title{
 	color: #FFFFFF;
@@ -38,10 +37,10 @@ html{
 .commonTitle .center-content .title_bar{
 	display: flex;
 	align-items: center;
+	width: 100%;
 }
 .commonTitle .center-content .title_bar div{
-	/* width: 31.67rem; */
-	width: 46rem;
+	flex: 1;
 	border: 1px solid #FFFFFF;
 	background: #FFFFFF;
 }
@@ -52,12 +51,14 @@ html{
 	display: flex;
 }
 .commonTitle .center-content .section-about .US_title{
-	/* color: #d0923b; */
-	color: rgba(208,146,59,0.8);
+	color: rgba(208,146,59,0.9);
 	font-size: 2rem;
 }
 .commonTitle .center-content .US_info{
 	margin-left: 9.58rem;
+}
+.commonTitle .center-content .section-about .US_title p{
+	margin-bottom: 0.2rem;
 }
 .commonTitle .center-content .US_info .US_contact p{
 	color: rgba(255,255,255,0.6);

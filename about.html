@@ -13,13 +13,36 @@
 	<link rel="stylesheet" href="vendor/swiper/css/idangerous.swiper.css">
 	<script src="vendor/swiper/js/idangerous.swiper.min.js"></script>
 
-	<!-- <link rel="stylesheet" href="./hivideo/hivideo.css" /> -->
+    <link rel="stylesheet" href="./hivideo/hivideo.css" />
+    <script type="text/javascript" src="./hivideo/hivideo.js"></script>
+    <script type="text/javascript" src="./hivideo/md5.min.js"></script>
+	<script type="text/javascript" src="./hivideo/f.js"></script>
+	<style>
+		.hi-video-wrapper{
+			height: 100%;
+			background: transparent;
+		}
+		.hi-video{
+			height: auto !important;
+		}
+		.hi-video-controlbar{
+			display: flex;
+			align-items: center;
+			bottom: 0;
+		}
+		.hi-video-controlbar .video-volume{
+			overflow: visible;
+		}
+		.hi-video-controlbar .video-slider .progressbar{
+			top: 0;
+		}
+	</style>
 </head>
 <body>
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
 	<div id="about-content">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
+			<div class="swiper-slide" style="width:100%;">
 				<img class="img-wrap" src="./images/index/swiper1.png">
 			</div>
 		</div>
@@ -35,12 +58,56 @@
 					<div></div>
 				</div>
 				<div class="introduction-img-wrap">
-					<img src="./images/know/know-constrction.png" alt="">
+					<img src="./images/know/know-constrction.jpg" alt="" style="flex-grow:1;">
 				</div>
-				<div class="introduction-word-wrap">
-					<p>
-						宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。
-					</p>
+				<div class="introduction-word-wrap m-b-90">
+					<div class="intro_item">
+						<div class="title font-bold">公司简介</div>
+						<p>
+							宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制
+							作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范
+							围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动
+							策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；
+							电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有
+							电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。
+							公司战略合作单位有：建华珠宝、百翠灵珠宝、枫亭珠宝、福美华珠宝、周
+							金生珠宝、深圳缔一世家文化创意、深圳微聚信息技术、深圳国投影视、深
+							圳谛珑文化、背景唯美新画面影视、中视合利（北京）文化投资、中国国际
+							微电影大点组委会、中国国际青年影展组委会、中国电影报社、英中友好促
+							进会等。
+						</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">公司精神</div>
+						<p>重诚信 勇进取 善融合 乐开拓</p>
+						<p>为人至善 从事至真 观点至新 理想至远</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">公司使命</div>
+						<p>追求卓越品质，打造影视精品，传递社会正能量。</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">核心价值观</div>
+						<p>微创新：不能为创新而创新，必须以创造价值为导向</p>
+						<p>思想创新、作品创新、部门创新、公司创新</p>
+						<p>学习：不是毕业了就不用学习了，三人行必有吾师，只有学习才能精进</p>
+						<p>管理学习、专业学习、借鉴学习、实践学习</p>
+						<p>责任：责任是一种与生俱来的使命；是一种约束，是一种担当，是进步之源
+						对自己负责，对同事负责，对部门负责，对公司负责，对客户负责</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">公司愿景</div>
+						<p>构建多元化传媒服务平台，打造国际化的影视产业航母。</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">公司宗旨</div>
+						<p>弘扬民族精神，传播社会正能量，以文化引领生活，挖掘品牌力量</p>
+					</div>
+					<div class="intro_item">
+						<div class="title font-bold">经营理念</div>
+						<p>注重细节，把握关键。追求完美，缔造经典。</p>
+						<p>广聚英才，共创辉煌！</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -76,7 +143,10 @@
 						<!-- <div class="main-wrap">
 							<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true"><source src="../../videos/03.mp4" id="source" type="video/mp4"></video>
 						</div> -->
-						<video src="" controls></video>
+						<!-- <video src="" controls></video> -->
+					<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true" poster="./images/index/11.png">
+						<source src="./videos/introduce.mp4" id="source" type="video/mp4">
+					</video>
 					</div>
 					<div class="video-list">
 						<div><span>播放列表</span></div>
@@ -85,7 +155,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="introduction-word-wrap">
+				<div class="introduction-word-wrap introduction-word-wrap2">
 					<div></div>
 					<p></p>
 				</div>
@@ -173,7 +243,7 @@
 						videoList = getList;
 						if (videoList.length) {
 							aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
-							aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[0].contentTitle,  videoList[0].content );
+							aboutObj.changeVideoInfo ('.introduction-word-wrap2', videoList[0].contentTitle,  videoList[0].content );
 							aboutObj.initVideoList (videoList);
 						}
 					},
@@ -232,7 +302,7 @@
 					for (var i = 0; i < videoList.length; i++) {
 						if (currentId == videoList[i].id) {
 							aboutObj.changeVideoSrc ( '#about-video', videoList[i].videoSrc);
-							aboutObj.changeVideoInfo ('.introduction-word-wrap', videoList[i].contentTitle,  videoList[i].content );
+							aboutObj.changeVideoInfo ('.introduction-word-wrap2', videoList[i].contentTitle,  videoList[i].content );
 							return false
 						}
 					}
@@ -355,12 +425,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 33.33rem;
 		margin: 2.5rem 0;
 	}
-	#about-bar-introduction .introduction-img-wrap img{
-		max-width: 58.33rem;
-		max-height: 33.33rem;
+	#about-bar-introduction .introduction-word-wrap .intro_item{
+		margin-bottom: 1rem;
+	}
+	#about-bar-introduction .introduction-word-wrap .intro_item .title{
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
+	#about-bar-introduction .introduction-word-wrap .intro_item p{
+		margin-bottom: 0;
+		padding-left: 1rem; 
 	}
 	#about-bar-structure .introduction-img-wrap{
 		display: flex;

@@ -90,6 +90,21 @@ var planeImgList = {
 		},
 		{
 			"imgUrl": "images/planeWorkCase/tryOn_11.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_12.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_13.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_14.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_15.png"
+		},
+		{
+			"imgUrl": "images/planeWorkCase/tryOn_16.png"
 		}
 	],
 	"posterList":[

@@ -17,8 +17,9 @@
 }
 .workCase-box .tab-box .introduce{
 	color: #333333;
-	width: 9rem;
-	padding: 0.35rem 0;
+	width: 10rem;
+	font-size: 1.3rem;
+	padding: 0.3rem 0;
 	border-radius: 50px 50px 50px 50px;
 	border: 1px dashed #333333;
 }
@@ -179,6 +180,12 @@
 }
 .workCase-box .center-content .tab-content .row_Img.oddNumber >div.left img{
 	margin: 1rem 1rem 0 0;
+}
+/*试戴图滚动加载*/
+#scropFade{
+	/* height: 0 !important;
+	opacity: 0 !important; */
+	transition: all 0.3s;
 }
 /* 白底图 */
 #bg_white{
