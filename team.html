@@ -47,7 +47,7 @@
 				<img src="./images/index/commonSys2.png" alt="">
 				<div></div>
 			</div>
-			<section class="section-about m-t-80 m-b-120">
+			<section class="section-about m-t-80 m-b-120 team-address-user">
 				<div id='address'></div>
 				<div class="US_info">
 					<div class="US_title">
@@ -129,7 +129,7 @@
 		map.addOverlay(marker);
 
 		var opts = {    
-		width : 220,     // 信息窗口宽度    
+		width : 260,     // 信息窗口宽度    
 		height: 80,     // 信息窗口高度    
 		title : "<p style='font-size: 1.5rem; margin-bottom: 0.1rem;'>宝琳国金珠宝交易中心</p>",  // 信息窗口标题  
 		content: "<p style='margin: 0;padding: 0;'>地址：深圳市罗湖区田贝四路宝林国金一期一楼</p><p style='margin: 0;padding: 0;'>电话：0755-22928136</p>" 
@@ -139,8 +139,12 @@
 		map.enableScrollWheelZoom(true); 
 	</script>
 	<style>
+		.team-address-user{
+			display: flex;
+			justify-content: flex-start;
+		}
 		#address{
-			width: 30.42rem;
+			width: 46rem;
 			height: 30.42rem;
 			margin: 2rem 0;
 		}

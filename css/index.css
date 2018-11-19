@@ -48,12 +48,14 @@ body,html{
 	text-align: center;
 }
 .main-title .title-top{
-	font-size: 1.8rem;
-	margin: 5rem 0 1.1rem;
+	font-size: 2.5rem;
+	line-height: 2.8rem;
+	margin: 5rem 0 0;
 	color: #cf9237;
 }
 .main-title .title-center {
 	font-size: 3.5rem;
+	line-height: 3.5rem;
 	color: #cf9237;
 	display: flex;
 }
@@ -66,6 +68,7 @@ body,html{
 .main-title .title-litter{
 	color: #999999;
 	font-size: 1.3rem;
+	margin-top: 1rem;
 }
 /* 产品和服务 */
 .production-box{
@@ -485,9 +488,15 @@ footer .copyright a{
 	/* height: 38.88rem; */
 	/* height: 28.83rem; */
 }
+.workCase .container .big-img .img{
+	/* width: 50%; */
+}
 .workCase .container .little-img{
 	/* height: 21.18rem; */
 	/* height: 15.75rem; */
+}
+.workCase .container .little-img .special-img{
+	top: -2px;
 }
 .workCase .container .big-img,
 .workCase .container .little-img{
