@@ -44,4 +44,43 @@ outline: none;
 	max-width: none;
 	max-height: 100%;
 }
-
+.center-area{
+	margin: 0 auto;
+	padding: 0 0.5rem;
+}
+.main-title{
+	padding: 0 0.56rem;
+}
+.f-row{
+	display: flex;
+	justify-content: center;
+}
+.f-column{
+	display: flex;
+	flex-direction: column;
+}
+.font-bold{
+	font-weight: bold;
+}
+.main-title{
+	margin-top: 0.7rem;
+}
+.main-title .title{
+	font-size: 0.5rem;
+	color: #d0913a;
+	margin: 0 0.6rem;
+}
+.litile-title {
+	font-size: 0.12rem;
+	color: #d0913a;
+	letter-spacing: 0.05rem;
+}
+.main-title .inner-center{
+	justify-content: space-between;
+	align-items: center;
+}
+.main-title>div:first-child,
+.main-title>div:last-child{
+	flex: 1;
+	border: 1px solid rgba(208,145,58,0.6);
+}
