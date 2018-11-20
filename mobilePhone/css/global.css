@@ -1,0 +1,47 @@
+/*此文件定义业务的公用样式*/
+*{
+	padding:0;
+	margin:0;
+	-webkit-tap-highlight-color:transparent;
+	/*设置元素宽高计算方式*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+html{
+	font-size: 100px;
+}
+body,
+html {
+	font-size: 0.24rem;
+	line-height: 1.5em;
+	font-family: -apple-system,Helvetica,sans-serif;
+	color: #6e6e6e;
+	background: #fff;
+}
+
+/*数字输入框不显示箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+input[type="number"]{
+-moz-appearance: textfield;
+}
+input:focus{
+outline: none;
+}
+
+/* 轮播图的样式 */
+.swiper-height{
+	height: 5rem; /*暂时这些*/
+}
+.swiper-height img.img-fluid{
+	max-width: none;
+	max-height: 100%;
+}
+
