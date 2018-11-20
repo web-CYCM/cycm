@@ -35,14 +35,20 @@ input[type="number"]{
 input:focus{
 outline: none;
 }
-
+a,
+a:hover,
+a:active{
+	color: #6e6e6e;
+	text-decoration: none;
+}
 /* 轮播图的样式 */
 .swiper-height{
-	height: 5rem; /*暂时这些*/
+	height: 8.9rem; 
 }
 .swiper-height img.img-fluid{
 	max-width: none;
 	max-height: 100%;
+	width: 100%;
 }
 .center-area{
 	margin: 0 auto;
@@ -64,6 +70,7 @@ outline: none;
 }
 .main-title{
 	margin-top: 0.7rem;
+	margin-bottom: 0.4rem;
 }
 .main-title .title{
 	font-size: 0.5rem;

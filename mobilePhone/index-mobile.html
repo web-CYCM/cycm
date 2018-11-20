@@ -44,6 +44,82 @@
 		.hi-video-controlbar .video-slider .progressbar{
 			top: 0;
 		}
+		/* 主页样式 */
+		.workCase{
+			/* 写阴影 */
+		}
+		.workCase .workCaseItem{
+			margin-bottom: 0.8rem;
+			box-shadow: 8px 0 8px -5px rgba(110,110,100,0.50),-8px 0 8px -5px rgba(110,110,100,0.50),0 8px 8px -5px rgba(110,110,100,0.50); 
+		}
+		.workCase .workCaseItem img,
+		.Information .InforItem img{
+			max-width: 100%;
+		}
+		.workCase .workCaseItem .big_title{
+			font-size: 0.46rem;
+			color: #333333;
+			margin-top: 0.3rem;
+			background: #ffffff;
+		}
+		.workCase .workCaseItem .vice-title,
+		.workCase .workCaseItem p{
+			font-size: 0.25rem;
+		}
+		.workCase .workCaseItem .handle_btn{
+			border: 1px solid #d0923b;
+			background: #d0923b;
+			width: 1.46rem;
+			height: 0.5rem;
+			line-height: 0.5rem;
+			text-align: center;
+			border-radius: 0.08rem;
+		}
+		.workCase .workCaseItem .handle_btn a{
+			color: #FFFFFF;
+			font-size: 0.2rem;
+		}
+		.content_box{
+			padding: 0 0.36rem 0.4rem;
+		}
+		/* 宸熠资讯 */
+		.Information{
+			/* border: 1px solid red; */
+		}
+		.Information .InforItem{
+			border: 1px solid transparent;
+			background: #f1f1f1;
+			margin-bottom: 0.25rem;
+		}
+		.Information .InforItem img{
+			max-width: 100%;
+		}
+		.Information .InforItem .content_text{
+			padding: 0.3rem 0 0 0.3rem;
+		}
+		.Information .InforItem .content_text p{
+			margin-bottom: 0.28rem;
+		}
+		.Information .InforItem .title,
+		.Information .InforItem .content_text,
+		.Information .InforItem .handleView{
+			font-size: 0.25rem;
+			color: #6e6e6e;
+		}
+		.Information .InforItem .handleView{
+			width: 1.5rem;
+			display: block;
+			text-align: center;
+			line-height: 0.3rem;
+			margin: 0 0 0.36rem;
+			font-size: 0.16rem;
+			color: #6e6e6e;
+			padding: 0.05rem 0;
+			border: 1px solid #6e6e6e;
+		}
+		.viewMore{
+			
+		}
 	</style>
 </head>
 <body>
@@ -55,16 +131,15 @@
 	<div class="swiper-height">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img class="img-fluid" src="../images/index/swiper2.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="../images/index/swiper1.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="../images/index/swiper2.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="../images/index/swiper1.png"></div>
+				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper_01.png"></div>
+				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper_02.png"></div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 	<div class="center-area">
 		<!-- 作品案例 -->
+		<!-- 标题 -->
 		<div class="main-title f-row justify-content-center align-items-center">
 			<div></div>
 			<div class="inner-center f-column">
@@ -72,6 +147,66 @@
 				<div class="litile-title">CASE AND WORKS</div>
 			</div>
 			<div></div>
+		</div>
+		<div class="workCase">
+			<div class="workCaseItem">
+				<img src="./images/index/workCaseVideo.png" alt="">
+				<div class="content_box">
+					<div class="big_title">视频类</div>
+					<div class="vice-title">THE TYPE OF VIDEO</div>
+					<p>宣传片&nbsp;|&nbsp;展示片&nbsp;|&nbsp;广告片&nbsp;|&nbsp;三维视频&nbsp;|&nbsp;宣推视频</p>
+					<div class="handle_btn">
+						<a>了解更多</a>
+					</div>
+				</div>
+			</div>
+			<div class="workCaseItem">
+				<img src="./images/index/workCasePlane.png" alt="">
+				<div class="content_box">
+					<div class="big_title">平面类</div>
+					<div class="vice-title">THE TYPE OF GRAPH</div>
+					<p>白底图&nbsp;|&nbsp;场景图&nbsp;|&nbsp;试戴图&nbsp;|&nbsp;海报&nbsp;|&nbsp;画册</p>
+					<div class="handle_btn">
+						<a>了解更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 宸熠资讯 -->
+		<div class="main-title f-row justify-content-center align-items-center">
+			<div></div>
+			<div class="inner-center f-column">
+				<div class="title font-bold">宸熠资讯</div>
+				<div class="litile-title">KING VISION NEWS</div>
+			</div>
+			<div></div>
+		</div>
+		<div class="Information">
+			<div class="InforItem">
+				<img src="./images/index/new_01.png" alt="">
+				<div class="content_text">
+					<div class="title">KeyShot产品优势</div>
+					<p>
+						KeyShot是基于LuxRender开发的渲染引擎，使
+						用先进的技术水平算法，根据物理方程模拟光线
+						流，产生高精度逼真场景效果，达到照片...
+					</p>
+					<a href="" class="handleView">了解详情</a>
+				</div>
+			</div>
+			<div class="InforItem">
+				<img src="./images/index/new_02.png" alt="">
+				<div class="content_text">
+					<div class="title">抖音信息流广告-抖音营销</div>
+					<p>
+						去年是短视频发展的元年，随着活跃用户的增长，
+						针对细分人群的平台也应运而生。作为行业内的
+						一匹黑马,抖音自2017年爆发开始...
+					</p>
+					<a href="" class="handleView">了解详情</a>
+				</div>
+			</div>
+			<div class="viewMore">MORE >>></div>
 		</div>
 	</div>
 	
