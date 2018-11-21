@@ -142,7 +142,7 @@
 <body>
 	
 	<!-- 导航栏 -->
-	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+	<header class="header-absolute section-header js-header unsticky" id="top-mobile"></header>
 
 	<!-- 轮播图 -->
 	<div class="swiper-height index">
@@ -274,7 +274,7 @@
 		}
 		(function () {
 			window.onload = function () {
-				$('#top').load('../header.html');
+				$('#top-mobile').load('header-mobile.html');
 			}
 		})();
 		var swiper = new Swiper('.swiper-container', {

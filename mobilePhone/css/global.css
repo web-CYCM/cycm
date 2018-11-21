@@ -43,7 +43,8 @@ a:active{
 }
 /* 轮播图的样式 */
 .swiper-height.index{
-	height: 8.9rem; 
+	height: 10.1rem;
+	padding-top: 1.2rem; 
 }
 .swiper-height img.img-fluid{
 	max-width: none;
@@ -94,7 +95,8 @@ a:active{
 }
 /* 内页导航栏中显示的文字 */ 
 .swiper-height{
-	height: 3.2rem;
+	height: 4.4rem;
+	padding-top: 1.2rem;
 }
 .swiper-height .swiper-slide{
 	position: relative;
