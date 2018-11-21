@@ -93,7 +93,8 @@
 
 	<script type="text/javascript">
 		if($(window).width() > 992){
-			location.href = '../newsView.html';
+			var Id = location.search && location.search.split("Id=")[1];
+			location.href = '../newsView.html?Id=' + Id;
 		}
 		function getNewsList(){
 			var data = newsList.data;
