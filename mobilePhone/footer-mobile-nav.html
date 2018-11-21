@@ -1,0 +1,307 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh">
+<body>
+	<div class="companyInfo-mobile-nav">
+		<div id='footer-phone'>
+			<a href="tel://0755-22928136">
+				<div class="img-wrap">
+					<img src="../images/index/commonSys.png" alt="">
+				</div>
+				<div class="text">一键拨号</div>
+				<div class="boder"></div>
+			</a>
+		</div>
+		<div id='footer-consult'>
+			<div class="img-wrap">
+				<img src="../images/index/commonSys.png" alt="">
+			</div>
+			<div class="text">在线咨询</div>
+			<div class="boder"></div>
+		</div>
+		<div id='footer-address'>
+			<div class="img-wrap">
+				<img src="../images/index/commonSys.png" alt="">
+			</div>
+			<div class="text">公司地址</div>
+			<div class="boder"></div>
+		</div>
+		<div id='footer-share'>
+			<div class="img-wrap">
+				<img src="../images/index/commonSys.png" alt="">
+			</div>
+			<div class="text">分享</div>
+			<div class="boder border-last"></div>
+		</div>
+	</div>
+
+	<div class="content-form dis-content-form">
+		<div class="content-form-close">X</div>
+		<div class="content-form-tip">请输入联系方式，我司将立即与您联络！</div>
+		<form action="" method="get">
+			<div>
+				<input type="text" name="firstName" value="" class="required" id="firstName" placeholder="请输入您的称呼：" autocomplete="off">
+				<p class="first-name-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<div>
+				<input type="text" name="telPhone" value="" class="required" id="telPhone" placeholder='请输入您的手机号码：' autocomplete="off">
+				<p class="tel-phone-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<div>
+				<input type="text" name="companyName" value="" class="required" id="companyName" placeholder="请输入贵司的公司名称：" autocomplete="off">
+				<p class="company-name-tip form-input-tip"><span class="dis-form-input-tip"></span></p>
+			</div>
+			<input type="submit" value="提交">
+		</form>
+	</div>
+	<div class="sideNav-model dis-sideNav-model"></div>
+
+	<div class="share-content dis-share-content">
+		<span>分享链接复制成功</span>
+	</div>
+	<script type="text/javascript">
+		(function () {
+			// window.onload = function () {
+				var footerObj = {
+					clickServices: function () {
+						$('.content-form').removeClass('dis-content-form');
+						$('.sideNav-model').removeClass('dis-sideNav-model');
+						
+						$('form').find('.form-input-tip span').addClass('dis-form-input-tip'); //隐藏表单tip
+					},
+					clickModel: function () {
+						$('.content-form').addClass('dis-content-form');
+						$('.sideNav-model').addClass('dis-sideNav-model');
+						
+						$('form').find('.form-input-tip span').addClass('dis-form-input-tip'); //隐藏表单tip
+					},
+
+					initShare: function () {
+						$('.share-content').addClass('dis-share-content');
+					},
+					clickShare: function () {
+						$('.share-content').removeClass('dis-share-content');
+						$('.share-content').fadeIn();
+						var setTimeId = setTimeout(function () {
+							$('.share-content').fadeOut();
+							clearTimeout (setTimeId);
+						}, 1000)
+					}
+				}
+				
+
+				footerObj.clickServices ();
+				footerObj.clickModel ();
+				footerObj.initShare ();
+				$("#footer-phone").on('click', function () {
+
+				})
+				$("#footer-consult").on('click', function () {
+					footerObj.clickServices ();
+				})
+				$("#footer-address").on('click', function () {
+					location.href = ''
+				})
+				$("#footer-share").on('click', function () {
+					console.log("share--->", location.href)
+					footerObj.clickShare ()
+				})
+
+				//点击form的遮罩
+				$('.sideNav-model').on('click', function () {
+					footerObj.clickModel ();
+				})
+				//点击弹窗关闭图标
+				$('.content-form-close').on('click', function () {
+					footerObj.clickModel ();
+				})
+				//表单验证
+				$('form input').blur(function () {
+					if ($(this).is('#firstName')) {
+						if (this.value == '') {
+							$(this).next().children().text('请输入您的称呼');
+							$(this).next().children().removeClass('dis-form-input-tip')
+						}else {
+							$(this).attr('value', this.value)
+						}
+					}
+					if ($(this).is('#telPhone')) {
+						if (this.value == '') {
+							$(this).next().children().text('请输入您的手机号码');
+							$(this).next().children().removeClass('dis-form-input-tip')
+						}else {
+							$(this).attr('value', this.value)
+						}
+					}
+					if ($(this).is('#companyName')) {
+						if (this.value == '') {
+							$(this).next().children().text('请输入贵司的公司名称');
+							$(this).next().children().removeClass('dis-form-input-tip')
+						}else {
+							$(this).attr('value', this.value)
+						}
+					}
+				})
+				//表单提交
+				$('form').submit(function () {
+					$('form input').trigger("blur");
+					if ($('form .dis-form-input-tip').length < $('form .form-input-tip').length) {
+						return false
+					} 
+					var firstNameSub = $('form #firstName').attr('value');
+					var telPhoneSub = $('form #telPhone').attr('value');
+					var companyNameSub = $('form #companyName').attr('value');
+					
+				})
+			// }
+		})()
+	</script>
+
+</body>
+<style>
+	#footer-mobile-nav{
+		position: fixed;
+		left: 0;
+		right: -1px;
+		bottom: -1px;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 1rem;
+		background: #FFFFFF;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav>div,
+	#footer-phone>a{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	#footer-phone>a:hover,
+	#footer-phone>a:active{
+		text-decoration: none;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav .img-wrap{
+		width: 0.5rem;
+		height: 0.5rem;
+		margin: 0 0.1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav .img-wrap img{
+		
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav .text{
+		color: #777777;
+		font-size: 0.3rem;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav .boder{
+		margin-left: 0.1rem;
+		border-right: 1px solid #777777;
+		height: 0.3rem;
+	}
+	#footer-mobile-nav .companyInfo-mobile-nav .border-last{
+		border-right: 1px solid #FFFFFF;
+	}
+
+
+	/* 表单 */
+	.dis-content-form,
+	.dis-share-content{
+		display: none;
+	}
+	.dis-sideNav-model{
+		display: none;
+	}
+	.sideNav-model{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 500;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.66);
+	}
+	.content-form,
+	.share-content{
+		position: fixed;
+		top: 50%;
+		right: 50%;
+		width: 6rem;
+		background: #d1933a;
+		border-radius: 0.05rem;
+		margin-top: -3rem;
+		margin-right: -3rem;
+		z-index: 999;
+		padding: 0.2rem 0.2rem 0.4rem 0.2rem;
+	}
+	.share-content{
+		width: 3rem;
+		font-size: 0.24rem;
+		margin-top: -3rem;
+		margin-right: -1.5rem;
+		padding: 0.2rem;
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	.content-form .content-form-close{
+		display: flex;
+		justify-content: flex-end;
+		font-size: 0.30rem;
+		color: #ffffff;
+	}
+	.content-form .content-form-tip{
+		display: flex;
+		justify-content: center;
+		font-size: 0.12rem;
+		color: #ffffff;
+		margin: 0 0 0.5rem 0;
+	}
+	.content-form form{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+	.content-form form .high{
+		width: 1rem;
+		color: rgb(255, 0, 0);
+	}
+	.content-form form input.required{
+		width: 5rem;
+		padding: 0 0.1rem;
+		font-size: 0.12rem;
+	}
+	.content-form form input[type="text"]{
+		border-style:none;
+		height: 0.5rem !important;		
+	}
+	.content-form form input:-webkit-autofill {
+         -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+	.content-form form input[type="submit"]{
+		border-style:none;
+		background-color: #6e6e6e;
+		color: #ffffff;
+		font-size: 0.36rem;
+		padding: 0 0.2rem;
+	}
+
+	.content-form form .form-input-tip{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: 0.3rem;
+		font-size: 0.12rem;
+		color:rgb(255, 0, 0);
+		margin: 0.1rem;
+	}
+	.content-form form .dis-form-input-tip{
+		display: none;
+	}
+</style>
+</html>
