@@ -39,7 +39,7 @@ a,
 a:hover,
 a:active{
 	color: #6e6e6e;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 /* 轮播图的样式 */
 .swiper-height.index{
@@ -119,6 +119,9 @@ a:active{
 	letter-spacing: 0.05rem;
 }
 /* tab页代替二级菜单切换 */
+.tab-Mobile {
+	margin-bottom: 0.54rem;
+}
 .tab-Mobile .tab-top a{
 	display: block;
 	padding: 0;
@@ -140,4 +143,80 @@ a:active{
 }
 .tab-Mobile .tab-top a.active .introduce{
 	color: #ce8e34;
+}
+/*  */
+.tab-Mobile .tab-content{
+	/* border: 1px solid red; */
+}
+.tab-Mobile .tab-content .panel-heading{
+	border-top: 1px solid #f7ecdd;
+}
+.tab-Mobile .tab-content .panel-heading:last-child{
+	border-bottom: 1px solid #f7ecdd;
+}
+.section1 .panel-heading{
+	height: 0.45rem;
+}
+.section2 .panel-heading{
+	height: 1.4rem;
+}
+.section2 p{
+	margin-bottom: 0.05rem;
+}
+.section2 .left_info span:first-child{
+	margin-bottom: 0.1rem;
+}
+#adList{
+	margin-bottom: 0.05rem;
+	font-size: 0.14rem;
+	flex-wrap: wrap;
+}
+#adList .adItem{
+	width: 2rem;
+	height: 2rem;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid transparent;
+	text-align: center;
+}
+#adList .adItem img{
+	max-width: 100%;
+}
+.section2 img{
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	margin: 0.2rem auto;
+}
+.tab-Mobile .tab-content .panel-heading a{
+	width: 100%; 
+	height: 100%;
+	display: flex;
+	font-size: 0.22rem;
+	justify-content: space-between;
+	align-items: center;
+}
+.tab-Mobile .tab-content .panel-heading a .img{
+	width: 0.16rem;
+	height: 0.16rem;
+	margin-right: 0.35rem;
+}
+.tab-Mobile .tab-content .panel-heading a .img img{
+	height: 100%;
+	width: 100%;
+}
+.tab-Mobile .tab-content .panel-heading a .left_info{
+	padding-left: 0.05rem;
+	color: #d0933c;
+}
+.tab-Mobile .tab-content .panel-heading a.collapsed .left_info{
+	color: #333333;
+}
+.tab-Mobile .tab-content .panel-heading a .left_info span:first-child{
+	width: 1.5rem;
+	padding-right: 0.45rem;
+}
+.tab-Mobile .tab-content .panel-body{
+	font-size: 0.18rem;
+	padding: 0.3rem 0;
 }
