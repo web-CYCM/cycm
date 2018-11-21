@@ -20,7 +20,6 @@
 	<script type="text/javascript" src="../hivideo/f.js"></script>
 	<style>
 		.hi-video-wrapper{
-			height: 100%;
 			background: transparent;
 		}
 		.hi-video{
@@ -29,7 +28,8 @@
 		.hi-video-controlbar{
 			display: flex;
 			align-items: center;
-			bottom: 0;
+			bottom: -0.75rem;
+			background: rgb(0,0,0);
 		}
 		.hi-video-controlbar .video-volume{
 			overflow: visible;
@@ -41,22 +41,98 @@
 </head>
 <body>
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
-	<div id="about-mobile-content">
-		<div>
+	<div id="about-mobile-img">
+		<img class="img-wrap" src="../images/index/swiper1.png">
+		<div class="img-title">
 			<div>
-				<img class="img-wrap" src="../images/index/swiper1.png">
+				<p>了解宸熠</p>
+				<p>COMPANY INTRODUCTION</p>
 			</div>
 		</div>
 	</div>
-	<div>
-		<div class="title">
+	<div id="about-mobile-tabs">
+		<div class="title" id="about-mobile-bar-introduction">
+			<div></div>
 			<span>公司简介</span>
 		</div>
-		<div class="title">
+		<div class="title" id="about-mobile-bar-structure">
+			<div></div>
 			<span>公司架构</span>
 		</div>
-		<div class="title">
+		<div class="title" id="about-mobile-bar-video">
+			<div></div>
 			<span>介绍视频</span>
+		</div>
+	</div>
+	<div id="about-mobile-introduction" class="dis-content">
+		<div class="about-mobile-content">
+			<div class="introduction-word-wrap">
+				<div class="intro_item">
+					<div class="title font-bold">公司简介</div>
+					<p>
+						宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制
+						作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范
+						围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动
+						策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；
+						电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有
+						电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。
+						公司战略合作单位有：建华珠宝、百翠灵珠宝、枫亭珠宝、福美华珠宝、周
+						金生珠宝、深圳缔一世家文化创意、深圳微聚信息技术、深圳国投影视、深
+						圳谛珑文化、背景唯美新画面影视、中视合利（北京）文化投资、中国国际
+						微电影大点组委会、中国国际青年影展组委会、中国电影报社、英中友好促
+						进会等。
+					</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">公司精神</div>
+					<p>重诚信 勇进取 善融合 乐开拓</p>
+					<p>为人至善 从事至真 观点至新 理想至远</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">公司使命</div>
+					<p>追求卓越品质，打造影视精品，传递社会正能量。</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">核心价值观</div>
+					<p>微创新：不能为创新而创新，必须以创造价值为导向</p>
+					<p>思想创新、作品创新、部门创新、公司创新</p>
+					<p>学习：不是毕业了就不用学习了，三人行必有吾师，只有学习才能精进</p>
+					<p>管理学习、专业学习、借鉴学习、实践学习</p>
+					<p>责任：责任是一种与生俱来的使命；是一种约束，是一种担当，是进步之源
+					对自己负责，对同事负责，对部门负责，对公司负责，对客户负责</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">公司愿景</div>
+					<p>构建多元化传媒服务平台，打造国际化的影视产业航母。</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">公司宗旨</div>
+					<p>弘扬民族精神，传播社会正能量，以文化引领生活，挖掘品牌力量</p>
+				</div>
+				<div class="intro_item">
+					<div class="title font-bold">经营理念</div>
+					<p>注重细节，把握关键。追求完美，缔造经典。</p>
+					<p>广聚英才，共创辉煌！</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="about-mobile-structure" class="dis-content">
+		<div class="introduction-img-wrap">
+			<img src="../images/know/company-strctrue.png" alt="">
+		</div>
+	</div>
+	<div id="about-mobile-video" class="dis-content">
+		<div class="introduction-video-wrap">
+			<div class="video-single" id="about-video">
+				<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true" poster="../images/index/11.png">
+					<source src="../videos/introduce.mp4" id="source" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="introduction-word-wrap introduction-word-wrap2">
+			<!-- <div></div> -->
+			<p></p>
 		</div>
 	</div>
 	<footer id="footer-mobile-code"></footer>
@@ -74,22 +150,227 @@
 				// $('#top').load('../header.html');
 				$('#footer-mobile-code').load('footer-mobile-code.html');
 				$('#footer-mobile-nav').load('footer-mobile-nav.html');
+
+				var getList = [];
+
+				var aboutObj = {
+					getVideoList: function () {
+						// 初次请求列表
+						var getList = [
+							{
+								id: 1,
+								img: '../images/know/video-list-01.jpg',
+								contentList: '宸熠传媒团队简介',
+								time: '1:15',
+								videoSrc: './videos/introduce.mp4',
+								contentTitle: 'OUR CASE AND WORKS',
+								content: '宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							},
+							// {
+							// 	id: 2,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '1宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '1OUR CASE AND WORKS',
+							// 	content: '1宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 3,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '2宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '2OUR CASE AND WORKS',
+							// 	content: '2宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 4,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '3宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/03.mp4',
+							// 	contentTitle: '3OUR CASE AND WORKS',
+							// 	content: '3宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 5,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '5宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '1OUR CASE AND WORKS',
+							// 	content: '5宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// },
+							// {
+							// 	id: 6,
+							// 	img: './images/know/video-list-01.jpg',
+							// 	contentList: '6宸熠传媒团队简介',
+							// 	time: '1:15',
+							// 	videoSrc: './videos/02.mp4',
+							// 	contentTitle: '2OUR CASE AND WORKS',
+							// 	content: '6宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
+							// }
+					];
+						videoList = getList;
+						if (videoList.length) {
+							aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
+							aboutObj.changeVideoInfo ('.introduction-word-wrap2', videoList[0].contentTitle,  videoList[0].content );
+						}
+					},
+					initAbout: function (option) {
+						if (option == 'introduction') {
+							$('#about-mobile-bar-introduction').addClass('tab-active');
+							$('#about-mobile-bar-structure').removeClass('tab-active');
+							$('#about-mobile-bar-video').removeClass('tab-active');
+
+							$('#about-mobile-introduction').removeClass('dis-content');
+							$('#about-mobile-structure').addClass('dis-content');
+							$('#about-mobile-video').addClass('dis-content');
+						}
+						if (option == 'structure') {
+							$('#about-mobile-bar-structure').addClass('tab-active');
+							$('#about-mobile-bar-introduction').removeClass('tab-active');
+							$('#about-mobile-bar-video').removeClass('tab-active');
+
+							$('#about-mobile-structure').removeClass('dis-content');
+							$('#about-mobile-introduction').addClass('dis-content');
+							$('#about-mobile-video').addClass('dis-content');
+						}
+						if (option == 'video') {
+							$('#about-mobile-bar-video').addClass('tab-active');
+							$('#about-mobile-bar-introduction').removeClass('tab-active');
+							$('#about-mobile-bar-structure').removeClass('tab-active');
+
+							$('#about-mobile-video').removeClass('dis-content');
+							$('#about-mobile-introduction').addClass('dis-content');
+							$('#about-mobile-structure').addClass('dis-content');
+						}
+					},
+					changeVideoSrc: function (videoObj, videoSrc) {
+						$(videoObj).children('video').attr('src', videoSrc);
+					},
+					changeVideoInfo: function (InfoObj, infoTitle, info) {
+						// $(InfoObj).children('div').text(infoTitle);
+						$(InfoObj).children('p').text(info);
+					}
+				}
+				
+				//初始化tabs、视频
+				aboutObj.initAbout ("video");
+				aboutObj.getVideoList ();
+				//tabs切换
+				$('#about-mobile-bar-introduction').on('click', function () {
+					aboutObj.initAbout ("introduction")
+				})
+				$('#about-mobile-bar-structure').on('click', function () {
+					aboutObj.initAbout ("structure")
+				})
+				$('#about-mobile-bar-video').on('click', function () {
+					aboutObj.initAbout ("video")
+				})
 			}
 		})()
 	</script>
 
 </body>
 <style>
-	#about-mobile-content{
-		/* margin-top: 7rem; */
+	*{
+		margin: 0;
+		padding: 0;
 	}
-	#about-mobile-content .img-wrap{
+	#about-mobile-img{
+		position: relative;
+	}
+	#about-mobile-img .img-wrap{
 		width: 100%;
-		height: 5rem;
+		height: 3.2rem;
+	}
+	#about-mobile-img .img-title{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #FFFFFF;
+	}
+	#about-mobile-img>div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	#about-mobile-img .img-title p{
+		margin: 0;
+		text-align: center;
+	}
+	#about-mobile-img .img-title p:first-child{
+		font-size: 0.5rem;
+	}
+	#about-mobile-img .img-title p:last-child{
+		font-size: 0.3rem;
 	}
 
-	#footer-mobile-code{
-		height: auto;
+	#about-mobile-tabs{
+		font-size: 0.36rem;
+		margin: 0.35rem 0.75rem 0.8rem 0.75rem;
+	}
+	#about-mobile-tabs .title{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0.1rem 0;
+		width: 1.75rem;
+	}
+	#about-mobile-tabs .title>div{
+		margin-right: 0.20rem;
+		border-left: 0.05rem solid #FFFFFF;
+		height: 0.3rem;
+	}
+	#about-mobile-tabs .tab-active>div{
+		border-left: 0.05rem solid #cf9239;
+	}
+	#about-mobile-tabs .tab-active>span{
+		color: #cf9239;
+	}
+
+	#about-mobile-introduction{
+		margin: 0 0.75rem;
+		font-size: 0.3rem;
+	}
+	#about-mobile-introduction.dis-content,
+	#about-mobile-structure.dis-content,
+	#about-mobile-video.dis-content{
+		display: none;
+	}
+
+	#about-mobile-introduction .font-bold{
+		font-weight: 600;
+	}
+	#about-mobile-introduction .introduction-word-wrap{
+		margin-bottom: 0.85rem;
+	}
+	#about-mobile-introduction .intro_item{
+		margin-bottom: 0.4rem;
+	}
+	#about-mobile-introduction p{
+		margin-bottom: 0;
+	}
+
+	#about-mobile-structure{
+		margin: 0 0.3rem 0.9rem 0.3rem;
+	}
+	#about-mobile-structure .introduction-img-wrap img{
+		max-width: 100%;
+	}
+
+	#about-mobile-video .introduction-video-wrap{
+		margin: 0 0.45rem;
+	}
+	#about-mobile-video .introduction-word-wrap p{
+		margin: 1.05rem 0.75rem 0.7rem 0.75rem;
+		font-size: 0.3rem;
 	}
 </style>
 </html>
