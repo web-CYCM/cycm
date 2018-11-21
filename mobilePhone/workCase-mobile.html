@@ -22,6 +22,10 @@
 	<link href="..\vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
 	<link href="..\vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<script type="text/javascript" src="../data/newsList.json"></script>
+    <link rel="stylesheet" href="../hivideo/hivideo.css" />
+    <script type="text/javascript" src="../hivideo/hivideo.js"></script>
+    <script type="text/javascript" src="../hivideo/md5.min.js"></script>
+	<script type="text/javascript" src="../hivideo/f.js"></script>
 	<style>
 		.hi-video-wrapper{
 			background: transparent;
@@ -145,106 +149,74 @@
 	<header class="header-absolute section-header js-header unsticky" id="top"></header>
 
 	<!-- 轮播图 -->
-	<div class="swiper-height index">
+	<div class="swiper-height">
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper_01.png"></div>
-				<div class="swiper-slide"><img class="img-fluid" src="./images/index/swiper_02.png"></div>
+				<div class="swiper-slide">
+					<div class="f-column">
+						<div class="title font-bold">视频类</div>
+						<div class="little_title">THE TYPE OF VIDEO</div>
+					</div>
+					<img class="img-fluid" src="./images/innerPage/workCase.png">
+				</div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
-	<div class="center-area">
-		<!-- 作品案例 -->
-		<!-- 标题 -->
-		<div class="main-title f-row justify-content-center align-items-center">
-			<div></div>
-			<div class="inner-center f-column">
-				<div class="title font-bold">作品案例</div>
-				<div class="litile-title">CASE AND WORKS</div>
-			</div>
-			<div></div>
+	<div class="center-area tab-Mobile">
+		<div class="nav nav-pills f-column tab-top p-t-30 m-b-40 selection" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			<a class="nav-link active seletion-item" id="v-preach-tab" data-toggle="pill" href="#v-preach" role="tab" aria-controls="v-preach" aria-selected="false">
+				<div class="introduce">宣传片</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-pieceShow-tab" data-toggle="pill" href="#v-pieceShow" role="tab" aria-controls="v-pieceShow" aria-selected="false">
+				<div class="introduce">展示片</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-Advertising-tab" data-toggle="pill" href="#v-Advertising" role="tab" aria-controls="v-Advertising" aria-selected="false">
+				<div class="introduce">广告片</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-3DVideo-tab" data-toggle="pill" href="#v-3DVideo" role="tab" aria-controls="v-3DVideo" aria-selected="true">
+				<div class="introduce">三维视频</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-Propaganda-tab" data-toggle="pill" href="#v-Propaganda" role="tab" aria-controls="v-Propaganda" aria-selected="false">
+				<div class="introduce">宣推视频</div>
+			</a>
 		</div>
-		<div class="workCase">
-			<div class="workCaseItem">
-				<img src="./images/index/workCaseVideo.png" alt="">
-				<div class="content_box">
-					<div class="big_title">视频类</div>
-					<div class="vice-title">THE TYPE OF VIDEO</div>
-					<p>宣传片&nbsp;|&nbsp;展示片&nbsp;|&nbsp;广告片&nbsp;|&nbsp;三维视频&nbsp;|&nbsp;宣推视频</p>
-					<div class="handle_btn">
-						<a>了解更多</a>
+		<div class="tab-content" id="v-pills-tabContent">
+			<div class="tab-pane fade" id="v-preach" role="tabpanel" aria-labelledby="v-preach-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="videoList">
+							宣传片
 					</div>
-				</div>
+				</section>
 			</div>
-			<div class="workCaseItem">
-				<img src="./images/index/workCasePlane.png" alt="">
-				<div class="content_box">
-					<div class="big_title">平面类</div>
-					<div class="vice-title">THE TYPE OF GRAPH</div>
-					<p>白底图&nbsp;|&nbsp;场景图&nbsp;|&nbsp;试戴图&nbsp;|&nbsp;海报&nbsp;|&nbsp;画册</p>
-					<div class="handle_btn">
-						<a>了解更多</a>
+			<div class="tab-pane fade" id="v-pieceShow" role="tabpanel" aria-labelledby="v-pieceShow-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="videoList">
+							展示片
 					</div>
-				</div>
+				</section>
 			</div>
-		</div>
-		<!-- 宸熠资讯 -->
-		<div class="main-title f-row justify-content-center align-items-center">
-			<div></div>
-			<div class="inner-center f-column">
-				<div class="title font-bold">宸熠资讯</div>
-				<div class="litile-title">KING VISION NEWS</div>
+			<div class="tab-pane fade" id="v-Advertising" role="tabpanel" aria-labelledby="v-Advertising-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="videoList">
+							广告片
+					</div>
+				</section>
 			</div>
-			<div></div>
-		</div>
-		<div class="Information">
-			<div class="InforItem">
-				<img src="./images/index/new_01.png" alt="">
-				<div class="content_text">
-					<div class="title">KeyShot产品优势</div>
-					<p>
-						KeyShot是基于LuxRender开发的渲染引擎，使
-						用先进的技术水平算法，根据物理方程模拟光线
-						流，产生高精度逼真场景效果，达到照片...
-					</p>
-					<a href="" class="handleView">了解详情</a>
-				</div>
+			<div class="tab-pane fade show active" id="v-3DVideo" role="tabpanel" aria-labelledby="v-3DVideo-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="videoList">
+							三维视频
+					</div>
+				</section>
 			</div>
-			<div class="InforItem">
-				<img src="./images/index/new_02.png" alt="">
-				<div class="content_text">
-					<div class="title">抖音信息流广告-抖音营销</div>
-					<p>
-						去年是短视频发展的元年，随着活跃用户的增长，
-						针对细分人群的平台也应运而生。作为行业内的
-						一匹黑马,抖音自2017年爆发开始...
-					</p>
-					<a href="" class="handleView">了解详情</a>
-				</div>
+			<div class="tab-pane fade" id="v-Propaganda" role="tabpanel" aria-labelledby="v-Propaganda-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="videoList">
+							宣推视频
+					</div>
+				</section>
 			</div>
-			<div class="viewMore">MORE &nbsp;&nbsp;>>></div>
-		</div>
-		<!-- 宸熠传媒 -->
-		<div class="main-title f-row justify-content-center align-items-center">
-			<div></div>
-			<div class="inner-center f-column">
-				<div class="title font-bold">宸熠传媒</div>
-				<div class="litile-title">KING VISION MEDIA</div>
-			</div>
-			<div></div>
-		</div>
-		<div class="newsList">
-			<p>
-				<span>宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，</span>
-				<span>2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务</span>
-				<span>范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，</span>
-				<span>赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术</span>
-				<span>设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出</span>
-				<span>经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、</span>
-				<span>微电影等视频制作及发行资质。</span>
-			</p>
-			<a href="#">查看更多</a>
 		</div>
 	</div>
 
@@ -270,21 +242,13 @@
 
 	<script type="text/javascript">
 		if($(window).width() > 992){
-			location.href = '../index.html';
+			location.href = '../workCase.html';
 		}
 		(function () {
 			window.onload = function () {
 				$('#top').load('../header.html');
 			}
 		})();
-		var swiper = new Swiper('.swiper-container', {
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true
-			},
-			autoplay: true
-		});
-		
 	</script>
 
 </body>

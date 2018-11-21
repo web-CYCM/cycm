@@ -42,7 +42,7 @@ a:active{
 	text-decoration: none;
 }
 /* 轮播图的样式 */
-.swiper-height{
+.swiper-height.index{
 	height: 8.9rem; 
 }
 .swiper-height img.img-fluid{
@@ -89,5 +89,55 @@ a:active{
 .main-title>div:first-child,
 .main-title>div:last-child{
 	flex: 1;
+	background: rgba(208,145,58,0.6);
 	border: 1px solid rgba(208,145,58,0.6);
+}
+/* 内页导航栏中显示的文字 */ 
+.swiper-height{
+	height: 3.2rem;
+}
+.swiper-height .swiper-slide{
+	position: relative;
+}
+.swiper-height .swiper-slide >div{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-height .swiper-slide >div .title{
+	font-size: 0.35rem;
+	color: #FFFFFF;
+	margin-bottom: 0.05rem;
+}
+.swiper-height .swiper-slide >div .little_title{
+	font-size: 0.2rem;
+	color: #FFFFFF;
+	letter-spacing: 0.05rem;
+}
+/* tab页代替二级菜单切换 */
+.tab-Mobile .tab-top a{
+	display: block;
+	padding: 0;
+	border-radius: 0;
+	border-left: 0.05rem solid transparent;
+}
+.tab-Mobile .nav-pills .nav-link.active, .show>.nav-pills .nav-link{
+	background: none;
+}
+.tab-Mobile .tab-top a .introduce{
+	display: block;
+	color: #6d6d6d;
+	font-size: 0.22rem;	
+	padding: 0.02rem 0;
+	margin-left: 0.1rem;
+}
+.tab-Mobile .tab-top a.active{
+	border-left: 0.05rem solid #ce8e34;
+}
+.tab-Mobile .tab-top a.active .introduce{
+	color: #ce8e34;
 }
