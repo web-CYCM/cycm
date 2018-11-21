@@ -174,6 +174,10 @@
 
 	<script type="text/javascript">
 		(function () {
+			if($(window).width() < 992){
+				location.href = './mobilePhone/about-mobile.html';
+			}
+
 			window.onload = function () {
 				$('#top').load('header.html');
 				$('#footer').load('footer.html');
