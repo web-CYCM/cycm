@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="">
+	<title>深圳市宸熠传媒有限公司</title>
+	<link href="../css/font-face.css" rel="stylesheet" media="all">
+	<link href="..\vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
+	<link href="..\css\theme.css" rel="stylesheet" media="all">
+	<link href=".\css\global.css" rel="stylesheet" media="all">
+
+	
+	<link href="..\vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
+
+	
+	<link href="../vendor/swiper/css/swiper.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animate.css\animate.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\css-hamburgers\hamburgers.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\slick\slick.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="../data/newsList.json"></script>
+	<style>
+		.news_area{
+			background: #f1f1f1;
+			padding-top: 0.45rem;
+			padding-bottom: 0.45rem;
+		}
+		.news_area #newsList .news-item{
+			background: #FFFFFF;
+			padding: 0.2rem;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0.45rem;
+		}
+		.news_area #newsList .news-item .news-system{
+			flex: 1;
+		}
+		.news_area #newsList .news-item .news-system img{
+			width: 100%;
+			max-height: 100%; 
+		}
+		.news_area #newsList .news-item .introduce{
+			font-size: 0.18rem;
+			margin-left: 0.4rem;
+			width: 3rem;
+		}
+		.news_area #newsList .news-item .introduce .title{
+			font-size: 0.24rem;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			margin-bottom: 0.3rem;
+		}
+		.news_area #newsList .news-item .introduce .learnMore{
+			font-size: 0.15rem;
+			color: #db9b3d;
+			margin-top: 0.2rem;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<!-- 导航栏 -->
+	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+
+	<!-- 轮播图 -->
+	<div class="swiper-height">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="f-column">
+						<div class="title font-bold">宸熠咨询</div>
+						<div class="little_title">KING VISION ADVISORY</div>
+					</div>
+					<img class="img-fluid" src="./images/innerPage/newsList.png">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="center-area news_area">
+		<div id="newsList"></div>
+	</div>
+
+
+
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor\popper.js\popper.min.js"></script>
+	<script src="../vendor\bootstrap\bootstrap.min.js"></script>
+
+
+	<script src="../vendor/swiper/js/swiper.min.js"></script>
+
+
+	<script src="../vendor\slick\slick.min.js"></script>
+	<script src="../vendor\animsition\animsition.min.js"></script>
+	<script src="../vendor\waypoints\jquery.waypoints.min.js"></script>
+	<script src="../vendor\jquery.counterup\jquery.counterup.min.js"></script>
+	<script src="../vendor\wowjs\wow.min.js"></script>
+	<script src="../vendor\lightbox2\js\lightbox.min.js"></script>
+	
+	<script src="../js/global.js"></script>
+	<script src="./js/global-mobile.js"></script>
+
+	<script type="text/javascript">
+		if($(window).width() > 992){
+			location.href = '../news.html';
+		}
+		function getNewsList(){
+			var data = newsList.data;
+			var endList = [];
+			if(data.length>5){
+				//只取前三条数据
+				endList.push(data[0]);
+				endList.push(data[1]);
+				endList.push(data[2]);
+				endList.push(data[3]);
+				endList.push(data[4]);
+			}else{
+				//全部赋值
+				endList = data;
+			}
+			$.each(endList || [], function(index,item){
+				var str = '<div class="news-item f-row"><div class="news-system"><img src="../'+item.imgUrl+'" alt=""></div><div class="introduce" onclick=toView("newsView-mobile.html?Id='+item.Id+'")><div class="title font-bold">'+item.name+'</div><div class="content"><span>'+item.briefText+'</span></div><div class="learnMore">了解详情&nbsp;&gt;</div></div></div>';
+				$("#newsList").append(str);
+			})
+		}
+		(function () {
+			window.onload = function () {
+				$('#top').load('../header.html');
+				getNewsList();
+			}
+		})();
+
+		function toView(link){
+			location.href=link;
+		}
+	</script>
+
+</body>
+</html>

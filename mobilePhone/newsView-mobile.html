@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="">
+	<title>深圳市宸熠传媒有限公司</title>
+	<link href="../css/font-face.css" rel="stylesheet" media="all">
+	<link href="..\vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
+	<link href="..\css\theme.css" rel="stylesheet" media="all">
+	<link href=".\css\global.css" rel="stylesheet" media="all">
+
+	
+	<link href="..\vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
+
+	
+	<link href="../vendor/swiper/css/swiper.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animate.css\animate.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\css-hamburgers\hamburgers.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\slick\slick.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="../data/newsList.json"></script>
+	<style>
+		#sectionList > div{
+			font-size: 0.2rem;
+		}
+		#sectionList > div p{
+			margin-bottom: 0.1rem;
+		}
+		#sectionList > div img{
+			max-width: 100%;
+			display: none;
+		}
+		#sectionList .article-title{
+			font-size: 0.3rem;
+			text-align: left;
+			margin: 0.4rem 0;
+		}
+		#sectionList .endJusmp >div{
+			margin: 0.3rem 0;
+		}
+		#sectionList .endJusmp >div a{
+			font-size: 0.25rem;
+			color: #c37404;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- 导航栏 -->
+	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+
+	<!-- 轮播图 -->
+	<div class="swiper-height">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="f-column">
+						<div class="title font-bold">宸熠咨询</div>
+						<div class="little_title">KING VISION ADVISORY</div>
+					</div>
+					<img class="img-fluid" src="./images/innerPage/newsList.png">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="center-area news_area">
+		<div id="sectionList"></div>
+	</div>
+
+
+
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor\popper.js\popper.min.js"></script>
+	<script src="../vendor\bootstrap\bootstrap.min.js"></script>
+
+
+	<script src="../vendor/swiper/js/swiper.min.js"></script>
+
+
+	<script src="../vendor\slick\slick.min.js"></script>
+	<script src="../vendor\animsition\animsition.min.js"></script>
+	<script src="../vendor\waypoints\jquery.waypoints.min.js"></script>
+	<script src="../vendor\jquery.counterup\jquery.counterup.min.js"></script>
+	<script src="../vendor\wowjs\wow.min.js"></script>
+	<script src="../vendor\lightbox2\js\lightbox.min.js"></script>
+	
+	<script src="../js/global.js"></script>
+	<script src="./js/global-mobile.js"></script>
+
+	<script type="text/javascript">
+		if($(window).width() > 992){
+			location.href = '../newsView.html';
+		}
+		function getNewsList(){
+			var data = newsList.data;
+			var Id = location.search && location.search.split("Id=")[1];
+			var formData = {}
+			if(Id){
+				$.each(data, function(index,item){
+					if(item.Id === Id){
+						var isPreface = item.details.preface?"block":"none",
+							isViewImgUrl = item.viewImgUrl?'block;':'none;',
+							isShowLast = index>0?'block;':'none;',
+							prevIndex = index-1>=0?data[index-1].Id:data[index].Id,
+							prevName = index-1>=0?data[index-1].name:data[index].name,
+							isShowNext = index>=0 && index < (data.length-1)?'block;':'none;',
+							nextIndex = (index+1<data.length)?data[index+1].Id:data[index].Id,
+							nextName = ((index+1)<data.length)?data[index+1].name:data[index].name;
+
+						var str = '<div><div class="article-title font-bold">'+item.name+'</div><div class="complete-intro" style="display:'+isPreface+'"><p class="content-flex"><span style="text-align:left;">'+item.details.preface+'</span></p></div><img src="../'+item.viewImgUrl+'" alt="" style="margin:0.1rem auto;display:'+isViewImgUrl+'"><div id="article_Info"></div><div class="summarize content-flex"><span>'+item.details.endInfo+'</span></div><div class="endJusmp"><div class="last" style="display:'+isShowLast+'"><a href="newsView-mobile.html?Id='+prevIndex+'"><span>上一篇：</span>'+prevName+'<span></span></a></div><div class="next" style="display:'+isShowNext+'"><a href="newsView-mobile.html?Id='+nextIndex+'"><span>下一篇：</span><span>'+nextName+'</span></a></div></div></div>';
+						var article = $('<div class="article"></div>');
+						$.each(item.details.advantages, function(chiIndex,chi) {
+							//处理单个小标题下，数据解释
+							var littleTitle = '';
+							$.each(chi.infoForm, function(InfoIndex,info) {
+								littleTitle += '<span>'+info.stage+'</span>';
+							})
+							var isShowInnerImg = chi.innerImg?'block;':'none;';
+							var chiStr = '<div class="article-item"><div class="title">'+chi.name+'</div><p class="content-flex">'+littleTitle+'</p><img style="margin:0.1rem auto;display:'+isShowInnerImg+'" src="../'+chi.innerImg+'" alt="" ></div>';
+								article.append(chiStr);
+						})
+						$("#sectionList").append(str);
+						$("#article_Info").append(article)
+					}
+				})
+			}
+		}
+		(function () {
+			window.onload = function () {
+				$('#top').load('../header.html');
+				getNewsList();
+			}
+		})();
+
+		function toView(link){
+			location.href=link;
+		}
+	</script>
+
+</body>
+</html>
