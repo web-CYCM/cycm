@@ -92,9 +92,13 @@
 			font-size: 0.18rem;
 		}
 		.videoList_area .videoList .videoItem .rightIntro .clickPlay{
+			margin-top: 0.1rem; 
+		}
+		.videoList_area .videoList .videoItem .rightIntro .clickPlay a,
+		.videoList_area .videoList .videoItem .rightIntro .clickPlay a:active,
+		.videoList_area .videoList .videoItem .rightIntro .clickPlay a:hover{
 			font-size: 0.15rem;
 			color: #db9b3d;
-			margin-top: 0.1rem; 
 		}
 	</style>
 </head>
@@ -196,14 +200,14 @@
 			//宣传片
 			var preachList = data.preachList;
 			$.each(preachList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL="">点击视频播放&nbsp;></a></div></div></div>'
 				$("#preachList").append(str);
 			})
 
 			//展示片
 			var showList = data.showList;
 			$.each(showList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL="">点击视频播放&nbsp;></a></div></div></div>'
 				$("#showList").append(str);
 			})
 
@@ -211,7 +215,7 @@
 			//广告片
 			var advertyList = data.advertyList;
 			$.each(advertyList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL="">点击视频播放&nbsp;></a></div></div></div>'
 				$("#advertyList").append(str);
 			})
 
@@ -220,14 +224,14 @@
 			//3D视频
 			var ThreeDList = data.ThreeDList;
 			$.each(ThreeDList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL="">点击视频播放&nbsp;></a></div></div></div>'
 				$("#ThreeDList").append(str);
 			})
 
 			//宣推视频
 			var pushList = data.pushList;
 			$.each(pushList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL=""><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html?url=../../'+item.videoUrl+'" videoURL="">点击视频播放&nbsp;></a></div></div></div>'
 				$("#pushList").append(str);
 			})
 			
