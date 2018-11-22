@@ -171,9 +171,6 @@
 	<script src="./js/global-mobile.js"></script>
 
 	<script type="text/javascript">
-		if($(window).width() > 992){
-			location.href = '../teamWork.html';
-		}
 		//获得团队人物
 		function getTeamPeople(){
 			var data = teamPeopleList.data;
@@ -252,9 +249,13 @@
 						}
 					}
 				})
-			});
-			// $("#teamPeopleList .panel .panel-heading").click(function(){})		
+			});		
 		})
+
+
+		if($(window).width() > 992){
+			location.href = '../teamWork.html?about=teamWork';
+		}
 	</script>
 
 </body>

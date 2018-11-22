@@ -159,6 +159,9 @@
 	<script src="./js/global-mobile.js"></script>
 
 	<script type="text/javascript">
+		if($(window).width() > 992){
+			location.href = '../about.html?about=introduction';
+		}
 		(function () {
 			window.onload = function () {
 				$('#top-mobile').load('header-mobile.html');
