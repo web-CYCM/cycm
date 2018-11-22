@@ -63,6 +63,9 @@
 	<div class="share-content dis-share-content">
 		<span>分享链接复制成功</span>
 	</div>
+
+	<script type="text/javascript" src="./js/clipboard.min.js"></script>
+
 	<script type="text/javascript">
 		(function () {
 			var footerObj = {
@@ -83,29 +86,34 @@
 					$('.share-content').addClass('dis-share-content');
 				},
 				clickShare: function () {
-					$('.share-content').removeClass('dis-share-content');
-					$('.share-content').fadeIn();
-					var setTimeId = setTimeout(function () {
-						$('.share-content').fadeOut();
-						clearTimeout (setTimeId);
-					}, 1000)
+					var link = location.href;
+					var clipboard = new ClipboardJS('#footer-share', {
+						text: function () {
+							return link
+						}
+					});
+					clipboard.on('success', function(e) {
+						$('.share-content').removeClass('dis-share-content');
+						$('.share-content').fadeIn();
+						var setTimeId = setTimeout(function () {
+							$('.share-content').fadeOut();
+							clearTimeout (setTimeId);
+						}, 1000)
+					})
 				}
 			}
 			
 			footerObj.clickServices ();
 			footerObj.clickModel ();
 			footerObj.initShare ();
-			$("#footer-phone").on('click', function () {
 
-			})
 			$("#footer-consult").on('click', function () {
 				footerObj.clickServices ();
 			})
 			$("#footer-address").on('click', function () {
-				location.href = ''
+				location.href = 'contactUs-mobile.html'
 			})
 			$("#footer-share").on('click', function () {
-				console.log("share--->", location.href)
 				footerObj.clickShare ()
 			})
 
