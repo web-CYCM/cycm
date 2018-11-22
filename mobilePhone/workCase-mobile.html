@@ -169,6 +169,8 @@
 			</div>
 		</div>
 	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
 
 
 
@@ -192,21 +194,21 @@
 
 	<script type="text/javascript">
 		if($(window).width() > 992){
-			location.href = '../workCase.html';
+			location.href = '../workCase.html?about=videoClass';
 		}
 		function getVideoList(){
 			var data = videoList;
 			//宣传片
 			var preachList = data.preachList;
 			$.each(preachList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" target="_blank" videoURL="../../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" videoURL="../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
 				$("#preachList").append(str);
 			})
 
 			//展示片
 			var showList = data.showList;
 			$.each(showList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" target="_blank" videoURL="../../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" videoURL="../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
 				$("#showList").append(str);
 			})
 
@@ -214,7 +216,7 @@
 			//广告片
 			var advertyList = data.advertyList;
 			$.each(advertyList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" target="_blank" videoURL="../../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" videoURL="../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
 				$("#advertyList").append(str);
 			})
 
@@ -223,14 +225,14 @@
 			//3D视频
 			var ThreeDList = data.ThreeDList;
 			$.each(ThreeDList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" target="_blank" videoURL="../../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" videoURL="../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
 				$("#ThreeDList").append(str);
 			})
 
 			//宣推视频
 			var pushList = data.pushList;
 			$.each(pushList, function(index,item){
-				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" target="_blank" videoURL="../../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
+				var str = '<div class="videoItem f-row"><div class="imgShow"><img src="'+item.phoneImg+'" alt=""><div class="shadow"><a class="popUpVideo section-content-play" href="../hivideo/html/hivideo.html" videoURL="../'+item.videoUrl+'"><img src="./images/innerPage/play.png" alt=""></a></div></div><div class="rightIntro f-column"><div class="title">'+item.name+'</div><div class="content">'+item.introduce+'</div><div class="clickPlay">点击视频播放&nbsp;></div></div></div>'
 				$("#pushList").append(str);
 			})
 			
@@ -238,6 +240,8 @@
 		(function () {
 			window.onload = function () {
 				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 			}
 			getVideoList();
 		})();

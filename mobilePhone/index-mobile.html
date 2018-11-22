@@ -131,8 +131,8 @@
 			width: 1.9rem;
 			color: #FFFFFF;
 			text-align: center;
-			height: 0.45rem;
-			line-height: 0.45rem;
+			height: 0.5rem;
+			line-height: 0.5rem;
 			background: #d0923b;
 			display: block;
 			margin: 0.3rem auto 0.9rem;
@@ -173,7 +173,7 @@
 					<div class="vice-title">THE TYPE OF VIDEO</div>
 					<p>宣传片&nbsp;|&nbsp;展示片&nbsp;|&nbsp;广告片&nbsp;|&nbsp;三维视频&nbsp;|&nbsp;宣推视频</p>
 					<div class="handle_btn">
-						<a>了解更多</a>
+						<a href="workCase-mobile.html">了解更多</a>
 					</div>
 				</div>
 			</div>
@@ -184,7 +184,7 @@
 					<div class="vice-title">THE TYPE OF GRAPH</div>
 					<p>白底图&nbsp;|&nbsp;场景图&nbsp;|&nbsp;试戴图&nbsp;|&nbsp;海报&nbsp;|&nbsp;画册</p>
 					<div class="handle_btn">
-						<a>了解更多</a>
+						<a href="workCase-mobile2.html">了解更多</a>
 					</div>
 				</div>
 			</div>
@@ -208,7 +208,7 @@
 						用先进的技术水平算法，根据物理方程模拟光线
 						流，产生高精度逼真场景效果，达到照片...
 					</p>
-					<a href="" class="handleView">了解详情</a>
+					<a href="newsView-mobile.html?Id=news_01" class="handleView">了解详情</a>
 				</div>
 			</div>
 			<div class="InforItem">
@@ -220,10 +220,10 @@
 						针对细分人群的平台也应运而生。作为行业内的
 						一匹黑马,抖音自2017年爆发开始...
 					</p>
-					<a href="" class="handleView">了解详情</a>
+					<a href="newsView-mobile.html?Id=news_02" class="handleView">了解详情</a>
 				</div>
 			</div>
-			<div class="viewMore">MORE &nbsp;&nbsp;>>></div>
+			<div class="viewMore" onclick="goPageByLink('news-mobile.html')">MORE &nbsp;&nbsp;>>></div>
 		</div>
 		<!-- 宸熠传媒 -->
 		<div class="main-title f-row justify-content-center align-items-center">
@@ -244,9 +244,11 @@
 				<span>经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、</span>
 				<span>微电影等视频制作及发行资质。</span>
 			</p>
-			<a href="#">查看更多</a>
+			<a href="about-mobile.html">查看更多</a>
 		</div>
 	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
 
 
 
@@ -275,6 +277,8 @@
 		(function () {
 			window.onload = function () {
 				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 			}
 		})();
 		var swiper = new Swiper('.swiper-container', {
@@ -284,7 +288,9 @@
 			},
 			autoplay: true
 		});
-		
+		function goPageByLink(link){
+			location.href = link;
+		}
 	</script>
 
 </body>

@@ -41,6 +41,11 @@ a:active{
 	color: #6e6e6e;
 	text-decoration: none !important;
 }
+@media (min-width: 576px){
+	.container {
+		max-width: 100% !important;
+	}
+}
 /* 轮播图的样式 */
 .swiper-height.index{
 	height: 10.1rem;
@@ -76,7 +81,7 @@ a:active{
 .main-title .title{
 	font-size: 0.5rem;
 	color: #d0913a;
-	margin: 0 0.6rem;
+	margin: 0 0.6rem 0.15rem;
 }
 .litile-title {
 	font-size: 0.12rem;
@@ -86,6 +91,9 @@ a:active{
 .main-title .inner-center{
 	justify-content: space-between;
 	align-items: center;
+}
+.main-title .inner-center{
+	
 }
 .main-title>div:first-child,
 .main-title>div:last-child{
@@ -136,9 +144,9 @@ a:active{
 .tab-Mobile .tab-top a .introduce{
 	display: block;
 	color: #6d6d6d;
-	font-size: 0.22rem;	
-	padding: 0.02rem 0;
-	margin-left: 0.1rem;
+	font-size: 0.3rem;	
+	padding: 0.03rem 0;
+	margin-left: 0.2rem;
 }
 .tab-Mobile .tab-top a.active{
 	border-left: 0.05rem solid #ce8e34;

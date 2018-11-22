@@ -1,0 +1,265 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="">
+	<title>深圳市宸熠传媒有限公司</title>
+	<link href="../css/font-face.css" rel="stylesheet" media="all">
+	<link href="..\vendor\font-awesome\css\font-awesome.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\linearicons\css\linearicons.css" rel="stylesheet" media="all">
+	<link href="..\css\theme.css" rel="stylesheet" media="all">
+	<link href=".\css\global.css" rel="stylesheet" media="all">
+
+	
+	<link href="..\vendor\bootstrap\bootstrap.min.css" rel="stylesheet" media="all">
+
+	
+	<link href="../vendor/swiper/css/swiper.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animate.css\animate.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\css-hamburgers\hamburgers.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\slick\slick.css" rel="stylesheet" media="all">
+	<link href="..\vendor\animsition\animsition.min.css" rel="stylesheet" media="all">
+	<link href="..\vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="../data/planeImgList.json"></script>
+	<style>
+		.ImgList_area{
+			
+		}
+		.tab-Mobile{
+			background: #f1f1f1;
+			margin-bottom: 0 !important;
+			padding-bottom: 0.5rem !important;
+		}
+		.ImgList{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.ImgList>.f-row>img{
+			height: 3.2rem;
+			width: 100%;
+			margin-bottom: 0.2rem;
+		}
+		.ImgList .posterItem{
+			width: 3.2rem;
+			height: 4rem;
+			margin-bottom: 0.2rem;
+		}
+		.ImgList .bgImgItem{
+			width: 3.2rem;
+			height: 3.2rem;
+			margin-bottom: 0.2rem;
+		}
+		.ImgList .albumItem{
+			width: 3.2rem;
+			height: 4.8rem;
+			margin-bottom: 0.2rem;
+		}
+		.ImgList .bgImgItem img,
+		.ImgList .posterItem img,
+		.ImgList .albumItem img{
+			width: 100%;
+			height: 100%;
+		}
+		.ImgList .f-row{
+			width: 100%;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- 导航栏 -->
+	<header class="header-absolute section-header js-header unsticky" id="top-mobile"></header>
+
+	<!-- 轮播图 -->
+	<div class="swiper-height">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="f-column">
+						<div class="title font-bold">平面类</div>
+						<div class="little_title">THE TYPE OF GRAPH</div>
+					</div>
+					<img class="img-fluid" src="./images/innerPage/workCasePlane.png">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="center-area tab-Mobile">
+		<div class="nav nav-pills f-column tab-top p-t-30 m-b-40 selection" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			<a class="nav-link active seletion-item" id="v-preach-tab" data-toggle="pill" href="#v-preach" role="tab" aria-controls="v-preach" aria-selected="false">
+				<div class="introduce">场景图</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-pieceShow-tab" data-toggle="pill" href="#v-pieceShow" role="tab" aria-controls="v-pieceShow" aria-selected="false">
+				<div class="introduce">试戴图</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-Advertising-tab" data-toggle="pill" href="#v-Advertising" role="tab" aria-controls="v-Advertising" aria-selected="false">
+				<div class="introduce">白底图</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-3DVideo-tab" data-toggle="pill" href="#v-3DVideo" role="tab" aria-controls="v-3DVideo" aria-selected="true">
+				<div class="introduce">海报</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-Propaganda-tab" data-toggle="pill" href="#v-Propaganda" role="tab" aria-controls="v-Propaganda" aria-selected="false">
+				<div class="introduce">画册</div>
+			</a>
+		</div>
+		<div class="tab-content ImgList_area" id="v-pills-tabContent">
+			<div class="tab-pane fade show active" id="v-preach" role="tabpanel" aria-labelledby="v-preach-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="scene"></div>
+				</section>
+			</div>
+			<div class="tab-pane fade" id="v-pieceShow" role="tabpanel" aria-labelledby="v-pieceShow-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="tryOn"></div>
+				</section>
+			</div>
+			<div class="tab-pane fade" id="v-Advertising" role="tabpanel" aria-labelledby="v-Advertising-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="whiteBg"></div>
+				</section>
+			</div>
+			<div class="tab-pane fade" id="v-3DVideo" role="tabpanel" aria-labelledby="v-3DVideo-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="posterList"></div>
+				</section>
+			</div>
+			<div class="tab-pane fade" id="v-Propaganda" role="tabpanel" aria-labelledby="v-Propaganda-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="albumList"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
+
+
+
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor\popper.js\popper.min.js"></script>
+	<script src="../vendor\bootstrap\bootstrap.min.js"></script>
+
+
+	<script src="../vendor/swiper/js/swiper.min.js"></script>
+
+
+	<script src="../vendor\slick\slick.min.js"></script>
+	<script src="../vendor\animsition\animsition.min.js"></script>
+	<script src="../vendor\waypoints\jquery.waypoints.min.js"></script>
+	<script src="../vendor\jquery.counterup\jquery.counterup.min.js"></script>
+	<script src="../vendor\wowjs\wow.min.js"></script>
+	<script src="../vendor\lightbox2\js\lightbox.min.js"></script>
+	
+	<script src="../js/global.js"></script>
+	<script src="./js/global-mobile.js"></script>
+
+	<script type="text/javascript">
+		if($(window).width() > 992){
+			location.href = '../workCase.html?about=planeClass';
+		}
+		function getImgList(){
+			var data = planeImgList;
+			//场景图
+			var scene = data.scene;
+			$.each(scene, function(index,item){
+				if((index+1) % 3 == 0 && index <= scene.length-1){
+					var isShowImg = scene[index]?'block':'none';
+					var imgUrl = scene[index].phoneUrl;
+					var isShowImg2 = scene[index-1]?'block':'none';
+					var imgUrl2 = scene[index-1].phoneUrl;
+					var isShowImg3 = scene[index-2]?'block':'none';
+					var imgUrl3 = scene[index-2].phoneUrl;
+					if(item.phoneUrl){
+						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="./'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						$("#scene").append(str);
+					}
+				}
+			})
+
+			//试戴图
+			var tryOn = data.tryOn;
+			$.each(tryOn, function(index,item){
+				if((index+1) % 3 == 0 && index <= tryOn.length-1){
+					var isShowImg = tryOn[index].phoneUrl?'block':'none';
+					var imgUrl = tryOn[index].phoneUrl;
+					var isShowImg2 = tryOn[index-1].phoneUrl?'block':'none';
+					var imgUrl2 = tryOn[index-1].phoneUrl;
+					var isShowImg3 = tryOn[index-2].phoneUrl?'block':'none';
+					var imgUrl3 = tryOn[index-2].phoneUrl;
+					if(item.phoneUrl){
+						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="./'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						$("#tryOn").append(str);
+					}
+				}
+			})
+
+
+			//白底图
+			var whiteBg = data.whiteBg;
+			$.each(whiteBg, function(index,item){
+				if((index+1) % 2 == 0 && index <= whiteBg.length-1){
+					var isShowImg = whiteBg[index].phoneUrl?'block':'none';
+					var imgUrl = whiteBg[index].phoneUrl;
+					var isShowImg2 = whiteBg[index-1].phoneUrl?'block':'none';
+					var imgUrl2 = whiteBg[index-1].phoneUrl;
+					if(item.phoneUrl){
+						var str = '<div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						$("#whiteBg").append(str);
+					}
+				}
+
+				
+			})
+
+
+
+			//海报
+			var posterList = data.posterListMobile;
+			$.each(posterList, function(index,item){
+				var str = "";
+				if(index != 2 && index != 3){
+					str = '<div class="f-row"><img src="./'+item.imgUrl+'" alt="" /></div>';
+				}else {
+					if((index+1) % 2 == 0){
+						var isShowImg = posterList[index].imgUrl?'block':'none';
+						var imgUrl = posterList[index].imgUrl;
+						var isShowImg2 = posterList[index-1].imgUrl?'block':'none';
+						var imgUrl2 = posterList[index-1].imgUrl;
+						str = '<div class="f-row"><div class="posterItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="posterItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+					}
+				}
+				$("#posterList").append(str);
+			})
+
+			//画册
+			var albumList = data.albumList;
+			$.each(albumList, function(index,item){
+				var str = "";
+				if((index+1) == 1){
+					str = '<div class="f-row"><img src="./'+item.phoneUrl+'" alt="" /></div>';
+				}else if((index+1) % 2 != 0){
+					var isShowImg = albumList[index].phoneUrl?'block':'none';
+					var imgUrl = albumList[index].phoneUrl;
+					var isShowImg2 = albumList[index-1].phoneUrl?'block':'none';
+					var imgUrl2 = albumList[index-1].phoneUrl;
+					str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+				}
+				$("#albumList").append(str);
+			})
+			
+		}
+		(function () {
+			window.onload = function () {
+				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
+			}
+			getImgList();
+		})();
+	</script>
+
+</body>
+</html>

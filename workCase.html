@@ -639,7 +639,14 @@
 			}
 		})();
 		if($(window).width() < 992){
-			location.href = './mobilePhone/workCase-mobile.html';
+			var hrefUrl = window.location.href;
+			var hrefData = hrefUrl.split('=');
+			var tabbar =  hrefData[1];
+			if(tabbar == 'videoClass'){
+				location.href = './mobilePhone/workCase-mobile.html';
+			}else if(tabbar == 'planeClass'){
+				location.href = './mobilePhone/workCase-mobile2.html';
+			}
 		}
 
 		

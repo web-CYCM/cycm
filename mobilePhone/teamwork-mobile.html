@@ -52,7 +52,7 @@
 <body>
 	
 	<!-- 导航栏 -->
-	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+	<header class="header-absolute section-header js-header unsticky" id="top-mobile"></header>
 
 	<!-- 轮播图 -->
 	<div class="swiper-height">
@@ -147,6 +147,8 @@
 			</div>
 		</div>
 	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
 
 
 
@@ -203,7 +205,9 @@
 		}
 		(function () {
 			window.onload = function () {
-				$('#top').load('../header.html');
+				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 				getTeamPeople();
 				getStrategyList();
 			}

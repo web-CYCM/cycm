@@ -23,6 +23,14 @@
 	<link href="..\vendor\lightbox2\css\lightbox.min.css" rel="stylesheet" media="all">
 	<script type="text/javascript" src="../data/newsList.json"></script>
 	<style>
+		.handleReturn > a {
+			display: block;
+			font-size: 0.3rem;
+			color: #c37404;
+			padding: 0.25rem 0;
+			padding-left: 0.5rem;
+			border-bottom: 1px solid #b2b2b2;
+		}
 		#sectionList > div{
 			font-size: 0.2rem;
 		}
@@ -38,6 +46,10 @@
 			text-align: left;
 			margin: 0.4rem 0;
 		}
+		#sectionList .endJusmp{
+			margin-top: 0.3rem;
+			border-top: 1px solid #b2b2b2;
+		}
 		#sectionList .endJusmp >div{
 			margin: 0.3rem 0;
 		}
@@ -50,7 +62,7 @@
 <body>
 	
 	<!-- 导航栏 -->
-	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+	<header class="header-absolute section-header js-header unsticky" id="top-mobile"></header>
 
 	<!-- 轮播图 -->
 	<div class="swiper-height">
@@ -67,9 +79,14 @@
 			<div class="swiper-pagination"></div>
 		</div>
 	</div>
+	<div class="handleReturn">
+		<a href="news-mobile.html">< 返回资讯列表</a>
+	</div>
 	<div class="center-area news_area">
 		<div id="sectionList"></div>
 	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
 
 
 
@@ -132,7 +149,9 @@
 		}
 		(function () {
 			window.onload = function () {
-				$('#top').load('../header.html');
+				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 				getNewsList();
 			}
 		})();

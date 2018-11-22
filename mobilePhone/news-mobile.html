@@ -28,6 +28,9 @@
 			padding-top: 0.45rem;
 			padding-bottom: 0.45rem;
 		}
+		.news_area #newsList{
+			padding: 0.45rem 0;
+		}
 		.news_area #newsList .news-item{
 			background: #FFFFFF;
 			padding: 0.2rem;
@@ -65,7 +68,7 @@
 <body>
 	
 	<!-- 导航栏 -->
-	<header class="header-absolute section-header js-header unsticky" id="top"></header>
+	<header class="header-absolute section-header js-header unsticky" id="top-mobile"></header>
 
 	<!-- 轮播图 -->
 	<div class="swiper-height">
@@ -85,6 +88,8 @@
 	<div class="center-area news_area">
 		<div id="newsList"></div>
 	</div>
+	<footer id="footer-mobile-code"></footer>
+	<footer id="footer-mobile-nav"></footer>
 
 
 
@@ -131,7 +136,9 @@
 		}
 		(function () {
 			window.onload = function () {
-				$('#top').load('../header.html');
+				$('#top-mobile').load('header-mobile.html');
+				$('#footer-mobile-code').load('footer-mobile-code.html');
+				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 				getNewsList();
 			}
 		})();
