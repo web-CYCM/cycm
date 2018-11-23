@@ -2,8 +2,7 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 	<link href=".\css\global.css" rel="stylesheet" media="all">
 </head>
 <body>
@@ -22,7 +21,7 @@
 			<div class="navbar-collapse collapse" id="navbarSupportedContent">
 				<div class="second-model"></div>
 				<ul class="navbar-nav">
-					<li class="nav-item" id="navbar-index">
+					<li class="nav-item" id="navbar-index" style="border-top:1px solid #a19993;">
 						<a class="nav-link" href="index-mobile.html">首页</a>
 					</li>
 					<li class="nav-item" id="navbar-know">
@@ -32,7 +31,7 @@
 						<a class="nav-link" href="news-mobile.html">宸熠资讯</a>
 					</li>
 					<li class="nav-item" id="navbar-case">
-						<a class="nav-link" href="javascript:void(0)">作品案例<span class="nav-link-arrow">></span></a>
+						<a class="nav-link" href="javascript:void(0)">作品案例<span class="nav-link-arrow"><img src="./images/innerPage/navUp.png" alt=""></span></a>
 						
 					</li>
 					<li class="nav-item case-nav-item-video dis-nav-item-video" id="navbar-case-video">
@@ -64,12 +63,12 @@
 						$('#navbar-case').siblings(".case-nav-item-video").removeClass('dis-nav-item-video');
 						$('#navbar-case').siblings(".case-nav-item-paper").removeClass('dis-nav-item-paper');
 
-						$("#navbar-case .nav-link-arrow").css('transform', 'rotate(90deg)');
+						$("#navbar-case .nav-link-arrow").css('transform', 'rotate(-180deg)');
 					} else {
 						$('#navbar-case').siblings(".case-nav-item-video").addClass('dis-nav-item-video');
 						$('#navbar-case').siblings(".case-nav-item-paper").addClass('dis-nav-item-paper');
 
-						$("#navbar-case .nav-link-arrow").css('transform', 'rotate(-90deg)');
+						$("#navbar-case .nav-link-arrow").css('transform', 'rotate(0deg)');
 					}
 				}
 			}
@@ -99,7 +98,8 @@
 		height: 1.2rem;
 		padding: 0 0.45rem;
 		background: #3d2817;
-		border-bottom: 2px solid #a19993;
+		/* border-bottom: 2px solid #a19993; */
+		/* border-bottom: 1px solid red; */
 	}
 	#top-mobile  .navbar .container .navbar-logo img{
 		max-height: 1.2rem;
@@ -131,8 +131,8 @@
 	#top-mobile .navbar .navbar-collapse .navbar-nav .nav-item{
 		display: flex;
 		align-items: center;
-		height: 0.85rem;
-		border-bottom: 2px solid #a19993;
+		height: 1rem;
+		border-bottom: 1px solid #a19993;
 		margin: 0;
 		
 	}
@@ -165,7 +165,7 @@
 	}
 	#top-mobile .navbar .navbar-collapse .navbar-nav .nav-item .nav-link-arrow{
 		font-size: 0.5rem;
-		transform: rotate(-90deg);
+		transition: all 0.3s;
 	}
 
 	#top-mobile .navbar .navbar-nav .nav-item .nav-link:after{

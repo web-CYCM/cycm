@@ -2,7 +2,7 @@ var cooperateList = {
     "data":[
         {
             "name":"建华珠宝",
-			"imgUrl": "images/index/team_01.png"
+			"imgUrl": "images/index/specialOne.jpg"
 		},
         {
             "name":"百翠灵珠宝",

@@ -2,8 +2,7 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 	<meta name="author" content="">
 	<title>深圳市宸熠传媒有限公司</title>
 	<link href="../css/font-face.css" rel="stylesheet" media="all">
@@ -90,14 +89,14 @@
 	</div>
 	<div class="center-area tab-Mobile">
 		<div class="nav nav-pills f-column tab-top p-t-30 m-b-40 selection" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-			<a class="nav-link active seletion-item" id="v-preach-tab" data-toggle="pill" href="#v-preach" role="tab" aria-controls="v-preach" aria-selected="false">
+			<a class="nav-link active seletion-item" id="v-Advertising-tab" data-toggle="pill" href="#v-Advertising" role="tab" aria-controls="v-Advertising" aria-selected="false">
+				<div class="introduce">白底图</div>
+			</a>
+			<a class="nav-link seletion-item" id="v-preach-tab" data-toggle="pill" href="#v-preach" role="tab" aria-controls="v-preach" aria-selected="false">
 				<div class="introduce">场景图</div>
 			</a>
 			<a class="nav-link seletion-item" id="v-pieceShow-tab" data-toggle="pill" href="#v-pieceShow" role="tab" aria-controls="v-pieceShow" aria-selected="false">
 				<div class="introduce">试戴图</div>
-			</a>
-			<a class="nav-link seletion-item" id="v-Advertising-tab" data-toggle="pill" href="#v-Advertising" role="tab" aria-controls="v-Advertising" aria-selected="false">
-				<div class="introduce">白底图</div>
 			</a>
 			<a class="nav-link seletion-item" id="v-3DVideo-tab" data-toggle="pill" href="#v-3DVideo" role="tab" aria-controls="v-3DVideo" aria-selected="true">
 				<div class="introduce">海报</div>
@@ -107,7 +106,12 @@
 			</a>
 		</div>
 		<div class="tab-content ImgList_area" id="v-pills-tabContent">
-			<div class="tab-pane fade show active" id="v-preach" role="tabpanel" aria-labelledby="v-preach-tab">
+			<div class="tab-pane fade show active" id="v-Advertising" role="tabpanel" aria-labelledby="v-Advertising-tab">
+				<section class="section section-about-1 p-t-40 overflow-hidden">
+					<div class="ImgList" id="whiteBg"></div>
+				</section>
+			</div>
+			<div class="tab-pane fade" id="v-preach" role="tabpanel" aria-labelledby="v-preach-tab">
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="scene"></div>
 				</section>
@@ -115,11 +119,6 @@
 			<div class="tab-pane fade" id="v-pieceShow" role="tabpanel" aria-labelledby="v-pieceShow-tab">
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="tryOn"></div>
-				</section>
-			</div>
-			<div class="tab-pane fade" id="v-Advertising" role="tabpanel" aria-labelledby="v-Advertising-tab">
-				<section class="section section-about-1 p-t-40 overflow-hidden">
-					<div class="ImgList" id="whiteBg"></div>
 				</section>
 			</div>
 			<div class="tab-pane fade" id="v-3DVideo" role="tabpanel" aria-labelledby="v-3DVideo-tab">
