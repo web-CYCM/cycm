@@ -418,7 +418,7 @@ footer .copyright a{
 .current-img,
 .currentPlane-img{
 	max-width: 100%;
-	position: absolute;
+	/* position: absolute; */
 	z-index: 10;
 	margin: 0 auto;
 }

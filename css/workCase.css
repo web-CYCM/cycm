@@ -141,7 +141,7 @@
 
 /* 平面类 */
 .workCase-box .center-content .tab-content .plane_Img{
-	/* border: 1px solid red; */
+	width: 74.16rem;
 
 }
 .workCase-box .center-content .tab-content .plane_Img .header_Img{
@@ -153,7 +153,6 @@
 	/* height: 25.42rem; */
 }
 .workCase-box .center-content .tab-content .row_Img{
-	/* border: 1px solid red; */
 	margin-bottom: 1rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -206,17 +205,73 @@
 	max-height: 100%;
 }
 /* 场景图 */
-#sceneList{
-	/* border: 1px solid red; */
+#albumList .sceneItem,
+#sceneList .sceneItem_true,
+#tryOnList .sceneItem_true{
+	display: flex;
+	margin-bottom: 1.2rem;
+	justify-content: center;
+}
+#albumList .sceneItem div img,
+#sceneList .sceneItem_true div img,
+#tryOnList .sceneItem_true div img{
+	width: 25rem;
+	height: 16rem;
+}
+#albumList .sceneItem > img,
+#tryOnList .sceneItem_true >img,
+#sceneList .sceneItem_true >img{
+	width: 51.25rem;
+	height: 32.9rem;
+}
+#albumList .sceneItem > img.imgItem{
+	width: 25.2rem;
+	height: 32rem;
+}
+.scenePlane_Img .header_Img,
+.planePoster_Img .header_Img{
+	text-align: center;
+}
+.scenePlane_Img .header_Img img{
+	width: 77.08rem;
+	height: 40rem;
+	/* height: 51.33rem; */
+	margin: 0 auto 10px;
+}
+.planePoster_Img .header_Img img{
+	width: 74.5rem;
+	margin-bottom: 1.2rem;
 }
 #sceneList .sceneItem,
-#posterList .sceneItem,
+#posterList .sceneItem, #posterList .sceneItem_row,
 #albumList .sceneItem{
 	width: 100%;
 	display: flex;
 	margin-bottom: 1.2rem;
 	justify-content: center;
 }
+#posterList .sceneItem_row{
+	width: 74.5rem;
+	margin: 0 auto 10px;
+}
+#posterList .sceneItem_row>img{
+	width: 16rem;
+	height: 29rem;
+}
+#posterList .sceneItem_row .sceneItem_col{
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+#posterList .sceneItem_row .sceneItem_col img{
+	width: 100%;
+}
+#posterList .sceneItem_row>img:nth-child(2){
+	width: 15rem;
+}
+#tryOnList .sceneItem_true div,
+#sceneList .sceneItem_true div,
 #sceneList .sceneItem div,
 #posterList .sceneItem div,
 #albumList .sceneItem div{
@@ -224,6 +279,15 @@
 	flex-direction: column;
 	justify-content: space-around;
 }
+#posterList .sceneItem div>img{
+	width: 26.91rem;
+	height: 16.67rem;
+}
+#posterList .sceneItem > img{
+	width: 46.67rem;
+	height: 34.17rem;
+}
+
 /* 团队合作-团队风采*/
 .workCase-box .figureIntroduction{
 	/* margin-right: 6rem; */
@@ -258,7 +322,6 @@
 	border-radius: 50%;
 }
 .workCase-box .figureIntroduction .figureItem .figureExperience{
-	/* border: 1px solid blue; */
 	margin-top: 1.5rem;
 }
 /* 团队合作-公司顾问 */

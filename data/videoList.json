@@ -40,6 +40,13 @@ var videoList = {
 			"phoneImg": "images/innerPage/ad_02.png",
 			"videoUrl": "videos/adverty/adverty_02.mp4",
 			"introduce": "“我能说些疯狂的事吗？你愿意嫁给我吗？”“我能说更疯狂的事吗？我愿意。”"
+		},
+		{
+            "name":"福美华—TVC广告片",
+			"showImg": "images/planeWorkCase/ad_03.png",
+			"phoneImg": "images/innerPage/ad_03.png",
+			"videoUrl": "videos/adverty/adverty_03.mp4",
+			"introduce": "深圳市福美华品牌TVC广告片。"
 		}
 	],
 	"preachList": [
@@ -47,9 +54,43 @@ var videoList = {
             "name":"宸熠珠宝数字化智能系统宣传片",
 			"showImg": "images/planeWorkCase/preach_03.jpg",
 			"phoneImg": "images/innerPage/preach_03.png",
-			"videoUrl": "videos/preach/preach_03.m4v",
-			// "introduce": "深圳宸熠科技有限公司是一家主营珠宝企业资源管理软件开发业务的高科技公司，专业致力于研发珠宝首饰企业产品与财务一体化管理平台，并能针对企业信息化管理的不同业务领域，为企业提供最佳管理生产与经营的解决方案。"
+			"videoUrl": "videos/xPreach/preach_03.mp4",
 			"introduce": "深圳宸熠科技有限公司是一家主营珠宝企业资源管理软件开发业务的高科技公司..."
+		},
+		{
+            "name":"宸熠传媒—快闪宣传片",
+			"showImg": "images/planeWorkCase/preach_01.png",
+			"phoneImg": "images/innerPage/preachMobile_01.png",
+			"videoUrl": "videos/xPreach/preach_01.mp4",
+			"introduce": "宸熠传媒构建多元化传媒服务平台，打造国际化的影视产业航母。"
+		},
+		{
+            "name":"宸熠传媒—快闪宣传片",
+			"showImg": "images/planeWorkCase/preach_02.png",
+			"phoneImg": "images/innerPage/preachMobile_02.png",
+			"videoUrl": "videos/xPreach/preach_02.mp4",
+			"introduce": "宸熠传媒构建多元化传媒服务平台，打造国际化的影视产业航母。"
+		},
+		{
+            "name":"宸熠传媒—电子相册",
+			"showImg": "images/planeWorkCase/preach_04.png",
+			"phoneImg": "images/innerPage/preachMobile_04.png",
+			"videoUrl": "videos/xPreach/preach_04.mp4",
+			"introduce": "宸熠传媒构建多元化传媒服务平台，打造国际化的影视产业航母。"
+		},
+		{
+            "name":"宸熠传媒—电子相册",
+			"showImg": "images/planeWorkCase/preach_05.png",
+			"phoneImg": "images/innerPage/preachMobile_05.png",
+			"videoUrl": "videos/xPreach/preach_05.mp4",
+			"introduce": "宸熠传媒构建多元化传媒服务平台，打造国际化的影视产业航母。"
+		},
+		{
+            "name":"宸熠传媒—电子相册",
+			"showImg": "images/planeWorkCase/preach_06.png",
+			"phoneImg": "images/innerPage/preachMobile_06.png",
+			"videoUrl": "videos/xPreach/preach_06.mp4",
+			"introduce": "宸熠传媒构建多元化传媒服务平台，打造国际化的影视产业航母。"
 		}
 	],
 	"pushList": [
@@ -57,115 +98,372 @@ var videoList = {
             "name":"MISS2012系列—01",
 			"showImg": "images/planeWorkCase/preach_01.jpg",
 			"phoneImg": "images/innerPage/preach_01.png",
-			"videoUrl": "videos/preach/preach_01.m4v",
+			"videoUrl": "videos/preach/preach_01.mp4",
 			"introduce": "羽翼造型的镶口设计让我化身天使，张开双翼，护你一世周全。"
 		},
 		{
             "name":"MISS2012系列—02",
 			"showImg": "images/planeWorkCase/preach_02.jpg",
 			"phoneImg": "images/innerPage/preach_02.png",
-			"videoUrl": "videos/preach/preach_02.m4v",
+			"videoUrl": "videos/preach/preach_02.mp4",
 			"introduce": "上下交错的戒臂是时光交织的誓言，在钻石的牵引下永恒不变。"
 		},
 		{
             "name":"MISS2012系列—03",
 			"showImg": "images/planeWorkCase/push_01.jpg",
 			"phoneImg": "images/innerPage/push_01.png",
-			"videoUrl": "videos/push/push_01.m4v",
+			"videoUrl": "videos/push/push_01.mp4",
 			"introduce": "巧妙的交心式花头设计，交你一颗真心，许你一世真情"
 		},
 		{
             "name":"MISS2012系列—04",
 			"showImg": "images/planeWorkCase/push_02.jpg",
 			"phoneImg": "images/innerPage/push_02.png",
-			"videoUrl": "videos/push/push_02.m4v",
+			"videoUrl": "videos/push/push_02.mp4",
 			"introduce": "指尖打上的蝴蝶结，是托付终身的誓言。"
 		},
 		{
             "name":"MISS2012系列—05",
 			"showImg": "images/planeWorkCase/push_03.jpg",
 			"phoneImg": "images/innerPage/push_03.png",
-			"videoUrl": "videos/push/push_03.m4v",
+			"videoUrl": "videos/push/push_03.mp4",
 			"introduce": "两条戒臂依偎交缠，一半经典，一半璀璨，一如你我，一生相伴。"
 		},
 		{
             "name":"MISS2012系列—06",
 			"showImg": "planeWorkCase/push_04.jpg",
 			"phoneImg": "images/innerPage/push_04.png",
-			"videoUrl": "videos/push/push_04.m4v",
+			"videoUrl": "videos/push/push_04.mp4",
 			"introduce": "底层戒臂内，镶23颗辅镶小钻，一如爱你一生的诺言，深藏心底，一世不变。"
 		},
 		{
             "name":"MISS2012系列—07",
 			"showImg": "planeWorkCase/push_05.jpg",
 			"phoneImg": "images/innerPage/push_05.png",
-			"videoUrl": "videos/push/push_05.m4v",
+			"videoUrl": "videos/push/push_05.mp4",
 			"introduce": "金色皇冠镶嵌于银白指环，因爱加冕，一世宠你如女王。"
 		}
 	],
 	"showList": [
 		{
-            "name":"福系列2",
-			"showImg": "images/planeWorkCase/fx1.jpg",
-			"phoneImg": "images/innerPage/fx1.png",
-			"videoUrl": "videos/show/fx_01.mp4",
-			"introduce": "深圳市福美华品牌推出的系列产品——福系列"
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_01.png",
+			"phoneImg": "images/innerPage/enamel_01.png",
+			"videoUrl": "videos/show/enamel/enamel_01.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
 		},{
-            "name":"福系列3",
-			"showImg": "images/planeWorkCase/fx2.jpg",
-			"phoneImg": "images/innerPage/fx2.png",
-			"videoUrl": "videos/show/fx_02.mp4",
-			"introduce": "深圳市福美华品牌推出的系列产品——福系列"
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_02.png",
+			"phoneImg": "images/innerPage/enamel_02.png",
+			"videoUrl": "videos/show/enamel/enamel_02.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_03.png",
+			"phoneImg": "images/innerPage/enamel_03.png",
+			"videoUrl": "videos/show/enamel/enamel_03.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_04.png",
+			"phoneImg": "images/innerPage/enamel_04.png",
+			"videoUrl": "videos/show/enamel/enamel_04.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_05.png",
+			"phoneImg": "images/innerPage/enamel_05.png",
+			"videoUrl": "videos/show/enamel/enamel_05.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_06.png",
+			"phoneImg": "images/innerPage/enamel_06.png",
+			"videoUrl": "videos/show/enamel/enamel_06.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—珐琅戒指",
+			"showImg": "images/planeWorkCase/enamel_07.png",
+			"phoneImg": "images/innerPage/enamel_07.png",
+			"videoUrl": "videos/show/enamel/enamel_07.mp4",
+			"introduce": "色彩、工艺与珠宝的完美结合。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_01.png",
+			"phoneImg": "images/innerPage/gold_01.png",
+			"videoUrl": "videos/show/gold/gold_01.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_02.png",
+			"phoneImg": "images/innerPage/gold_02.png",
+			"videoUrl": "videos/show/gold/gold_02.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_03.png",
+			"phoneImg": "images/innerPage/gold_03.png",
+			"videoUrl": "videos/show/gold/gold_03.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_04.png",
+			"phoneImg": "images/innerPage/gold_04.png",
+			"videoUrl": "videos/show/gold/gold_04.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_05.png",
+			"phoneImg": "images/innerPage/gold_05.png",
+			"videoUrl": "videos/show/gold/gold_05.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_06.png",
+			"phoneImg": "images/innerPage/gold_06.png",
+			"videoUrl": "videos/show/gold/gold_06.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_07.png",
+			"phoneImg": "images/innerPage/gold_07.png",
+			"videoUrl": "videos/show/gold/gold_07.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_08.png",
+			"phoneImg": "images/innerPage/gold_08.png",
+			"videoUrl": "videos/show/gold/gold_08.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_09.png",
+			"phoneImg": "images/innerPage/gold_09.png",
+			"videoUrl": "videos/show/gold/gold_09.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_10.png",
+			"phoneImg": "images/innerPage/gold_10.png",
+			"videoUrl": "videos/show/gold/gold_10.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_11.png",
+			"phoneImg": "images/innerPage/gold_11.png",
+			"videoUrl": "videos/show/gold/gold_11.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_12.png",
+			"phoneImg": "images/innerPage/gold_12.png",
+			"videoUrl": "videos/show/gold/gold_12.mp4",
+			"introduce": "单个黄金类产品展示视频。"
+		},{
+            "name":"展示—黄金产品",
+			"showImg": "images/planeWorkCase/gold_13.png",
+			"phoneImg": "images/innerPage/gold_13.png",
+			"videoUrl": "videos/show/gold/gold_13.mp4",
+			"introduce": "单个黄金类产品展示视频。"
 		},
 		{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_01.jpg",
-			"phoneImg": "images/innerPage/show_01.png",
-			"videoUrl": "videos/show/show_01.mp4",
+			"showImg": "images/planeWorkCase/ring_01.png",
+			"phoneImg": "images/innerPage/ring_01.png",
+			"videoUrl": "videos/show/ring/ring_01.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_02.jpg",
-			"phoneImg": "images/innerPage/show_02.png",
-			"videoUrl": "videos/show/show_02.mp4",
+			"showImg": "images/planeWorkCase/ring_02.png",
+			"phoneImg": "images/innerPage/ring_02.png",
+			"videoUrl": "videos/show/ring/ring_02.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_03.jpg",
-			"phoneImg": "images/innerPage/show_03.png",
-			"videoUrl": "videos/show/show_03.mp4",
+			"showImg": "images/planeWorkCase/ring_03.png",
+			"phoneImg": "images/innerPage/ring_03.png",
+			"videoUrl": "videos/show/ring/ring_03.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_04.jpg",
-			"phoneImg": "images/innerPage/show_04.png",
-			"videoUrl": "videos/show/show_04.mp4",
+			"showImg": "images/planeWorkCase/ring_04.png",
+			"phoneImg": "images/innerPage/ring_04.png",
+			"videoUrl": "videos/show/ring/ring_04.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_05.jpg",
-			"phoneImg": "images/innerPage/show_05.png",
-			"videoUrl": "videos/show/show_05.mp4",
+			"showImg": "images/planeWorkCase/ring_05.png",
+			"phoneImg": "images/innerPage/ring_05.png",
+			"videoUrl": "videos/show/ring/ring_05.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_06.jpg",
-			"phoneImg": "images/innerPage/show_06.png",
-			"videoUrl": "videos/show/show_06.mp4",
+			"showImg": "images/planeWorkCase/ring_06.png",
+			"phoneImg": "images/innerPage/ring_06.png",
+			"videoUrl": "videos/show/ring/ring_06.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_07.jpg",
-			"phoneImg": "images/innerPage/show_07.png",
-			"videoUrl": "videos/show/show_07.mp4",
+			"showImg": "images/planeWorkCase/ring_07.png",
+			"phoneImg": "images/innerPage/ring_07.png",
+			"videoUrl": "videos/show/ring/ring_07.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
 		},{
             "name":"展示—戒指",
-			"showImg": "images/planeWorkCase/show_08.jpg",
-			"phoneImg": "images/innerPage/show_08.png",
-			"videoUrl": "videos/show/show_08.mp4",
+			"showImg": "images/planeWorkCase/ring_08.png",
+			"phoneImg": "images/innerPage/ring_08.png",
+			"videoUrl": "videos/show/ring/ring_08.mp4",
 			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_09.png",
+			"phoneImg": "images/innerPage/ring_09.png",
+			"videoUrl": "videos/show/ring/ring_09.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_10.png",
+			"phoneImg": "images/innerPage/ring_10.png",
+			"videoUrl": "videos/show/ring/ring_10.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_11.png",
+			"phoneImg": "images/innerPage/ring_11.png",
+			"videoUrl": "videos/show/ring/ring_11.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_12.png",
+			"phoneImg": "images/innerPage/ring_12.png",
+			"videoUrl": "videos/show/ring/ring_12.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_13.png",
+			"phoneImg": "images/innerPage/ring_13.png",
+			"videoUrl": "videos/show/ring/ring_13.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_14.png",
+			"phoneImg": "images/innerPage/ring_14.png",
+			"videoUrl": "videos/show/ring/ring_14.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_15.png",
+			"phoneImg": "images/innerPage/ring_15.png",
+			"videoUrl": "videos/show/ring/ring_15.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_16.png",
+			"phoneImg": "images/innerPage/ring_16.png",
+			"videoUrl": "videos/show/ring/ring_16.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_17.png",
+			"phoneImg": "images/innerPage/ring_17.png",
+			"videoUrl": "videos/show/ring/ring_17.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_18.png",
+			"phoneImg": "images/innerPage/ring_18.png",
+			"videoUrl": "videos/show/ring/ring_18.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_19.png",
+			"phoneImg": "images/innerPage/ring_19.png",
+			"videoUrl": "videos/show/ring/ring_19.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_20.png",
+			"phoneImg": "images/innerPage/ring_20.png",
+			"videoUrl": "videos/show/ring/ring_20.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_21.png",
+			"phoneImg": "images/innerPage/ring_21.png",
+			"videoUrl": "videos/show/ring/ring_21.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_22.png",
+			"phoneImg": "images/innerPage/ring_22.png",
+			"videoUrl": "videos/show/ring/ring_22.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_23.png",
+			"phoneImg": "images/innerPage/ring_23.png",
+			"videoUrl": "videos/show/ring/ring_23.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—戒指",
+			"showImg": "images/planeWorkCase/ring_24.png",
+			"phoneImg": "images/innerPage/ring_24.png",
+			"videoUrl": "videos/show/ring/ring_24.mp4",
+			"introduce": "单个戒指展示视频。完美呈现戒指每一个细节，绽放每一寸流光溢彩。"
+		},{
+            "name":"展示—手表",
+			"showImg": "images/planeWorkCase/handleBiao_01.png",
+			"phoneImg": "images/innerPage/handleBiao_01.png",
+			"videoUrl": "videos/show/handleBiao/handleBiao_01.mp4",
+			"introduce": "绽放于手腕的细节艺术，闪耀迷人光泽。"
+		},{
+            "name":"展示—手表",
+			"showImg": "images/planeWorkCase/handleBiao_02.png",
+			"phoneImg": "images/innerPage/handleBiao_02.png",
+			"videoUrl": "videos/show/handleBiao/handleBiao_02.mp4",
+			"introduce": "绽放于手腕的细节艺术，闪耀迷人光泽。"
+		},{
+            "name":"展示—手表",
+			"showImg": "images/planeWorkCase/handleBiao_03.png",
+			"phoneImg": "images/innerPage/handleBiao_03.png",
+			"videoUrl": "videos/show/handleBiao/handleBiao_03.mp4",
+			"introduce": "绽放于手腕的细节艺术，闪耀迷人光泽。"
+		},{
+            "name":"展示—手表",
+			"showImg": "images/planeWorkCase/handleBiao_04.png",
+			"phoneImg": "images/innerPage/handleBiao_04.png",
+			"videoUrl": "videos/show/handleBiao/handleBiao_04.mp4",
+			"introduce": "绽放于手腕的细节艺术，闪耀迷人光泽。"
+		},{
+            "name":"展示—异性钻戒",
+			"showImg": "images/planeWorkCase/noNormal_01.png",
+			"phoneImg": "images/innerPage/noNormal_01.png",
+			"videoUrl": "videos/show/noNormal/noNormal_01.mp4",
+			"introduce": "异性之美源于独一无二。"
+		},{
+            "name":"展示—异性钻戒",
+			"showImg": "images/planeWorkCase/noNormal_02.png",
+			"phoneImg": "images/innerPage/noNormal_02.png",
+			"videoUrl": "videos/show/noNormal/noNormal_02.mp4",
+			"introduce": "异性之美源于独一无二。"
+		},{
+            "name":"展示—异性钻戒",
+			"showImg": "images/planeWorkCase/noNormal_03.png",
+			"phoneImg": "images/innerPage/noNormal_03.png",
+			"videoUrl": "videos/show/noNormal/noNormal_03.mp4",
+			"introduce": "异性之美源于独一无二。"
+		},{
+            "name":"展示—异性钻戒",
+			"showImg": "images/planeWorkCase/noNormal_04.png",
+			"phoneImg": "images/innerPage/noNormal_04.png",
+			"videoUrl": "videos/show/noNormal/noNormal_04.mp4",
+			"introduce": "异性之美源于独一无二。"
+		},{
+            "name":"展示—异性钻戒",
+			"showImg": "images/planeWorkCase/noNormal_05.png",
+			"phoneImg": "images/innerPage/noNormal_05.png",
+			"videoUrl": "videos/show/noNormal/noNormal_05.mp4",
+			"introduce": "异性之美源于独一无二。"
 		}
-
 	]
 }
