@@ -31,18 +31,26 @@
 			margin-bottom: 0 !important;
 			padding-bottom: 0.5rem !important;
 		}
+		.end_flex{
+			display: flex;
+			justify-content: space-between;
+		}
+		.end_flex>img{
+			width: 48%;
+			height: 5rem;
+		}
 		.ImgList{
 			display: flex;
 			flex-wrap: wrap;
 		}
 		.ImgList>.f-row>img{
-			height: 3.2rem;
+			height: 4rem;
 			width: 100%;
 			margin-bottom: 0.2rem;
 		}
 		.ImgList .posterItem{
 			width: 3.2rem;
-			height: 4rem;
+			height: 2rem;
 			margin-bottom: 0.2rem;
 		}
 		.ImgList .bgImgItem{
@@ -52,8 +60,29 @@
 		}
 		.ImgList .albumItem{
 			width: 3.2rem;
-			height: 4.8rem;
+			height: 4.5rem;
 			margin-bottom: 0.2rem;
+		}
+		/* 调整移动端作品案例部分图片的大小 */
+		.ImgList#sceneEnd .f-row>img,
+		.ImgList#tryOnEnd .f-row>img,
+		.ImgList#scene .f-row>img,
+		.ImgList#tryOn .f-row>img{
+			height: 4.2rem !important;
+		}
+		.f-row.about_row >img:nth-child(1){
+			width: 2rem;
+		}
+		.f-row.about_row >img:nth-child(2){
+			/* width: 2.5rem; */
+			margin-left: 10px;
+			flex: 1;
+		}
+		.ImgList#sceneEnd .f-row .bgImgItem,
+		.ImgList#tryOnEnd .f-row .bgImgItem,
+		.ImgList#scene .f-row .bgImgItem,
+		.ImgList#tryOn .f-row .bgImgItem{
+			height: 2.2rem !important;
 		}
 		.ImgList .bgImgItem img,
 		.ImgList .posterItem img,
@@ -114,16 +143,26 @@
 			<div class="tab-pane fade" id="v-preach" role="tabpanel" aria-labelledby="v-preach-tab">
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="scene"></div>
+					<div class="ImgList" id="sceneEnd">
+						<div class="f-row"><img style="display:block;" src="./../images/planeWorkCase/scene_40.JPG" alt=""></div>
+					</div>
 				</section>
 			</div>
 			<div class="tab-pane fade" id="v-pieceShow" role="tabpanel" aria-labelledby="v-pieceShow-tab">
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="tryOn"></div>
+					<div class="ImgList" id="tryOnEnd">
+						<div class="f-row"><img style="display:block;" src="./../images/planeWorkCase/tryOn_37.jpg" alt=""></div>
+					</div>
 				</section>
 			</div>
 			<div class="tab-pane fade" id="v-3DVideo" role="tabpanel" aria-labelledby="v-3DVideo-tab">
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="posterList"></div>
+					<div class="end_flex">
+						<img src="../images/planeWorkCase/poster_09.jpg" alt="" class="m-r-10">
+						<img src="../images/planeWorkCase/poster_13.jpg" alt="">
+					</div>
 				</section>
 			</div>
 			<div class="tab-pane fade" id="v-Propaganda" role="tabpanel" aria-labelledby="v-Propaganda-tab">
@@ -238,17 +277,36 @@
 			var albumList = data.albumList;
 			$.each(albumList, function(index,item){
 				var str = "";
-				if((index+1) == 1){
-					str = '<div class="f-row"><img src="./'+item.phoneUrl+'" alt="" /></div>';
-				}else if((index+1) % 2 != 0){
-					var isShowImg = albumList[index].phoneUrl?'block':'none';
-					var imgUrl = albumList[index].phoneUrl;
-					var isShowImg2 = albumList[index-1].phoneUrl?'block':'none';
-					var imgUrl2 = albumList[index-1].phoneUrl;
-					str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+				if(index > 1){
+					if(index != 2 && index != 3){
+						str = '<div class="f-row"><img src="./'+item.phoneUrl+'" alt="" /></div>';
+					}else {
+						if((index+1) % 2 == 0){
+							var isShowImg = albumList[index].phoneUrl?'block':'none';
+							var phoneUrl = albumList[index].phoneUrl;
+							var isShowImg2 = albumList[index-1].phoneUrl?'block':'none';
+							var phoneUrl2 = albumList[index-1].phoneUrl;
+							str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="./'+phoneUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="./'+phoneUrl+'" alt="" /></div></div>';
+						}
+					}
+				}else if(index == 1){
+					str = '<div class="f-row about_row"><img src="./'+albumList[index-1].phoneUrl+'" alt="" /><img src="./'+item.phoneUrl+'" alt="" /></div>';
 				}
 				$("#albumList").append(str);
 			})
+			// $.each(albumList, function(index,item){
+			// 	var str = "";
+			// 	if((index+1) == 1){
+			// 		str = '<div class="f-row"><img src="./'+item.phoneUrl+'" alt="" /></div>';
+			// 	}else if((index+1) % 2 != 0){
+			// 		var isShowImg = albumList[index].phoneUrl?'block':'none';
+			// 		var imgUrl = albumList[index].phoneUrl;
+			// 		var isShowImg2 = albumList[index-1].phoneUrl?'block':'none';
+			// 		var imgUrl2 = albumList[index-1].phoneUrl;
+			// 		str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+			// 	}
+			// 	$("#albumList").append(str);
+			// })
 			
 		}
 		(function () {
