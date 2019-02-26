@@ -69,8 +69,8 @@ var planeImgList = {
 			"imgUrl": "images/planeWorkCase/whiteBg_15.jpg"
 		},
         {
-			"phoneUrl": "../images/planeWorkCase/whiteBg_16.jpg",
-			"imgUrl": "images/planeWorkCase/whiteBg_16.jpg"
+			"phoneUrl": "../images/planeWorkCase/whiteBg_16.JPG",
+			"imgUrl": "images/planeWorkCase/whiteBg_16.JPG"
 		},
         {
 			"phoneUrl": "../images/planeWorkCase/whiteBg_17.jpg",
@@ -306,8 +306,8 @@ var planeImgList = {
 			"imgUrl": "images/planeWorkCase/tryOn_13.jpg"
 		},
 		{
-			"phoneUrl": "../images/planeWorkCase/tryOn_14.jpg",
-			"imgUrl": "images/planeWorkCase/tryOn_14.jpg"
+			"phoneUrl": "../images/planeWorkCase/tryOn_14.JPG",
+			"imgUrl": "images/planeWorkCase/tryOn_14.JPG"
 		},
 		{
 			"phoneUrl": "../images/planeWorkCase/tryOn_15.jpg",
