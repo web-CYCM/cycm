@@ -129,16 +129,18 @@
 	<script src="./js/global-mobile.js"></script>
 
 	<script type="text/javascript">
+		if($('#top-mobile')){
+			$('#top-mobile').load('header-mobile.html');
+		}
+		if($('#footer-mobile-code')){
+			$('#footer-mobile-code').load('footer-mobile-code.html');
+		}
+		if($('#footer-mobile-nav')){
+			$('#footer-mobile-nav').load('footer-mobile-nav.html');
+		}
 		if($(window).width() > 992){
 			location.href = '../team.html';
 		}
-		(function () {
-			window.onload = function () {
-				$('#top-mobile').load('header-mobile.html');
-				$('#footer-mobile-code').load('footer-mobile-code.html');
-				$('#footer-mobile-nav').load('footer-mobile-nav.html');
-			}
-		})();
 		
 		var map = new BMap.Map('address');
 		var point = new BMap.Point(114.131416, 22.573554);

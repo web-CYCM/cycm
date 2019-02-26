@@ -145,7 +145,7 @@
 	<div id="about-mobile-video" class="dis-content">
 		<div class="introduction-video-wrap">
 			<div class="video-single" id="about-video">
-				<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true" poster="../images/index/11.png">
+				<video ishivideo="true" isrotate="false" autoHide="true" poster="../images/index/11.png">
 					<source src="../videos/introduce.mp4" id="source" type="video/mp4">
 				</video>
 			</div>
@@ -168,11 +168,17 @@
 		if($(window).width() > 992){
 			location.href = '../about.html?about=introduction';
 		}
+		if($('#top-mobile')){
+			$('#top-mobile').load('header-mobile.html');
+		}
+		if($('#footer-mobile-code')){
+			$('#footer-mobile-code').load('footer-mobile-code.html');
+		}
+		if($('#footer-mobile-nav')){
+			$('#footer-mobile-nav').load('footer-mobile-nav.html');
+		}
 		(function () {
 			window.onload = function () {
-				$('#top-mobile').load('header-mobile.html');
-				$('#footer-mobile-code').load('footer-mobile-code.html');
-				$('#footer-mobile-nav').load('footer-mobile-nav.html');
 
 				var getList = [];
 
