@@ -107,17 +107,19 @@
 
 	<script type="text/javascript">
 	
+		if($('#top')){
+			$('#top').load('header.html');
+		}
+		if($('#footer')){
+			$('#footer').load('footer.html');
+		}
+		if($('#sideNav')){
+			$('#sideNav').load('sideNav.html');
+		}
 		if($(window).width() < 992){
 			location.href = './mobilePhone/contactUs-mobile.html';
 		}
 		
-		(function () {
-			window.onload = function () {
-				$('#top').load('header.html');
-				$('#footer').load('footer.html');
-				$('#sideNav').load('sideNav.html');
-			}
-		})();
 		
 		var map = new BMap.Map('address');
 		var point = new BMap.Point(114.131416, 22.573554);

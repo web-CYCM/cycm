@@ -153,6 +153,15 @@
 		if($(window).width() < 992){
 			location.href = './mobilePhone/teamwork-mobile.html';
 		}
+		if($('#top')){
+			$('#top').load('header.html');
+		}
+		if($('#footer')){
+			$('#footer').load('footer.html');
+		}
+		if($('#sideNav')){
+			$('#sideNav').load('sideNav.html');
+		}
 		function getTeamPeople(){
 			var data = teamPeopleList.data;
 			var len = data.length;
@@ -230,11 +239,6 @@
             };
 		}
 		(function () {
-			window.onload = function () {
-				$('#top').load('header.html');
-				$('#footer').load('footer.html');
-				$('#sideNav').load('sideNav.html');
-			}
 			getSlider();
 			getStrategyList();
 			getTeamPeople();

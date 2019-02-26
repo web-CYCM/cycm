@@ -1259,6 +1259,15 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
+		if($('#top')){
+			$('#top').load('header.html');
+		}
+		if($('#footer')){
+			$('#footer').load('footer.html');
+		}
+		if($('#sideNav')){
+			$('#sideNav').load('sideNav.html');
+		}
 		function getCurrentImgList(){
 			var whiteBgList = planeImgList.whiteBg,
 				sceneList = planeImgList.scene,
@@ -1334,12 +1343,7 @@
 
 		}
 		(function () {
-			window.onload = function () {
-				$('#top').load('header.html');
-				$('#footer').load('footer.html');
-				$('#sideNav').load('sideNav.html');
-				getCurrentImgList();
-			}
+			getCurrentImgList();
 		})();
 		if($(window).width() < 992){
 			var hrefUrl = window.location.href;

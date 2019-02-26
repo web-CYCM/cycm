@@ -173,16 +173,21 @@
 	<script type="text/javascript" src="./hivideo/md5.min.js"></script>
 
 	<script type="text/javascript">
+		if($('#top')){
+			$('#top').load('header.html');
+		}
+		if($('#footer')){
+			$('#footer').load('footer.html');
+		}
+		if($('#sideNav')){
+			$('#sideNav').load('sideNav.html');
+		}
 		(function () {
 			if($(window).width() < 992){
 				location.href = './mobilePhone/about-mobile.html';
 			}
 
 			window.onload = function () {
-				$('#top').load('header.html');
-				$('#footer').load('footer.html');
-				$('#sideNav').load('sideNav.html');
-
 				var videoList = [];
 
 				var aboutObj = {

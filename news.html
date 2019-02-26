@@ -74,6 +74,15 @@
 	<script src="./js/global.js"></script>
 
 	<script type="text/javascript">
+		if($('#top')){
+			$('#top').load('header.html');
+		}
+		if($('#footer')){
+			$('#footer').load('footer.html');
+		}
+		if($('#sideNav')){
+			$('#sideNav').load('sideNav.html');
+		}
 		
 		function getNewsList(){
 			var data = newsList.data;
@@ -101,11 +110,6 @@
 			location.href = link;
 		}
 		(function () {
-			window.onload = function () {
-				$('#top').load('header.html');
-				$('#footer').load('footer.html');
-				$('#sideNav').load('sideNav.html');
-			}
 			// 动态获取新闻列表
 			getNewsList()
 		})();
