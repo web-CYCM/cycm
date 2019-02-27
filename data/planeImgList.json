@@ -1,42 +1,34 @@
 var planeImgList = {
     "whiteBg":[
         {
-			// "phoneUrl": "../images/innerPage/opaque_01.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_01.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_01.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_02.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_02.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_02.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_03.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_03.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_03.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_04.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_04.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_04.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_05.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_05.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_05.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_06.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_06.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_06.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_07.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_07.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_07.jpg"
 		},
         {
-			// "phoneUrl": "../images/innerPage/opaque_08.png",
 			"phoneUrl": "../images/planeWorkCase/whiteBg_08.jpg",
 			"imgUrl": "images/planeWorkCase/whiteBg_08.jpg"
 		},
