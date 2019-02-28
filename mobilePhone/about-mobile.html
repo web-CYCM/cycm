@@ -42,6 +42,108 @@
 		.hi-video-controlbar{
 			z-index: 0 !important;
 		}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#about-mobile-img{
+		position: relative;
+		padding-top: 1.2rem;
+	}
+	#about-mobile-img .img-wrap{
+		width: 100%;
+		height: 3.2rem;
+	}
+	#about-mobile-img .img-title{
+		position: absolute;
+		top: 0.2rem;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #FFFFFF;
+	}
+	#about-mobile-img>div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	#about-mobile-img .img-title p{
+		margin: 0;
+		text-align: center;
+	}
+	#about-mobile-img .img-title p:first-child{
+		font-size: 0.5rem;
+		margin-bottom: 0.1rem;
+	}
+	#about-mobile-img .img-title p:last-child{
+		font-size: 0.3rem;
+	}
+
+	#about-mobile-tabs{
+		font-size: 0.36rem;
+		margin: 0.35rem 0.75rem 0.8rem 0.75rem;
+	}
+	#about-mobile-tabs .title{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0.1rem 0;
+		width: 1.75rem;
+	}
+	#about-mobile-tabs .title>div{
+		margin-right: 0.20rem;
+		border-left: 0.05rem solid #FFFFFF;
+		height: 0.3rem;
+	}
+	#about-mobile-tabs .tab-active>div{
+		border-left: 0.05rem solid #cf9239;
+	}
+	#about-mobile-tabs .tab-active>span{
+		color: #cf9239;
+	}
+
+	#about-mobile-introduction{
+		margin: 0 0.75rem;
+		font-size: 0.3rem;
+	}
+	#about-mobile-introduction.dis-content,
+	#about-mobile-structure.dis-content,
+	#about-mobile-video.dis-content{
+		display: none;
+	}
+
+	#about-mobile-introduction .font-bold{
+		font-weight: 600;
+	}
+	#about-mobile-introduction .introduction-word-wrap{
+		margin-bottom: 0.85rem;
+	}
+	#about-mobile-introduction .intro_item{
+		margin-bottom: 0.4rem;
+	}
+	#about-mobile-introduction p{
+		margin-bottom: 0;
+	}
+
+	#about-mobile-structure{
+		margin: 0 0.3rem 0.9rem 0.3rem;
+	}
+	#about-mobile-structure .introduction-img-wrap img{
+		max-width: 100%;
+	}
+
+	#about-mobile-video .introduction-video-wrap{
+		margin: 0 0.45rem;
+	}
+	#about-mobile-video .introduction-word-wrap p{
+		margin: 1.05rem 0.75rem 0.7rem 0.75rem;
+		font-size: 0.3rem;
+	}
+	.introduction-word-wrap .intro_item .title {
+		margin-bottom: 0.1rem;
+	}
 
 	</style>
 </head>
@@ -64,7 +166,7 @@
 						<div class="title font-bold">了解宸熠</div>
 						<div class="little_title">COMPANY INTRODUTION</div>
 					</div>
-					<img class="img-fluid" src="./images/innerPage/aboutHead.png">
+					<img class="img-fluid" src="http://storages.kcyvision.com/mobilePhone/images/innerPage/aboutHead.png">
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -139,14 +241,14 @@
 	</div>
 	<div id="about-mobile-structure" class="dis-content">
 		<div class="introduction-img-wrap">
-			<img src="../images/know/company-strctrue.png" alt="">
+			<img src="http://storages.kcyvision.com/images/know/company-strctrue.png" alt="">
 		</div>
 	</div>
 	<div id="about-mobile-video" class="dis-content">
 		<div class="introduction-video-wrap">
 			<div class="video-single" id="about-video">
-				<video ishivideo="true" isrotate="false" autoHide="true" poster="../images/index/11.png">
-					<source src="../videos/introduce.mp4" id="source" type="video/mp4">
+				<video ishivideo="true" isrotate="false" autoHide="true" poster="http://storages.kcyvision.com/images/index/11.png">
+					<source src="http://storages.kcyvision.com/videos/introduce.mp4" id="source" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -178,7 +280,7 @@
 			$('#footer-mobile-nav').load('footer-mobile-nav.html');
 		}
 		(function () {
-			window.onload = function () {
+			// window.onload = function () {
 
 				var getList = [];
 
@@ -188,59 +290,14 @@
 						var getList = [
 							{
 								id: 1,
-								img: '../images/know/video-list-01.jpg',
+								img: 'http://storages.kcyvision.com/images/know/video-list-01.jpg',
 								contentList: '宸熠传媒团队简介',
 								time: '1:15',
-								videoSrc: './videos/introduce.mp4',
+								videoSrc: 'http://storages.kcyvision.com/videos/introduce.mp4',
 								contentTitle: 'OUR CASE AND WORKS',
 								content: '宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							},
-							// {
-							// 	id: 2,
-							// 	img: './images/know/video-list-01.jpg',
-							// 	contentList: '1宸熠传媒团队简介',
-							// 	time: '1:15',
-							// 	videoSrc: './videos/02.mp4',
-							// 	contentTitle: '1OUR CASE AND WORKS',
-							// 	content: '1宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							// },
-							// {
-							// 	id: 3,
-							// 	img: './images/know/video-list-01.jpg',
-							// 	contentList: '2宸熠传媒团队简介',
-							// 	time: '1:15',
-							// 	videoSrc: './videos/02.mp4',
-							// 	contentTitle: '2OUR CASE AND WORKS',
-							// 	content: '2宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							// },
-							// {
-							// 	id: 4,
-							// 	img: './images/know/video-list-01.jpg',
-							// 	contentList: '3宸熠传媒团队简介',
-							// 	time: '1:15',
-							// 	videoSrc: './videos/03.mp4',
-							// 	contentTitle: '3OUR CASE AND WORKS',
-							// 	content: '3宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							// },
-							// {
-							// 	id: 5,
-							// 	img: './images/know/video-list-01.jpg',
-							// 	contentList: '5宸熠传媒团队简介',
-							// 	time: '1:15',
-							// 	videoSrc: './videos/02.mp4',
-							// 	contentTitle: '1OUR CASE AND WORKS',
-							// 	content: '5宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							// },
-							// {
-							// 	id: 6,
-							// 	img: './images/know/video-list-01.jpg',
-							// 	contentList: '6宸熠传媒团队简介',
-							// 	time: '1:15',
-							// 	videoSrc: './videos/02.mp4',
-							// 	contentTitle: '2OUR CASE AND WORKS',
-							// 	content: '6宸熠传媒团队多年以来专业从事金银珠宝类产品摄影及视频制作，2018年由深圳市汉唐鑫业投资有限公司整合多方资源注资成立，业务范围拓展为：摄影摄像服务、礼仪服务、会务服务；市场营销策划，赛事活动策划；企业形象策划，展览展销策划、影视项目策划；美术设计、装潢设计；电脑图文设计、多媒体设计、产品设计；代理演出经纪和艺人经纪；且拥有电影、电视剧、广告片、宣传片、专题片、微电影等视频制作及发行资质。'
-							// }
-					];
+							}
+						];
 						videoList = getList;
 						if (videoList.length) {
 							aboutObj.changeVideoSrc ( '#about-video', videoList[0].videoSrc);
@@ -298,116 +355,9 @@
 				$('#about-mobile-bar-video').on('click', function () {
 					aboutObj.initAbout ("video")
 				})
-			}
+			// }
 		})()
 	</script>
 
 </body>
-<style>
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	#about-mobile-img{
-		position: relative;
-		padding-top: 1.2rem;
-	}
-	#about-mobile-img .img-wrap{
-		width: 100%;
-		height: 3.2rem;
-	}
-	#about-mobile-img .img-title{
-		position: absolute;
-		top: 0.2rem;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		color: #FFFFFF;
-	}
-	#about-mobile-img>div{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-	}
-	#about-mobile-img .img-title p{
-		margin: 0;
-		text-align: center;
-	}
-	#about-mobile-img .img-title p:first-child{
-		font-size: 0.5rem;
-		margin-bottom: 0.1rem;
-	}
-	#about-mobile-img .img-title p:last-child{
-		font-size: 0.3rem;
-	}
-	.navbar .navbar-nav .nav-item .nav-link:after{
-		/* background: #FFFFFF; */
-	}
-
-	#about-mobile-tabs{
-		font-size: 0.36rem;
-		margin: 0.35rem 0.75rem 0.8rem 0.75rem;
-	}
-	#about-mobile-tabs .title{
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		padding: 0.1rem 0;
-		width: 1.75rem;
-	}
-	#about-mobile-tabs .title>div{
-		margin-right: 0.20rem;
-		border-left: 0.05rem solid #FFFFFF;
-		height: 0.3rem;
-	}
-	#about-mobile-tabs .tab-active>div{
-		border-left: 0.05rem solid #cf9239;
-	}
-	#about-mobile-tabs .tab-active>span{
-		color: #cf9239;
-	}
-
-	#about-mobile-introduction{
-		margin: 0 0.75rem;
-		font-size: 0.3rem;
-	}
-	#about-mobile-introduction.dis-content,
-	#about-mobile-structure.dis-content,
-	#about-mobile-video.dis-content{
-		display: none;
-	}
-
-	#about-mobile-introduction .font-bold{
-		font-weight: 600;
-	}
-	#about-mobile-introduction .introduction-word-wrap{
-		margin-bottom: 0.85rem;
-	}
-	#about-mobile-introduction .intro_item{
-		margin-bottom: 0.4rem;
-	}
-	#about-mobile-introduction p{
-		margin-bottom: 0;
-	}
-
-	#about-mobile-structure{
-		margin: 0 0.3rem 0.9rem 0.3rem;
-	}
-	#about-mobile-structure .introduction-img-wrap img{
-		max-width: 100%;
-	}
-
-	#about-mobile-video .introduction-video-wrap{
-		margin: 0 0.45rem;
-	}
-	#about-mobile-video .introduction-word-wrap p{
-		margin: 1.05rem 0.75rem 0.7rem 0.75rem;
-		font-size: 0.3rem;
-	}
-	.introduction-word-wrap .intro_item .title {
-		margin-bottom: 0.1rem;
-	}
-</style>
 </html>
