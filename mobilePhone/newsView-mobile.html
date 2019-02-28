@@ -73,7 +73,7 @@
 						<div class="title font-bold">宸熠咨询</div>
 						<div class="little_title">KING VISION ADVISORY</div>
 					</div>
-					<img class="img-fluid" src="./images/innerPage/newsList.png">
+					<img class="img-fluid" src="http://storages.kcyvision.com/mobilePhone/images/innerPage/newsList.png">
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -138,7 +138,7 @@
 							nextIndex = (index+1<data.length)?data[index+1].Id:data[index].Id,
 							nextName = ((index+1)<data.length)?data[index+1].name:data[index].name;
 
-						var str = '<div><div class="article-title font-bold">'+item.name+'</div><div class="complete-intro" style="display:'+isPreface+'"><p class="content-flex"><span style="text-align:left;">'+item.details.preface+'</span></p></div><img src="../'+item.viewImgUrl+'" alt="" style="margin:0.1rem auto;display:'+isViewImgUrl+'"><div id="article_Info"></div><div class="summarize content-flex"><span>'+item.details.endInfo+'</span></div><div class="endJusmp"><div class="last" style="display:'+isShowLast+'"><a href="newsView-mobile.html?Id='+prevIndex+'"><span>上一篇：</span>'+prevName+'<span></span></a></div><div class="next" style="display:'+isShowNext+'"><a href="newsView-mobile.html?Id='+nextIndex+'"><span>下一篇：</span><span>'+nextName+'</span></a></div></div></div>';
+						var str = '<div><div class="article-title font-bold">'+item.name+'</div><div class="complete-intro" style="display:'+isPreface+'"><p class="content-flex"><span style="text-align:left;">'+item.details.preface+'</span></p></div><img src="'+item.viewImgUrl+'" alt="" style="margin:0.1rem auto;display:'+isViewImgUrl+'"><div id="article_Info"></div><div class="summarize content-flex"><span>'+item.details.endInfo+'</span></div><div class="endJusmp"><div class="last" style="display:'+isShowLast+'"><a href="newsView-mobile.html?Id='+prevIndex+'"><span>上一篇：</span>'+prevName+'<span></span></a></div><div class="next" style="display:'+isShowNext+'"><a href="newsView-mobile.html?Id='+nextIndex+'"><span>下一篇：</span><span>'+nextName+'</span></a></div></div></div>';
 						var article = $('<div class="article"></div>');
 						$.each(item.details.advantages, function(chiIndex,chi) {
 							//处理单个小标题下，数据解释
@@ -147,7 +147,7 @@
 								littleTitle += '<span>'+info.stage+'</span>';
 							})
 							var isShowInnerImg = chi.innerImg?'block;':'none;';
-							var chiStr = '<div class="article-item"><div class="title">'+chi.name+'</div><p class="content-flex">'+littleTitle+'</p><img style="margin:0.1rem auto;display:'+isShowInnerImg+'" src="../'+chi.innerImg+'" alt="" ></div>';
+							var chiStr = '<div class="article-item"><div class="title">'+chi.name+'</div><p class="content-flex">'+littleTitle+'</p><img style="margin:0.1rem auto;display:'+isShowInnerImg+'" src="'+chi.innerImg+'" alt="" ></div>';
 								article.append(chiStr);
 						})
 						$("#sectionList").append(str);

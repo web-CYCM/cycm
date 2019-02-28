@@ -110,7 +110,7 @@
 						<div class="title font-bold">平面类</div>
 						<div class="little_title">THE TYPE OF GRAPH</div>
 					</div>
-					<img class="img-fluid" src="./images/innerPage/workCasePlane.png">
+					<img class="img-fluid" src="http://storages.kcyvision.com/mobilePhone/images/innerPage/workCasePlane.png">
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -144,7 +144,7 @@
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="scene"></div>
 					<div class="ImgList" id="sceneEnd">
-						<div class="f-row"><img style="display:block;" src="./../images/planeWorkCase/scene_40.JPG" alt=""></div>
+						<div class="f-row"><img style="display:block;" src="http://storages.kcyvision.com/images/planeWorkCase/scene_40.JPG" alt=""></div>
 					</div>
 				</section>
 			</div>
@@ -152,7 +152,7 @@
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="tryOn"></div>
 					<div class="ImgList" id="tryOnEnd">
-						<div class="f-row"><img style="display:block;" src="./../images/planeWorkCase/tryOn_37.jpg" alt=""></div>
+						<div class="f-row"><img style="display:block;" src="http://storages.kcyvision.com/images/planeWorkCase/tryOn_37.jpg" alt=""></div>
 					</div>
 				</section>
 			</div>
@@ -160,8 +160,8 @@
 				<section class="section section-about-1 p-t-40 overflow-hidden">
 					<div class="ImgList" id="posterList"></div>
 					<div class="end_flex">
-						<img src="../images/planeWorkCase/poster_09.jpg" alt="" class="m-r-10">
-						<img src="../images/planeWorkCase/poster_13.jpg" alt="">
+						<img src="http://storages.kcyvision.com/images/planeWorkCase/poster_09.jpg" alt="" class="m-r-10">
+						<img src="http://storages.kcyvision.com/images/planeWorkCase/poster_13.jpg" alt="">
 					</div>
 				</section>
 			</div>
@@ -221,7 +221,7 @@
 					var isShowImg3 = scene[index-2]?'block':'none';
 					var imgUrl3 = scene[index-2].phoneUrl;
 					if(item.phoneUrl){
-						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="./'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="'+imgUrl+'" alt="" /></div></div>';
 						$("#scene").append(str);
 					}
 				}
@@ -238,7 +238,7 @@
 					var isShowImg3 = tryOn[index-2].phoneUrl?'block':'none';
 					var imgUrl3 = tryOn[index-2].phoneUrl;
 					if(item.phoneUrl){
-						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="./'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						var str = '<div class="f-row"><img style="display:'+isShowImg3+';" src="'+imgUrl3+'" alt="" /></div><div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="'+imgUrl+'" alt="" /></div></div>';
 						$("#tryOn").append(str);
 					}
 				}
@@ -254,7 +254,7 @@
 					var isShowImg2 = whiteBg[index-1].phoneUrl?'block':'none';
 					var imgUrl2 = whiteBg[index-1].phoneUrl;
 					if(item.phoneUrl){
-						var str = '<div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						var str = '<div class="f-row"><div class="bgImgItem"><img style="display:'+isShowImg2+';" src="'+imgUrl2+'" alt="" /></div><div class="bgImgItem"><img style="display:'+isShowImg+';" src="'+imgUrl+'" alt="" /></div></div>';
 						$("#whiteBg").append(str);
 					}
 				}
@@ -269,14 +269,14 @@
 			$.each(posterList, function(index,item){
 				var str = "";
 				if(index != 2 && index != 3){
-					str = '<div class="f-row"><img src="./'+item.imgUrl+'" alt="" /></div>';
+					str = '<div class="f-row"><img src="'+item.imgUrl+'" alt="" /></div>';
 				}else {
 					if((index+1) % 2 == 0){
 						var isShowImg = posterList[index].imgUrl?'block':'none';
 						var imgUrl = posterList[index].imgUrl;
 						var isShowImg2 = posterList[index-1].imgUrl?'block':'none';
 						var imgUrl2 = posterList[index-1].imgUrl;
-						str = '<div class="f-row"><div class="posterItem"><img style="display:'+isShowImg2+';" src="./'+imgUrl2+'" alt="" /></div><div class="posterItem"><img style="display:'+isShowImg+';" src="./'+imgUrl+'" alt="" /></div></div>';
+						str = '<div class="f-row"><div class="posterItem"><img style="display:'+isShowImg2+';" src="'+imgUrl2+'" alt="" /></div><div class="posterItem"><img style="display:'+isShowImg+';" src="'+imgUrl+'" alt="" /></div></div>';
 					}
 				}
 				$("#posterList").append(str);
@@ -288,18 +288,18 @@
 				var str = "";
 				if(index > 1){
 					if(index != 2 && index != 3){
-						str = '<div class="f-row"><img src="./'+item.phoneUrl+'" alt="" /></div>';
+						str = '<div class="f-row"><img src="'+item.phoneUrl+'" alt="" /></div>';
 					}else {
 						if((index+1) % 2 == 0){
 							var isShowImg = albumList[index].phoneUrl?'block':'none';
 							var phoneUrl = albumList[index].phoneUrl;
 							var isShowImg2 = albumList[index-1].phoneUrl?'block':'none';
 							var phoneUrl2 = albumList[index-1].phoneUrl;
-							str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="./'+phoneUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="./'+phoneUrl+'" alt="" /></div></div>';
+							str = '<div class="f-row"><div class="albumItem"><img style="display:'+isShowImg2+';" src="'+phoneUrl2+'" alt="" /></div><div class="albumItem"><img style="display:'+isShowImg+';" src="'+phoneUrl+'" alt="" /></div></div>';
 						}
 					}
 				}else if(index == 1){
-					str = '<div class="f-row about_row"><img src="./'+albumList[index-1].phoneUrl+'" alt="" /><img src="./'+item.phoneUrl+'" alt="" /></div>';
+					str = '<div class="f-row about_row"><img src="'+albumList[index-1].phoneUrl+'" alt="" /><img src="'+item.phoneUrl+'" alt="" /></div>';
 				}
 				$("#albumList").append(str);
 			})

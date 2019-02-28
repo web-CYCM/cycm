@@ -82,7 +82,7 @@
 						<div class="title font-bold">宸熠咨询</div>
 						<div class="little_title">KING VISION ADVISORY</div>
 					</div>
-					<img class="img-fluid" src="./images/innerPage/newsList.png">
+					<img class="img-fluid" src="http://storages.kcyvision.com/mobilePhone/images/innerPage/newsList.png">
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -142,7 +142,7 @@
 				endList = data;
 			}
 			$.each(endList || [], function(index,item){
-				var str = '<div class="news-item f-row"><div class="news-system"><img src="../'+item.imgUrl+'" alt=""></div><div class="introduce" onclick=toView("newsView-mobile.html?Id='+item.Id+'")><div class="title font-bold">'+item.name+'</div><div class="content"><span>'+item.briefText+'</span></div><div class="learnMore">了解详情&nbsp;&gt;</div></div></div>';
+				var str = '<div class="news-item f-row"><div class="news-system"><img src="'+item.imgUrl+'" alt=""></div><div class="introduce" onclick=toView("newsView-mobile.html?Id='+item.Id+'")><div class="title font-bold">'+item.name+'</div><div class="content"><span>'+item.briefText+'</span></div><div class="learnMore">了解详情&nbsp;&gt;</div></div></div>';
 				$("#newsList").append(str);
 			})
 		}
