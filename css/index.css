@@ -225,11 +225,11 @@ body,html{
 	color: #FFFFFF;
 	text-align: center;
 }
-.features-bgImg{
+/* .features-bgImg{
 	background-repeat: no-repeat;
 	background: url("../images/index/webCenter.png");
 	background-size: 100% 100%;
-}
+} */
 .section-features .section-head{
 	font-size: 2.5rem;
 }	
@@ -305,7 +305,7 @@ body,html{
 	}
 
 	/* 关于我们 */
-	.section-footer1{
+	/* .section-footer1{
 		background-size: 100% 100% !important;
 		background-image: url("../images/index/footer.png") !important;
 		background-repeat: no-repeat !important;
@@ -318,7 +318,7 @@ body,html{
 		flex-direction: column;
 		justify-content: center;
 		font-size: 1.25rem;
-	}
+	} */
 
 	/* footer */
 	/* .footer_info{
